@@ -1,4 +1,4 @@
-name: Horizons
-description: Horizons template for Jekyll
+name: My Links
+description: ultimate url collection
 paginate: 10
-baseurl: '/Horizons-Jekyll-Theme'
+baseurl: '/mylinks'
