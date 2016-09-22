@@ -5,10 +5,24 @@
         <description>Jekyll Jacman - yitao</description>
         <link></link>
         <atom:link href="" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Thu, 22 Sep 2016 23:38:19 +0200</lastBuildDate>
-        <pubDate>Thu, 22 Sep 2016 23:38:19 +0200</pubDate>
+        <lastBuildDate>Thu, 22 Sep 2016 23:47:59 +0200</lastBuildDate>
+        <pubDate>Thu, 22 Sep 2016 23:47:59 +0200</pubDate>
         <ttl>60</ttl>
 
+
+        <item>
+                <title>first test post</title>
+                <description>&lt;p&gt;menu:&lt;br&gt;
+  主页: /&lt;br&gt;
+  归档: /archives&lt;br&gt;
+  关于: /about&lt;/p&gt;
+
+&lt;p&gt;to taki test&lt;/p&gt;
+</description>
+                <link>/jekyll/2016/09/22/first-test-post</link>
+                <guid>/jekyll/2016/09/22/first-test-post</guid>
+                <pubDate>Thu, 22 Sep 2016 00:00:00 +0200</pubDate>
+        </item>
 
         <item>
                 <title>如何使用 Jacman 主题</title>
