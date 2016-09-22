@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CapMTL</title>
-    <description>CapMTL est un logiciel libre. &lt;br/&gt; Géré par &lt;a href='https://github.com/bettermtl/bettermtl.github.io/graphs/contributors'&gt;contributeurs&lt;/a&gt;.</description>
+    <title>BetterMTL</title>
+    <description>BetterMTL is free and open-source. &lt;br/&gt; Run by &lt;a href='https://github.com/bettermtl/bettermtl.github.io/graphs/contributors'&gt;contributors&lt;/a&gt;.</description>
     <link>https://pyram.github.io/mylinks/</link>
     <atom:link href="https://pyram.github.io/mylinks/flux.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Sep 2016 04:56:21 -0400</pubDate>
-    <lastBuildDate>Thu, 22 Sep 2016 04:56:21 -0400</lastBuildDate>
+    <pubDate>Thu, 22 Sep 2016 05:01:47 -0400</pubDate>
+    <lastBuildDate>Thu, 22 Sep 2016 05:01:47 -0400</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
     
@@ -23,6 +23,17 @@
         <pubDate>Thu, 05 May 2016 00:00:00 -0400</pubDate>
         <link>https://pyram.github.io/mylinks/p/docker.html</link>
         <guid isPermaLink="true">https://pyram.github.io/mylinks/p/docker.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Hello</title>
+        <description>&lt;p&gt;Hello Montreal!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 16 Apr 2016 00:00:00 -0400</pubDate>
+        <link>https://pyram.github.io/mylinks/p/hello.html</link>
+        <guid isPermaLink="true">https://pyram.github.io/mylinks/p/hello.html</guid>
         
         
       </item>
