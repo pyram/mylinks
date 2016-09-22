@@ -1,39 +1,27 @@
-# Evento
+[![BetterMTL](https://img.shields.io/badge/better-mtl-blue.svg)](http://bettermtl.com) [![Build Status](https://travis-ci.org/bettermtl/bettermtl.github.io.svg?branch=master)](https://travis-ci.org/bettermtl/bettermtl.github.io) [![Stories in progress](https://img.shields.io/waffle/label/bettermtl/bettermtl.github.io/in%20progress.svg)](https://waffle.io/bettermtl/bettermtl.github.io)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/bettermtl/general)
 
-Evento is a minimal, responsive theme for Jekyll. The projects allows people, groups or companies to host and show a list future and past events.
+# BetterMTL
 
-### Features
+Lets anyone contribute to a shared calendar of activities.
 
-* Clean layout
-* Responsive layout
-* Shows future and past events
-* Easy for people to add events
+[Add your activities](http://bettermtl.github.io/about/)
+
+### Features here
+* Clean responsive layout
+* Easy to add events, by and for the community
+* Future and past events in one list
 
 ---
 
 ### Install and Test
-
-1. Download or clone repo `git clone git@github.com:boyney123/evento.git`
-2. Enter the folder: `cd evento/`
+1. Download or clone repo `git clone git@github.com:bettermtl/bettermtl.github.io.git`
+2. Enter the folder: `cd bettermtl.github.io/`
 4. Start Jekyll server: `jekyll serve`
 
 Access via: [http://localhost:4000](http://localhost:4000)
 
 ---
 
-### Demo and Download
-
-[Demo](http://evento.davidboyne.co.uk)
-
-[Download](https://github.com/boyney123/evento/archive/master.zip)
-
-### Screen Shot 1
-![Evento - free Jekyll theme](/screenshot.png)
-### Screen Shot 2
-![Evento - free Jekyll theme](/screenshot2.png)
-
----
-
 ### Copyright and license
-
-It is under [the MIT license](/LICENSE).
+[MIT licensed](/LICENSE) data and code.
