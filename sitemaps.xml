@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    
+      <url>
+        <loc>/p/docker.html</loc>
+        
+        
+        <lastmod>2016-05-05T00:00:00-04:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/p/hello.html</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/p/hello.html" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/p/bonjour.html" />
+        
+        <lastmod>2016-04-16T00:00:00-04:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/p/bonjour.html</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/p/hello.html" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/p/bonjour.html" />
+        
+        <lastmod>2016-04-16T00:00:00-04:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/p/web-security.html</loc>
+        
+        
+        <lastmod>2016-04-03T00:00:00-04:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/p/intro-to-react.html</loc>
+        
+        
+        <lastmod>2016-03-28T00:00:00-04:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/p/angular-2.html</loc>
+        
+        
+        <lastmod>2016-03-10T00:00:00-05:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/p/aws.html</loc>
+        
+        
+        <lastmod>2016-01-05T00:00:00-05:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+  
+    
+      <url>
+        <loc>/a-propos/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/a-propos/" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/about/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/about/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/a-propos/" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/about/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/bettermtl.ics</loc>
+        
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blog/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blogue/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/blogue/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/blog/" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/blogue/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/create/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/create/" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/creer/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/creer/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/create/" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/creer/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/endroits/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/endroits/" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/locations/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/feed.xml</loc>
+        
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/flux.xml</loc>
+        
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/welcome/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/locations/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/endroits/" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/locations/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/css/main.css</loc>
+        
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/network/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/network/" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/reseau/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/reseau/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/network/" />
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/reseau/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/sitemaps.xml</loc>
+        
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/welcome/</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="fr" href="/" />
+        
+          <xhtml:link rel="alternate" hreflang="en" href="/welcome/" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+  </urlset>

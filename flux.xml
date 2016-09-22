@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{&quot;en&quot;=&gt;&quot;BetterMTL&quot;, &quot;fr&quot;=&gt;&quot;CapMTL&quot;, &quot;ru&quot;=&gt;&quot;ЛучшеMTL&quot;, &quot;ar&quot;=&gt;&quot;MTLأفضل&quot;}</title>
-    <description>{&quot;en&quot;=&gt;&quot;BetterMTL is free and open-source. &lt;br/&gt; Run by &lt;a href='https://github.com/bettermtl/bettermtl.github.io/graphs/contributors'&gt;contributors&lt;/a&gt;.&quot;, &quot;fr&quot;=&gt;&quot;CapMTL est un logiciel libre. &lt;br/&gt; Géré par &lt;a href='https://github.com/bettermtl/bettermtl.github.io/graphs/contributors'&gt;contributeurs&lt;/a&gt;.&quot;, &quot;ru&quot;=&gt;&quot;ЛучшеMTL является бесплатным и открытыми исходными. &lt;br/&gt; Созданный &lt;a href='https://github.com/bettermtl/bettermtl.github.io/graphs/contributors'&gt;участниками&lt;/a&gt;.&quot;, &quot;ar&quot;=&gt;&quot;أفضل هو الحرة والمفتوحة المصدرMTL &lt;br/&gt; &lt;a href='https://github.com/bettermtl/bettermtl.github.io/graphs/contributors'&gt; تنتج المشاركين المتطوعين&lt;/a&gt;.&quot;}</description>
+    <title>CapMTL</title>
+    <description>CapMTL est un logiciel libre. &lt;br/&gt; Géré par &lt;a href='https://github.com/bettermtl/bettermtl.github.io/graphs/contributors'&gt;contributeurs&lt;/a&gt;.</description>
     <link>https://mpyra.github.io/mylinks/</link>
-    <atom:link href="https://mpyra.github.io/mylinks/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://mpyra.github.io/mylinks/flux.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 22 Sep 2016 04:52:26 -0400</pubDate>
     <lastBuildDate>Thu, 22 Sep 2016 04:52:26 -0400</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
     
       <item>
         <title>Docker</title>
@@ -22,17 +23,6 @@
         <pubDate>Thu, 05 May 2016 00:00:00 -0400</pubDate>
         <link>https://mpyra.github.io/mylinks/p/docker.html</link>
         <guid isPermaLink="true">https://mpyra.github.io/mylinks/p/docker.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Hello</title>
-        <description>&lt;p&gt;Hello Montreal!&lt;/p&gt;
-</description>
-        <pubDate>Sat, 16 Apr 2016 00:00:00 -0400</pubDate>
-        <link>https://mpyra.github.io/mylinks/p/hello.html</link>
-        <guid isPermaLink="true">https://mpyra.github.io/mylinks/p/hello.html</guid>
         
         
       </item>
