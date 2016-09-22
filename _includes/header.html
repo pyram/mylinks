@@ -17,7 +17,7 @@
               {% assign current = 'current' %}
             {% endif %}
             <li class="page-link element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-              <a href="{{ link.url }}">{{ link.label_name }}</a>
+              <a href="{{ link.url | prepend: site.baseurl }}">{{ link.label_name }}</a>
             </li>
           {% endfor %}
         </ul>
@@ -31,7 +31,7 @@
     {% if activity.lang == page.lang %}
       <p>{{ activity.lang }}</p>
     {% else %}
-      <a href="{{ activity.url }}" class="lang {{ activity.lang }}">{{ activity.lang }}</a>
+      <a href="{{ activity.url | prepend: site.baseurl }}" class="lang {{ activity.lang }}">{{ activity.lang }}</a>
     {% endif %}
   {% endfor %}
   {% assign posts=site.posts | where: "ref", page.ref | sort: 'lang' %}
@@ -39,7 +39,7 @@
     {% if post.lang == page.lang %}
       <p>{{ post.lang }}</p>
     {% else %}
-      <a href="{{ post.url }}" class="lang {{ post.lang }}">{{ post.lang }}</a>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="lang {{ post.lang }}">{{ post.lang }}</a>
     {% endif %}
   {% endfor %}
   {% assign pages=site.pages | where: "ref", page.ref | sort: 'lang' %}
@@ -47,7 +47,7 @@
     {% if post.lang == page.lang %}
       <p>{{ post.lang }}</p>
     {% else %}
-      <a href="{{ post.url }}" class="lang {{ post.lang }}">{{ post.lang }}</a>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="lang {{ post.lang }}">{{ post.lang }}</a>
     {% endif %}
   {% endfor %}
   {% assign locations=site.locations | where: "ref", page.ref | sort: 'lang' %}
@@ -55,7 +55,7 @@
     {% if location.lang == page.lang %}
       <p>{{ location.lang }}</p>
     {% else %}
-      <a href="{{ location.url }}" class="lang {{ location.lang }}">{{ location.lang }}</a>
+      <a href="{{ location.url | prepend: site.baseurl }}" class="lang {{ location.lang }}">{{ location.lang }}</a>
     {% endif %}
   {% endfor %}
 </div>

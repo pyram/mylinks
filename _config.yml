@@ -33,26 +33,26 @@ lang:
 
 defaults:
   - scope:
-      path: ""
+      path: "mylinks"
     values:
-      lang: "en"
+      lang: "fr"
   - scope:
-      path: ""
+      path: "mylinks"
       type: "activities"
     values:
       layout: "activity"
   - scope:
-      path: ""
+      path: "mylinks"
       type: "posts"
     values:
       layout: "post"
   - scope:
-      path: ""
+      path: "mylinks"
       type: locations
     values:
       layout: location
   - scope:
-      path: ""
+      path: "mylinks"
       type: network
     values:
       layout: node
@@ -62,11 +62,11 @@ url: "https://pyram.github.io" # the base hostname & protocol for your site
 
 timezone: America/Montreal
 
-author: Paul Cuciureanu
-facebook_username: bettermtl
-twitter_username: BetterMTL
+author: Michael Pyra
+facebook_username: pyram@tlen.pl
+twitter_username: pyram
 github_username:  pyram
-company_name: BetterMTL invites
+company_name: pyram
 
 # Build settings
 markdown: kramdown
