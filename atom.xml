@@ -4,7 +4,7 @@
  <title>Jekyll Jacman</title>
  <link href="" rel="self"/>
  <link href=""/>
- <updated>2016-09-22T23:56:22+02:00</updated>
+ <updated>2016-09-23T00:10:37+02:00</updated>
  <id></id>
  <author>
    <name>yitao</name>
@@ -27,233 +27,534 @@
  </entry>
  
  <entry>
-   <title>如何使用 Jacman 主题</title>
+   <title>How to Use Jacman topic</title>
    <link href="/jekyll/2015/09/20/how-to-use-jacman"/>
    <updated>2015-09-20T00:00:00+02:00</updated>
    <id>/jekyll/2015/09/20/how-to-use-jacman</id>
-   <content type="html">&lt;h2 id=&quot;&gt;主题介绍&lt;/h2&gt;
+   <content type="html">&lt;h2 id=&quot;topic-introduction&quot;&gt;Topic Introduction&lt;/h2&gt;
 
-&lt;p&gt;Jekyll-Jacman 是为 &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; 设计的一款清新且具有响应式的主题，拥有更丰富的特性并支持了很多的国内服务。Jacman 始于 &lt;a href=&quot;https://github.com/wuchong/jacman&quot;&gt;Jacman&lt;/a&gt; 移植而来。&lt;/p&gt;
+&lt;p&gt;Jekyll-Jacman is &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; has designed a fresh and responsive theme, has a richer feature support and a lot of domestic service. Jacman began &lt;a href=&quot;https://github.com/wuchong/jacman&quot;&gt;Jacman&lt;/a&gt; transplanted from.&lt;/p&gt;
 
-&lt;!-- more --&gt;
+&lt;p&gt;&amp;lt;-! More -&amp;gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;&gt;配置指南&lt;/h2&gt;
+&lt;h2 id=&quot;configuration-guide&quot;&gt;Configuration Guide&lt;/h2&gt;
 
-&lt;p&gt;Jacman 主题提供了丰富的配置属性，可以实现您对主题的自定义。配置文件&lt;code&gt;_config.yml&lt;/code&gt;位于主题根目录下。本次更新对配置文件进行了较大调整，如您之前就使用了 Jacman，也需要您根据以下指南进行相应的修改。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;##### 菜单
-menu:
-  主页: /
-  归档: /archives
-  关于: /about
+&lt;p&gt;Jacman topic provides a wealth of configuration properties, you can achieve your own definition of the subject matter. &lt;code&gt;_config.yml&lt;/code&gt; Configuration file located in the root directory of the theme. This update to the configuration file for a major adjustment, if you use it before the Jacman, also require you to be modified according to the following guidelines.&lt;/p&gt;
 
-#### 控件
-widgets: 
-- category
-- tag
-- links
-- rss
+&lt;p&gt;`&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
 
-#### RSS 
-rss: /atom.xml 
+&lt;h5 id=&quot;menu&quot;&gt;Menu&lt;/h5&gt;
 
-#### 图片相关
-imglogo:
-  enable: true               ## 是否显示网站 logo
-  src: img/logo.png        
-favicon: img/favicon.ico     ## 网站图标    
-apple_icon: img/jacman.jpg   ## 苹果设备上的图标，背景不要透明
-author_img: img/author.jpg   ## 网站底部的博主头像
-banner_img: img/banner.jpg   ## 博客顶部的图片
+&lt;p&gt;menu:&lt;br&gt;
+  Home: /&lt;br&gt;
+  Archive: / archives&lt;br&gt;
+  About: / about&lt;/p&gt;
 
-close_aside: false      ##是否在文章页面自动关闭侧边栏
+&lt;h4 id=&quot;controls&quot;&gt;Controls&lt;/h4&gt;
 
-#### 首页相关
-index:
-  expand: true              ## 首页文章是否展开。默认为展开式，显示 Read More。
-  excerpt_link: Read More    
-
-#### 作者信息
-author:
-  name: ## 作者名
-  intro_line1:  &quot;Hello ,I'm Larry Page in Google.&quot;    ## 网站底部的个人介绍
-  intro_line2:  &quot;This is my blog,believe it or not.&quot;  
-  weibo_verifier:  ## 微博秀的验证码
-  tsina:           ## 用于微博秀和微博分享
-  weibo:           ## 用于显示网站底部社交按钮，下同
-  douban:         
-  zhihu:  
-  email:     
-  twitter:   
-  github:     
-  facebook: 
-  linkedin:   
-  google_plus:   
-  stackoverflow:  
-
-
-#### 目录
-toc:
-  article: true   ## 是否在文章中显示目录
-  aside: true     ## 是否在侧边栏显示目录
-
-#### 友情链接
-links:
-  码农圈: https://coderq.com,一个面向程序员交流分享的新一代社区
-  Jark's Blog: http://wuchong.me
-
-#### 评论
-duoshuo_shortname: 
-disqus_shortname:  
-
-#### 分享按钮
-jiathis:
-  enable: false   ## 默认使用主题内建分享
-  id:    
-  tsina: 
-
-#### 网站统计
-google_analytics:
-  enable: false
-  id:            ## google analytics ID.
-  site:          ## 网站地址.
-baidu_tongji:
-  enable: false
-  sitecode:      ## 百度统计站点特征码
-cnzz_tongji:
-  enable: false
-  siteid:        ## CNZZ统计站点ID
-
-#### 杂项
-ShowCustomFont: true  
-fancybox: true        
-totop: true           
-
-#### 自定义搜索
-google_cse: 
-  enable: false
-  cx:  
-baidu_search:    
-  enable: false
-  id:   
-  site: http://zhannei.baidu.com/cse/search 
-tinysou_search:     ## http://tinysou.com/
-  enable: false
-  id: &quot;4ac092ad8d749fdc6293&quot; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;&gt;属性功能&lt;/h3&gt;
+&lt;p&gt;widgets:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;菜单 menu&lt;/strong&gt;
-默认没有启用 &lt;code&gt;/tags&lt;/code&gt; 和 &lt;code&gt;/categories&lt;/code&gt;页面，如果需要启用请在博客目录下的&lt;code&gt;source&lt;/code&gt;文件夹中分别建立&lt;code&gt;tags&lt;/code&gt; 和 &lt;code&gt;categories&lt;/code&gt;文件夹每个文件夹中分别包含一个&lt;code&gt;index.md&lt;/code&gt;文件。内容为：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;layout: tags (或categories)
-title: tags (或categories)
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;因为主题中已经内置了这两个页面的模板，所以他们会被正确的解析出来。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;控件 widgets&lt;/strong&gt;
-提供了7种小工具。包括标签、分类、RSS、友情链接、微博秀。&lt;/li&gt;
+&lt;li&gt;Category&lt;/li&gt;
+&lt;li&gt;Tag&lt;/li&gt;
+&lt;li&gt;Links&lt;/li&gt;
+&lt;li&gt;Rss&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;友情链接&lt;/strong&gt;：友情链接的网址添加可以在&lt;code&gt;links&lt;/code&gt;属性下添加。&lt;/p&gt;
+&lt;h4 id=&quot;rss&quot;&gt;RSS&lt;/h4&gt;
 
-&lt;p&gt;&lt;strong&gt;微博秀&lt;/strong&gt;：需要注意的是，如果要启用微博秀，您必须填上&lt;code&gt;author&lt;/code&gt;属性下&lt;code&gt;tsina&lt;/code&gt;和&lt;code&gt;weibo_verifier&lt;/code&gt;的值，前者是您微博ID，后者是您微博秀的验证码，访问 &lt;a href=&quot;http://app.weibo.com/tool/weiboshow&quot;&gt;http://app.weibo.com/tool/weiboshow&lt;/a&gt; 在如下图位置，可以获得您的 verifier，如：我的是&lt;code&gt;b3593ceb&lt;/code&gt;。&lt;br&gt;
-&lt;img src=&quot;http://ww1.sinaimg.cn/large/81b78497jw1emegd6b0ytj209204pweu.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;rss: /atom.xml&lt;/p&gt;
 
-&lt;p&gt;如果要关闭侧边栏，将&lt;code&gt;close_aside&lt;/code&gt;置为&lt;code&gt;true&lt;/code&gt;，就会在博文页面自动关闭侧边栏。&lt;/p&gt;
+&lt;h4 id=&quot;pictures&quot;&gt;Pictures&lt;/h4&gt;
+
+&lt;p&gt;imglogo:&lt;br&gt;
+  enable: true ## whether to display the website logo&lt;br&gt;
+  src: img / logo.png&lt;br&gt;
+favicon: img / favicon.ico ## favicon&lt;br&gt;
+apple_icon: img / jacman.jpg ## Apple icon on your device, do not transparent background&lt;br&gt;
+author_img: img / author.jpg ## at the bottom of the site&amp;#39;s bloggers Avatar&lt;br&gt;
+banner_img: img / banner.jpg ## blog top pictures&lt;/p&gt;
+
+&lt;p&gt;close_aside: false ## whether to automatically turn off the sidebar in the article page&lt;/p&gt;
+
+&lt;h4 id=&quot;home-related&quot;&gt;Home related&lt;/h4&gt;
+
+&lt;p&gt;index:&lt;br&gt;
+  expand: true ## Home Articles whether to expand. The default is expandable display Read More.&lt;br&gt;
+  excerpt_link: Read More&lt;/p&gt;
+
+&lt;h4 id=&quot;author-information&quot;&gt;author information&lt;/h4&gt;
+
+&lt;p&gt;author:&lt;br&gt;
+  name: ## Author Name&lt;br&gt;
+  intro_line1: &amp;quot;. Hello, I&amp;#39;m Larry Page in Google&amp;quot; ## at the bottom of the site&amp;#39;s personal introduction&lt;br&gt;
+  intro_line2: &amp;quot;This is my blog, believe it or not.&amp;quot;&lt;br&gt;
+  weibo_verifier: ## microblogging show verification code&lt;br&gt;
+  tsina: ## for the show and microblogging microblogging Share&lt;br&gt;
+  weibo: ## social buttons to display the bottom of the site, the same below&lt;br&gt;
+  douban:&lt;br&gt;
+  zhihu:&lt;br&gt;
+  email:&lt;br&gt;
+  twitter:&lt;br&gt;
+  github:&lt;br&gt;
+  facebook:&lt;br&gt;
+  linkedin:&lt;br&gt;
+  google_plus:&lt;br&gt;
+  stackoverflow:&lt;/p&gt;
+
+&lt;h4 id=&quot;table-of-contents&quot;&gt;table of Contents&lt;/h4&gt;
+
+&lt;p&gt;toc:&lt;br&gt;
+  article: true ## is displayed in the article directory&lt;br&gt;
+  aside: true ## whether to display the directory in the sidebar&lt;/p&gt;
+
+&lt;h4 id=&quot;links&quot;&gt;Links&lt;/h4&gt;
+
+&lt;p&gt;links:&lt;br&gt;
+  Code Agricultural circle: &lt;a href=&quot;https://coderq.com&quot;&gt;https://coderq.com&lt;/a&gt;, a programmer for the exchange and sharing of new generation community&lt;br&gt;
+  Jark&amp;#39;s Blog: &lt;a href=&quot;http://wuchong.me&quot;&gt;http://wuchong.me&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;reviews&quot;&gt;Reviews&lt;/h4&gt;
+
+&lt;p&gt;duoshuo_shortname:&lt;br&gt;
+disqus_shortname:&lt;/p&gt;
+
+&lt;h4 id=&quot;share-button&quot;&gt;Share button&lt;/h4&gt;
+
+&lt;p&gt;jiathis:&lt;br&gt;
+  enable: false ## default theme built-share&lt;br&gt;
+  id:&lt;br&gt;
+  tsina:&lt;/p&gt;
+
+&lt;h4 id=&quot;site-statistics&quot;&gt;Site Statistics&lt;/h4&gt;
+
+&lt;p&gt;google_analytics:&lt;br&gt;
+  enable: false&lt;br&gt;
+  id: ## google analytics ID.&lt;br&gt;
+  site: ## Web site addresses.&lt;br&gt;
+baidu_tongji:&lt;br&gt;
+  enable: false&lt;br&gt;
+  sitecode: ## Baidu statistics signature site&lt;br&gt;
+cnzz_tongji:&lt;br&gt;
+  enable: false&lt;br&gt;
+  siteid: ## CNZZ Statistics Site ID&lt;/p&gt;
+
+&lt;h4 id=&quot;miscellaneous&quot;&gt;Miscellaneous&lt;/h4&gt;
+
+&lt;p&gt;ShowCustomFont: true&lt;br&gt;
+fancybox: true&lt;br&gt;
+totop: true&lt;/p&gt;
+
+&lt;h4 id=&quot;custom-search&quot;&gt;Custom Search&lt;/h4&gt;
+
+&lt;p&gt;google_cse:&lt;br&gt;
+  enable: false&lt;br&gt;
+  cx:&lt;br&gt;
+baidu_search:&lt;br&gt;
+  enable: false&lt;br&gt;
+  id:&lt;br&gt;
+  site: &lt;a href=&quot;http://zhannei.baidu.com/cse/search&quot;&gt;http://zhannei.baidu.com/cse/search&lt;/a&gt;&lt;br&gt;
+tinysou_search: ## &lt;a href=&quot;http://tinysou.com/&quot;&gt;http://tinysou.com/&lt;/a&gt;&lt;br&gt;
+  enable: false&lt;br&gt;
+  id: &amp;quot;4ac092ad8d749fdc6293&amp;quot;&lt;br&gt;
+`&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;properties-function&quot;&gt;Properties function&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;图片相关 Image&lt;/strong&gt;&lt;br&gt;
-本主题可以设置网站相关图片，例如网站图标（&lt;code&gt;favicon&lt;/code&gt;）、网站logo（&lt;code&gt;imglogo&lt;/code&gt;）、作者头像（&lt;code&gt;author_img&lt;/code&gt;）。建议启用网站logo，格式建议为&lt;code&gt;.svg&lt;/code&gt;或&lt;code&gt;.png&lt;/code&gt;格式。同时建议提供配套的 favicon 以及在苹果设备上的图标&lt;code&gt;apple_icon&lt;/code&gt;（背景不要透明）。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;首页显示模式 Index&lt;/strong&gt;&lt;br&gt;
-目前首页的显示模式支持两种，一种是原先的卡片式（前往 &lt;a href=&quot;http://wuchong.me/jacman&quot;&gt;Demo&lt;/a&gt; 预览），另一种是类似官方主题的文章展开式（&lt;a href=&quot;http://wuchong.me&quot;&gt;本站&lt;/a&gt;即采用的这种）。两者各有优劣，前者首页加载速度更快，后者文章内容更能吸引读者。主题默认采用后一种展开式，如需开启第一种卡片式，请设置&lt;code&gt;index&lt;/code&gt;属性下的&lt;code&gt;expand: false&lt;/code&gt;。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Menu menu ** **
+Not enabled by default &lt;code&gt;/ tags&lt;/code&gt; and&lt;code&gt;/ categories&lt;/code&gt; page, if you need to enable file in the &lt;code&gt;source&lt;/code&gt; blog directory folders are established&lt;code&gt;tags&lt;/code&gt; and &lt;code&gt;categories&lt;/code&gt; Folders Each folder contains a&lt;code&gt;index respectively .md&lt;/code&gt; file. Content:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;卡片式的文章摘要是截取文章内容的前140个字，也可以自己总结&lt;code&gt;description&lt;/code&gt;并将其放在开头的&lt;code&gt;front-matter&lt;/code&gt;中。展开式的文章摘要就是使用&lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;/code&gt;截取了。&lt;/p&gt;
+&lt;p&gt;`&lt;code&gt;&lt;/code&gt;&lt;br&gt;
+layout: tags (or categories)&lt;/p&gt;
+
+&lt;h2 id=&quot;title-tags-or-categories&quot;&gt;title: tags (or categories)&lt;/h2&gt;
+
+&lt;p&gt;`&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;amp; Nbsp; &amp;amp; nbsp; &amp;amp; nbsp; &amp;amp; nbsp; &amp;amp; nbsp; &amp;amp; nbsp; because the topic has built templates on these two pages, so they will be properly parsed.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;作者信息 author&lt;/strong&gt;&lt;br&gt;
-作者信息，建议尽量填写完整。其中&lt;code&gt;tsina&lt;/code&gt;是你的新浪微博ID，不同于用户名或微博主页地址。启用这个属性后，其他用户在微博上分享你文章的同时会自动@你。同时它和&lt;code&gt;weibo_verifier&lt;/code&gt;一起作用生成微博秀。&lt;code&gt;intro_line1&lt;/code&gt;和&lt;code&gt;intro_line2&lt;/code&gt;是网站底部的个人介绍。&lt;code&gt;weibo&lt;/code&gt;、&lt;code&gt;twitter&lt;/code&gt;、&lt;code&gt;facebook&lt;/code&gt;等是用来显示网站右下角的社交按钮的，如下图所示。&lt;br&gt;
-&lt;img src=&quot;http://ww4.sinaimg.cn/large/81b78497jw1emgscr3575j2078050jrc.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;目录 toc&lt;/strong&gt;&lt;br&gt;
-是否启用在文章中或侧边栏中的目录功能。二者可以都为&lt;code&gt;true&lt;/code&gt;或都为&lt;code&gt;false&lt;/code&gt;。同时，如果你希望在特定的某一篇文章中关闭目录功能你可以在文章文件开头中的&lt;code&gt;front-matter&lt;/code&gt;中加上一行&lt;code&gt;toc: false&lt;/code&gt;。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;评论 comments&lt;/strong&gt;&lt;br&gt;
-填写&lt;code&gt;duoshuo_shortname&lt;/code&gt;&lt;a href=&quot;http://duoshuo.com/&quot;&gt;多说&lt;/a&gt;的用户名，启用多说评论系统。在大陆地区更好用的评论系统。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Controls ** widgets **
+Providing the seven kinds of gadgets. Including labeling, sorting, RSS, Links, microblogging show.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;填写&lt;code&gt;disqus_shortname&lt;/code&gt;&lt;a href=&quot;http://disqus.com/&quot;&gt;disqus&lt;/a&gt; 的用户名，启用 disqus 评论系统。国际上更广泛使用的评论系统。设置博客根目录下的&lt;code&gt;_config.yml&lt;/code&gt;文件中的&lt;code&gt;disqus_shortname&lt;/code&gt;同样也能开启该功能。&lt;/p&gt;
+&lt;p&gt;** ** Link: Link URL Add to add the &lt;code&gt;links&lt;/code&gt; attributes.&lt;/p&gt;
+
+&lt;p&gt;** ** Microblogging show: Note that, if you want to enable microblogging show, you must fill in the value of &lt;code&gt;author&lt;/code&gt; attributes&lt;code&gt;tsina&lt;/code&gt; and &lt;code&gt;weibo_verifier&lt;/code&gt;, the former is your Twitter ID, which is your microblogging show codes, visit the following figure &lt;a href=&quot;http://app.weibo.com/tool/weiboshow&quot;&gt;http://app.weibo.com/tool/weiboshow&lt;/a&gt; in position, you can get your verifier, such as: I was &lt;code&gt;b3593ceb&lt;/code&gt;.&lt;br&gt;
+! &lt;a href=&quot;Http://ww1.sinaimg.cn/large/81b78497jw1emegd6b0ytj209204pweu.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to turn off the sidebar, the &lt;code&gt;close_aside&lt;/code&gt; set to&lt;code&gt;true&lt;/code&gt;, it will automatically turn off the sidebar in blog page.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;加网分享 jiathis&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&quot;http://www.jiathis.com/&quot;&gt;加网&lt;/a&gt;分享系统。默认关闭，因为主题已经内置了原生的分享功能。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;网站统计 Analytics&lt;/strong&gt;&lt;br&gt;
-&lt;code&gt;google_analytics&lt;/code&gt;：Google Analytics追踪代码。请注意：Google Analytics已经升级到了Universal Analytics。请先前往后台升级你的Google Analytics版本后再启用追踪代码，更多信息请&lt;a href=&quot;https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN&quot;&gt;点击这里&lt;/a&gt;了解。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pictures Image ** **&lt;br&gt;
+This topic can set up a website related images, such as site icon ( &lt;code&gt;favicon&lt;/code&gt;), website logo (&lt;code&gt;imglogo&lt;/code&gt;), author avatar ( &lt;code&gt;author_img&lt;/code&gt;). We recommend enabling website logo, format or suggestions for &lt;code&gt;.svg&lt;/code&gt;&lt;code&gt;.png&lt;/code&gt; format. At the same time it proposed to provide supporting and favicon icon &lt;code&gt;apple_icon&lt;/code&gt; on Apple devices (not transparent background).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Display Mode Index ** ** Home&lt;br&gt;
+Home currently supports two display modes, one is the original card of formula (Go to &lt;a href=&quot;http://wuchong.me/jacman&quot;&gt;Demo&lt;/a&gt; Preview), and the other is similar to the official theme of the article Expanding (&lt;a href=&quot;http://wuchong.me&quot;&gt;site &lt;/a&gt; which uses this). Both have advantages and disadvantages, the former home load faster, the latter article content more attractive to readers. After expanding uses a default theme, open for the first card type, set the &lt;code&gt;expand&lt;/code&gt; index&lt;code&gt;attributes of: false&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;baidu_tongji&lt;/code&gt;：百度统计功能。需要填写站点特征码&lt;code&gt;sitecode&lt;/code&gt;，在&lt;a href=&quot;http://tongji.baidu.com/web/welcome/login&quot;&gt;官网&lt;/a&gt;注册并配置站点后，获取特征码。特征码可以在「网站中心」-&amp;gt; 「代码获取」中查看，如下图所示的&lt;code&gt;e6d1f421bbc9962127a50488f9ed37d1&lt;/code&gt;，注意去掉前面的&lt;code&gt;3F&lt;/code&gt;。&lt;br&gt;
-&lt;img src=&quot;http://ww4.sinaimg.cn/large/81b78497jw1emf4v6qf91j20kf07sq8v.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;cnzz_tongji&lt;/code&gt;：站长统计功能。需要填写站点ID&lt;code&gt;siteid&lt;/code&gt;，同理在&lt;a href=&quot;http://www.cnzz.com&quot;&gt;站长官网&lt;/a&gt;注册并配置站点后获得。&lt;/p&gt;
+&lt;p&gt;The card is a summary of the article contents of the article before the interception of 140 words to be summarized &lt;code&gt;description&lt;/code&gt; own and at the beginning of the&lt;code&gt;front-matter&lt;/code&gt; in. Expanding the page is to use the &lt;code&gt;&amp;lt;-! More -&amp;gt;&lt;/code&gt; intercepted.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;数学公式 mathjax&lt;/strong&gt;&lt;br&gt;
-主题支持写 LaTex 数学公式。只需要在文章文件开头的&lt;code&gt;front-matter&lt;/code&gt;中，加上一行&lt;code&gt;mathjax: true&lt;/code&gt;，即可在文中写 LaTex 公式。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;图片浏览 fancybox&lt;/strong&gt;&lt;br&gt;
-默认关闭，如果你经常发表 Gallery 类型的文章，那么请设置为&lt;code&gt;true&lt;/code&gt;。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;返回顶部 totop&lt;/strong&gt;&lt;br&gt;
-右下角&lt;code&gt;返回顶部&lt;/code&gt;按钮，默认开启。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;自定义搜索 Search&lt;/strong&gt;&lt;br&gt;
-&lt;code&gt;baidu_search&lt;/code&gt;：如果开启百度站内搜索需要登录 &lt;a href=&quot;http://zn.baidu.com/&quot;&gt;百度站内搜索&lt;/a&gt;，配置好你的站点，并开启站内搜索获取搜索ID，另外&lt;code&gt;site&lt;/code&gt;属性可以填默认值，也可以填自己做了CNAME的二级域名，更详细的可以阅读&lt;a href=&quot;http://gengbiao.me/hexo/hexo%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/&quot;&gt;这篇博客&lt;/a&gt;了解。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Author information author ** **&lt;br&gt;
+On information, we recommended to completed. Where &lt;code&gt;tsina&lt;/code&gt; your Weibo ID, different from the user name or Twitter homepage addresses. Enabling this attribute, other users can share your articles on the microblogging while automatically! You. At the same time it &lt;code&gt;weibo_verifier&lt;/code&gt; act together to generate microblogging show. &lt;code&gt;Intro_line1&lt;/code&gt; and&lt;code&gt;intro_line2&lt;/code&gt; is a personal website at the bottom of the presentation. &lt;code&gt;Weibo&lt;/code&gt;,&lt;code&gt;twitter&lt;/code&gt;, &lt;code&gt;facebook&lt;/code&gt; the like is used to display the lower right corner of the site&amp;#39;s social buttons, as shown below.&lt;br&gt;
+! &lt;a href=&quot;Http://ww4.sinaimg.cn/large/81b78497jw1emgscr3575j2078050jrc.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;** Contents toc **&lt;br&gt;
+Whether in the article or directory function sidebar enabled. Both may have to &lt;code&gt;true&lt;/code&gt; or are&lt;code&gt;false&lt;/code&gt;. Also, if you want to turn off a specific directory features an article at the beginning of the article you can file &lt;code&gt;front-matter&lt;/code&gt; add a line in&lt;code&gt;toc: false&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Comments comments ** **&lt;br&gt;
+Fill &lt;code&gt;duoshuo_shortname&lt;/code&gt; &lt;a href=&quot;http://duoshuo.com/&quot;&gt;say&lt;/a&gt; user name, say enabled commenting system. In mainland China with a better comment system.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;google_cse&lt;/code&gt;：如果开启谷歌自定义搜索需要先登录 &lt;a href=&quot;https://www.google.com/cse/&quot;&gt;Google CSE&lt;/a&gt;，配置好你的站点，并获得此自定义搜索的ID。此外你需要在博客目录下的&lt;code&gt;source&lt;/code&gt;文件夹中建立&lt;code&gt;search&lt;/code&gt;文件夹并包含一个&lt;code&gt;index.md&lt;/code&gt;文件。内容为：&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt; layout: search
- title: search
- ---
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;tiny_search&lt;/code&gt;: 如果要开启&lt;a href=&quot;http://tinysou.com/&quot;&gt;微搜索&lt;/a&gt;，需要先注册一个帐号，配置一个Engine，将Engine的Key填入配置文件中的&lt;code&gt;id&lt;/code&gt;即可。&lt;/p&gt;
-
-&lt;h2 id=&quot;&gt;常见问题&lt;/h2&gt;
+&lt;p&gt;Fill &lt;code&gt;disqus_shortname&lt;/code&gt; &lt;a href=&quot;http://disqus.com/&quot;&gt;disqus&lt;/a&gt; user name, enable disqus comment system. Wider international use of the commenting system. &lt;code&gt;_config.yml&lt;/code&gt; Blog settings file in the root directory of the&lt;code&gt;disqus_shortname&lt;/code&gt; also can open the function.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Q：图片默认都是居左的，我怎么设置能让图片居中呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Share jiathis ** ** Screening&lt;br&gt;
+&lt;a href=&quot;http://www.jiathis.com/&quot;&gt;Screening&lt;/a&gt; sharing system. It turned off by default, because the theme has built native sharing.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Site Stats Analytics ** **&lt;br&gt;
+&lt;code&gt;Google_analytics&lt;/code&gt;: Google Analytics tracking code. Note: Google Analytics has been upgraded to Universal Analytics. Please go back to upgrade your version of Google Analytics tracking code is then enabled, for more information please &lt;a href=&quot;https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN&quot;&gt;CLICK HERE&lt;/a&gt; understanding.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;Baidu_tongji&lt;/code&gt;: Baidu statistics. Sites need to fill pattern &lt;code&gt;sitecode&lt;/code&gt;, in &lt;a href=&quot;http://tongji.baidu.com/web/welcome/login&quot;&gt;official website&lt;/a&gt; to register and configure a site, to obtain signatures. Signature in the &amp;quot;Site Center&amp;quot; -&amp;gt; &amp;quot;Get the code&amp;quot; view, &lt;code&gt;e6d1f421bbc9962127a50488f9ed37d1&lt;/code&gt; shown in the following figure, remove the front of the note&lt;code&gt;3F&lt;/code&gt;.&lt;br&gt;
+! &lt;a href=&quot;Http://ww4.sinaimg.cn/large/81b78497jw1emf4v6qf91j20kf07sq8v.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Cnzz_tongji&lt;/code&gt;: Master statistics. After the need to fill the site ID&lt;code&gt;siteid&lt;/code&gt;, empathy in &lt;a href=&quot;http://www.cnzz.com&quot;&gt;Station Executive Network&lt;/a&gt; register and configure the site to get.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Mathematical formulas mathjax ** **&lt;br&gt;
+Theme Support LaTex write mathematical formulas. Only at the beginning of the article file &lt;code&gt;front-matter&lt;/code&gt; in, add a line&lt;code&gt;mathjax: true&lt;/code&gt;, LaTex to write the formula in the text.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Photo browser fancybox ** **&lt;br&gt;
+Off by default, if you regularly publish articles Gallery type, then set to &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;** Top totop **&lt;br&gt;
+`` Back to top the bottom right button is enabled by default.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Custom Search Search ** **&lt;br&gt;
+&lt;code&gt;Baidu_search&lt;/code&gt;: If enabled within the Baidu search the station need to sign &lt;a href=&quot;http://zn.baidu.com/&quot;&gt;Baidu Search stations&lt;/a&gt;, configure your site and get the search open search Site ID, additional attributes can fill&lt;code&gt;site&lt;/code&gt; the default value can also fill in their own second-level domain of the CNAME, more detail can be read &lt;a href=&quot;http://gengbiao.me/hexo/hexo%E6%B7%BB%E5%8A%A0%%20E7%%2099%%20BE%%20E5%%20BA%%20A6%%20E7%%20AB%%2099%%20E5%%2086%%2085%%20E6%%2090%%209C%%20E7%%20B4%%20A2%20/&quot;&gt;this blog&lt;/a&gt; understanding.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;Google_cse&lt;/code&gt;: If enabled Google Custom Search need to sign &lt;a href=&quot;https://www.google.com/cse/&quot;&gt;Google CSE&lt;/a&gt;, configure your site and get this custom search ID. In addition, you need to create &lt;code&gt;search&lt;/code&gt; file&lt;code&gt;source&lt;/code&gt; file blog directory folder in the folder and file contains a &lt;code&gt;index.md&lt;/code&gt;. Content:&lt;br&gt;
+ `&lt;code&gt;&lt;/code&gt;&lt;br&gt;
+ layout: search&lt;br&gt;
+ title: search&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;`&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Tiny_search&lt;/code&gt;: If you want to turn &lt;a href=&quot;http://tinysou.com/&quot;&gt;micro search&lt;/a&gt;, you need to register an account, configure an Engine, the Engine of Key Fill in the configuration file&lt;code&gt;id&lt;/code&gt; can.&lt;/p&gt;
+
+&lt;h2 id=&quot;common-problem&quot;&gt;common problem&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;** Q: The default picture is left home, how do I set up the center to make pictures? **&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;使用 &lt;code&gt;&amp;lt;img src=&amp;quot;&amp;quot; style=&amp;quot;display:block;margin:auto&amp;quot;/&amp;gt;&lt;/code&gt;的HTML标签。&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;&amp;lt;img src =&amp;quot; &amp;quot;style =&amp;quot; display: block; margin: auto &amp;quot;/&amp;gt;&lt;/code&gt; HTML tags.&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Q：如何建立一篇图片类文章（Gallery Post）？&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;** Q: How to build an image articles (Gallery Post)? **&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;直接新建一个 Markdown 文件，将其&lt;code&gt;front-matter&lt;/code&gt;修改为如下，即可看到主题为图片类文章提供的样式。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;---
-layout: photo
-title: Gallery Post
-photos:
-- http://i.minus.com/ibobbTlfxZgITW.jpg
-- http://i.minus.com/iedpg90Y0exFS.jpg
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Q：我在配置文件中给某一项设置了值，但为什么总是看不到效果啊？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Direct Create a Markdown file, &lt;code&gt;front-matter&lt;/code&gt; modified as follows, you can see the theme style image articles provided.&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;_config.yml&lt;/code&gt;文件中的每个属性值前面必须留一个空格，建议在 Sublime/Notepad++ 中开启显示所有空格模式。另每篇文章的 &lt;code&gt;front-matter&lt;/code&gt; 也要注意这个问题。&lt;/p&gt;
+&lt;h2 id=&quot;&gt;`&lt;code&gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;layout: photo&lt;br&gt;
+title: Gallery Post&lt;br&gt;
+photos:&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Q：怎么提意见和建议？&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;Http://i.minus.com/ibobbTlfxZgITW.jpg&quot;&gt;Http://i.minus.com/ibobbTlfxZgITW.jpg&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;http-i-minus-com-iedpg90y0exfs-jpg&quot;&gt;- &lt;a href=&quot;Http://i.minus.com/iedpg90Y0exFS.jpg&quot;&gt;Http://i.minus.com/iedpg90Y0exFS.jpg&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;`&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;** Q: I am in the configuration file to set the value of an item, but why always see the effect ah? **&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;主题还在不断完善中，欢迎 &lt;a href=&quot;https://github.com/Simpleyyt/jekyll-jacman/issues&quot;&gt;open issue&lt;/a&gt; 来提建议，参与讨论。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;_config.yml&lt;/code&gt; Front of each attribute value file must leave a space, it is recommended that all open spaces display modes Sublime / Notepad ++ in. Another of each article &lt;code&gt;front-matter&lt;/code&gt; also pay attention to this issue.&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;*&lt;em&gt;Q：为什么我修改了配置文件/发表了博文，解析出来的却是乱码呢？ *&lt;/em&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;** Q: how comments and suggestions? **&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;请将你的配置文件/markdown文件保存成 &lt;code&gt;UTF-8&lt;/code&gt; 格式。&lt;/p&gt;
+&lt;p&gt;Topic still evolving, welcome &lt;a href=&quot;https://github.com/Simpleyyt/jekyll-jacman/issues&quot;&gt;open issue&lt;/a&gt; to make recommendations, participate in discussions.&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;*&lt;em&gt;Q：为什么开启了微博秀后，显示是空白的，没有内容展示？ *&lt;/em&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;** Q: Why do I modify the configuration file / published Bowen, parse it out but it is a distortion? **&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;每次修改参数都会这样，需要多刷新几次或者上传到服务器上就好了。&lt;/p&gt;
+&lt;p&gt;Please save your configuration file / markdown files into &lt;code&gt;UTF-8&lt;/code&gt; format.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;** Q: Why open microblogging show display is blank, no content impressions? **&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Each time you modify this parameter will need to refresh a few times, or uploaded to the server just fine.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How to Use Jacman topic</title>
+   <link href="/jekyll/2015/09/20/how-to-use-jacman-en"/>
+   <updated>2015-09-20T00:00:00+02:00</updated>
+   <id>/jekyll/2015/09/20/how-to-use-jacman-en</id>
+   <content type="html">&lt;h2 id=&quot;topic-introduction&quot;&gt;Topic Introduction&lt;/h2&gt;
+
+&lt;p&gt;Jekyll-Jacman is &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; has designed a fresh and responsive theme, has a richer feature support and a lot of domestic service. Jacman began &lt;a href=&quot;https://github.com/wuchong/jacman&quot;&gt;Jacman&lt;/a&gt; transplanted from.&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;-! More -&amp;gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;configuration-guide&quot;&gt;Configuration Guide&lt;/h2&gt;
+
+&lt;p&gt;Jacman topic provides a wealth of configuration properties, you can achieve your own definition of the subject matter. &lt;code&gt;_config.yml&lt;/code&gt; Configuration file located in the root directory of the theme. This update to the configuration file for a major adjustment, if you use it before the Jacman, also require you to be modified according to the following guidelines.&lt;/p&gt;
+
+&lt;p&gt;`&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;menu&quot;&gt;Menu&lt;/h5&gt;
+
+&lt;p&gt;menu:&lt;br&gt;
+  Home: /&lt;br&gt;
+  Archive: / archives&lt;br&gt;
+  About: / about&lt;/p&gt;
+
+&lt;h4 id=&quot;controls&quot;&gt;Controls&lt;/h4&gt;
+
+&lt;p&gt;widgets:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Category&lt;/li&gt;
+&lt;li&gt;Tag&lt;/li&gt;
+&lt;li&gt;Links&lt;/li&gt;
+&lt;li&gt;Rss&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;rss&quot;&gt;RSS&lt;/h4&gt;
+
+&lt;p&gt;rss: /atom.xml&lt;/p&gt;
+
+&lt;h4 id=&quot;pictures&quot;&gt;Pictures&lt;/h4&gt;
+
+&lt;p&gt;imglogo:&lt;br&gt;
+  enable: true ## whether to display the website logo&lt;br&gt;
+  src: img / logo.png&lt;br&gt;
+favicon: img / favicon.ico ## favicon&lt;br&gt;
+apple_icon: img / jacman.jpg ## Apple icon on your device, do not transparent background&lt;br&gt;
+author_img: img / author.jpg ## at the bottom of the site&amp;#39;s bloggers Avatar&lt;br&gt;
+banner_img: img / banner.jpg ## blog top pictures&lt;/p&gt;
+
+&lt;p&gt;close_aside: false ## whether to automatically turn off the sidebar in the article page&lt;/p&gt;
+
+&lt;h4 id=&quot;home-related&quot;&gt;Home related&lt;/h4&gt;
+
+&lt;p&gt;index:&lt;br&gt;
+  expand: true ## Home Articles whether to expand. The default is expandable display Read More.&lt;br&gt;
+  excerpt_link: Read More&lt;/p&gt;
+
+&lt;h4 id=&quot;author-information&quot;&gt;author information&lt;/h4&gt;
+
+&lt;p&gt;author:&lt;br&gt;
+  name: ## Author Name&lt;br&gt;
+  intro_line1: &amp;quot;. Hello, I&amp;#39;m Larry Page in Google&amp;quot; ## at the bottom of the site&amp;#39;s personal introduction&lt;br&gt;
+  intro_line2: &amp;quot;This is my blog, believe it or not.&amp;quot;&lt;br&gt;
+  weibo_verifier: ## microblogging show verification code&lt;br&gt;
+  tsina: ## for the show and microblogging microblogging Share&lt;br&gt;
+  weibo: ## social buttons to display the bottom of the site, the same below&lt;br&gt;
+  douban:&lt;br&gt;
+  zhihu:&lt;br&gt;
+  email:&lt;br&gt;
+  twitter:&lt;br&gt;
+  github:&lt;br&gt;
+  facebook:&lt;br&gt;
+  linkedin:&lt;br&gt;
+  google_plus:&lt;br&gt;
+  stackoverflow:&lt;/p&gt;
+
+&lt;h4 id=&quot;table-of-contents&quot;&gt;table of Contents&lt;/h4&gt;
+
+&lt;p&gt;toc:&lt;br&gt;
+  article: true ## is displayed in the article directory&lt;br&gt;
+  aside: true ## whether to display the directory in the sidebar&lt;/p&gt;
+
+&lt;h4 id=&quot;links&quot;&gt;Links&lt;/h4&gt;
+
+&lt;p&gt;links:&lt;br&gt;
+  Code Agricultural circle: &lt;a href=&quot;https://coderq.com&quot;&gt;https://coderq.com&lt;/a&gt;, a programmer for the exchange and sharing of new generation community&lt;br&gt;
+  Jark&amp;#39;s Blog: &lt;a href=&quot;http://wuchong.me&quot;&gt;http://wuchong.me&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;reviews&quot;&gt;Reviews&lt;/h4&gt;
+
+&lt;p&gt;duoshuo_shortname:&lt;br&gt;
+disqus_shortname:&lt;/p&gt;
+
+&lt;h4 id=&quot;share-button&quot;&gt;Share button&lt;/h4&gt;
+
+&lt;p&gt;jiathis:&lt;br&gt;
+  enable: false ## default theme built-share&lt;br&gt;
+  id:&lt;br&gt;
+  tsina:&lt;/p&gt;
+
+&lt;h4 id=&quot;site-statistics&quot;&gt;Site Statistics&lt;/h4&gt;
+
+&lt;p&gt;google_analytics:&lt;br&gt;
+  enable: false&lt;br&gt;
+  id: ## google analytics ID.&lt;br&gt;
+  site: ## Web site addresses.&lt;br&gt;
+baidu_tongji:&lt;br&gt;
+  enable: false&lt;br&gt;
+  sitecode: ## Baidu statistics signature site&lt;br&gt;
+cnzz_tongji:&lt;br&gt;
+  enable: false&lt;br&gt;
+  siteid: ## CNZZ Statistics Site ID&lt;/p&gt;
+
+&lt;h4 id=&quot;miscellaneous&quot;&gt;Miscellaneous&lt;/h4&gt;
+
+&lt;p&gt;ShowCustomFont: true&lt;br&gt;
+fancybox: true&lt;br&gt;
+totop: true&lt;/p&gt;
+
+&lt;h4 id=&quot;custom-search&quot;&gt;Custom Search&lt;/h4&gt;
+
+&lt;p&gt;google_cse:&lt;br&gt;
+  enable: false&lt;br&gt;
+  cx:&lt;br&gt;
+baidu_search:&lt;br&gt;
+  enable: false&lt;br&gt;
+  id:&lt;br&gt;
+  site: &lt;a href=&quot;http://zhannei.baidu.com/cse/search&quot;&gt;http://zhannei.baidu.com/cse/search&lt;/a&gt;&lt;br&gt;
+tinysou_search: ## &lt;a href=&quot;http://tinysou.com/&quot;&gt;http://tinysou.com/&lt;/a&gt;&lt;br&gt;
+  enable: false&lt;br&gt;
+  id: &amp;quot;4ac092ad8d749fdc6293&amp;quot;&lt;br&gt;
+`&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;properties-function&quot;&gt;Properties function&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Menu menu ** **
+Not enabled by default &lt;code&gt;/ tags&lt;/code&gt; and&lt;code&gt;/ categories&lt;/code&gt; page, if you need to enable file in the &lt;code&gt;source&lt;/code&gt; blog directory folders are established&lt;code&gt;tags&lt;/code&gt; and &lt;code&gt;categories&lt;/code&gt; Folders Each folder contains a&lt;code&gt;index respectively .md&lt;/code&gt; file. Content:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;`&lt;code&gt;&lt;/code&gt;&lt;br&gt;
+layout: tags (or categories)&lt;/p&gt;
+
+&lt;h2 id=&quot;title-tags-or-categories&quot;&gt;title: tags (or categories)&lt;/h2&gt;
+
+&lt;p&gt;`&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;amp; Nbsp; &amp;amp; nbsp; &amp;amp; nbsp; &amp;amp; nbsp; &amp;amp; nbsp; &amp;amp; nbsp; because the topic has built templates on these two pages, so they will be properly parsed.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Controls ** widgets **
+Providing the seven kinds of gadgets. Including labeling, sorting, RSS, Links, microblogging show.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;** ** Link: Link URL Add to add the &lt;code&gt;links&lt;/code&gt; attributes.&lt;/p&gt;
+
+&lt;p&gt;** ** Microblogging show: Note that, if you want to enable microblogging show, you must fill in the value of &lt;code&gt;author&lt;/code&gt; attributes&lt;code&gt;tsina&lt;/code&gt; and &lt;code&gt;weibo_verifier&lt;/code&gt;, the former is your Twitter ID, which is your microblogging show codes, visit the following figure &lt;a href=&quot;http://app.weibo.com/tool/weiboshow&quot;&gt;http://app.weibo.com/tool/weiboshow&lt;/a&gt; in position, you can get your verifier, such as: I was &lt;code&gt;b3593ceb&lt;/code&gt;.&lt;br&gt;
+! &lt;a href=&quot;Http://ww1.sinaimg.cn/large/81b78497jw1emegd6b0ytj209204pweu.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to turn off the sidebar, the &lt;code&gt;close_aside&lt;/code&gt; set to&lt;code&gt;true&lt;/code&gt;, it will automatically turn off the sidebar in blog page.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Pictures Image ** **&lt;br&gt;
+This topic can set up a website related images, such as site icon ( &lt;code&gt;favicon&lt;/code&gt;), website logo (&lt;code&gt;imglogo&lt;/code&gt;), author avatar ( &lt;code&gt;author_img&lt;/code&gt;). We recommend enabling website logo, format or suggestions for &lt;code&gt;.svg&lt;/code&gt;&lt;code&gt;.png&lt;/code&gt; format. At the same time it proposed to provide supporting and favicon icon &lt;code&gt;apple_icon&lt;/code&gt; on Apple devices (not transparent background).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Display Mode Index ** ** Home&lt;br&gt;
+Home currently supports two display modes, one is the original card of formula (Go to &lt;a href=&quot;http://wuchong.me/jacman&quot;&gt;Demo&lt;/a&gt; Preview), and the other is similar to the official theme of the article Expanding (&lt;a href=&quot;http://wuchong.me&quot;&gt;site &lt;/a&gt; which uses this). Both have advantages and disadvantages, the former home load faster, the latter article content more attractive to readers. After expanding uses a default theme, open for the first card type, set the &lt;code&gt;expand&lt;/code&gt; index&lt;code&gt;attributes of: false&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The card is a summary of the article contents of the article before the interception of 140 words to be summarized &lt;code&gt;description&lt;/code&gt; own and at the beginning of the&lt;code&gt;front-matter&lt;/code&gt; in. Expanding the page is to use the &lt;code&gt;&amp;lt;-! More -&amp;gt;&lt;/code&gt; intercepted.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Author information author ** **&lt;br&gt;
+On information, we recommended to completed. Where &lt;code&gt;tsina&lt;/code&gt; your Weibo ID, different from the user name or Twitter homepage addresses. Enabling this attribute, other users can share your articles on the microblogging while automatically! You. At the same time it &lt;code&gt;weibo_verifier&lt;/code&gt; act together to generate microblogging show. &lt;code&gt;Intro_line1&lt;/code&gt; and&lt;code&gt;intro_line2&lt;/code&gt; is a personal website at the bottom of the presentation. &lt;code&gt;Weibo&lt;/code&gt;,&lt;code&gt;twitter&lt;/code&gt;, &lt;code&gt;facebook&lt;/code&gt; the like is used to display the lower right corner of the site&amp;#39;s social buttons, as shown below.&lt;br&gt;
+! &lt;a href=&quot;Http://ww4.sinaimg.cn/large/81b78497jw1emgscr3575j2078050jrc.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;** Contents toc **&lt;br&gt;
+Whether in the article or directory function sidebar enabled. Both may have to &lt;code&gt;true&lt;/code&gt; or are&lt;code&gt;false&lt;/code&gt;. Also, if you want to turn off a specific directory features an article at the beginning of the article you can file &lt;code&gt;front-matter&lt;/code&gt; add a line in&lt;code&gt;toc: false&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Comments comments ** **&lt;br&gt;
+Fill &lt;code&gt;duoshuo_shortname&lt;/code&gt; &lt;a href=&quot;http://duoshuo.com/&quot;&gt;say&lt;/a&gt; user name, say enabled commenting system. In mainland China with a better comment system.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fill &lt;code&gt;disqus_shortname&lt;/code&gt; &lt;a href=&quot;http://disqus.com/&quot;&gt;disqus&lt;/a&gt; user name, enable disqus comment system. Wider international use of the commenting system. &lt;code&gt;_config.yml&lt;/code&gt; Blog settings file in the root directory of the&lt;code&gt;disqus_shortname&lt;/code&gt; also can open the function.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Share jiathis ** ** Screening&lt;br&gt;
+&lt;a href=&quot;http://www.jiathis.com/&quot;&gt;Screening&lt;/a&gt; sharing system. It turned off by default, because the theme has built native sharing.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Site Stats Analytics ** **&lt;br&gt;
+&lt;code&gt;Google_analytics&lt;/code&gt;: Google Analytics tracking code. Note: Google Analytics has been upgraded to Universal Analytics. Please go back to upgrade your version of Google Analytics tracking code is then enabled, for more information please &lt;a href=&quot;https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN&quot;&gt;CLICK HERE&lt;/a&gt; understanding.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;Baidu_tongji&lt;/code&gt;: Baidu statistics. Sites need to fill pattern &lt;code&gt;sitecode&lt;/code&gt;, in &lt;a href=&quot;http://tongji.baidu.com/web/welcome/login&quot;&gt;official website&lt;/a&gt; to register and configure a site, to obtain signatures. Signature in the &amp;quot;Site Center&amp;quot; -&amp;gt; &amp;quot;Get the code&amp;quot; view, &lt;code&gt;e6d1f421bbc9962127a50488f9ed37d1&lt;/code&gt; shown in the following figure, remove the front of the note&lt;code&gt;3F&lt;/code&gt;.&lt;br&gt;
+! &lt;a href=&quot;Http://ww4.sinaimg.cn/large/81b78497jw1emf4v6qf91j20kf07sq8v.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Cnzz_tongji&lt;/code&gt;: Master statistics. After the need to fill the site ID&lt;code&gt;siteid&lt;/code&gt;, empathy in &lt;a href=&quot;http://www.cnzz.com&quot;&gt;Station Executive Network&lt;/a&gt; register and configure the site to get.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Mathematical formulas mathjax ** **&lt;br&gt;
+Theme Support LaTex write mathematical formulas. Only at the beginning of the article file &lt;code&gt;front-matter&lt;/code&gt; in, add a line&lt;code&gt;mathjax: true&lt;/code&gt;, LaTex to write the formula in the text.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Photo browser fancybox ** **&lt;br&gt;
+Off by default, if you regularly publish articles Gallery type, then set to &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;** Top totop **&lt;br&gt;
+`` Back to top the bottom right button is enabled by default.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Custom Search Search ** **&lt;br&gt;
+&lt;code&gt;Baidu_search&lt;/code&gt;: If enabled within the Baidu search the station need to sign &lt;a href=&quot;http://zn.baidu.com/&quot;&gt;Baidu Search stations&lt;/a&gt;, configure your site and get the search open search Site ID, additional attributes can fill&lt;code&gt;site&lt;/code&gt; the default value can also fill in their own second-level domain of the CNAME, more detail can be read &lt;a href=&quot;http://gengbiao.me/hexo/hexo%E6%B7%BB%E5%8A%A0%%20E7%%2099%%20BE%%20E5%%20BA%%20A6%%20E7%%20AB%%2099%%20E5%%2086%%2085%%20E6%%2090%%209C%%20E7%%20B4%%20A2%20/&quot;&gt;this blog&lt;/a&gt; understanding.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;Google_cse&lt;/code&gt;: If enabled Google Custom Search need to sign &lt;a href=&quot;https://www.google.com/cse/&quot;&gt;Google CSE&lt;/a&gt;, configure your site and get this custom search ID. In addition, you need to create &lt;code&gt;search&lt;/code&gt; file&lt;code&gt;source&lt;/code&gt; file blog directory folder in the folder and file contains a &lt;code&gt;index.md&lt;/code&gt;. Content:&lt;br&gt;
+ `&lt;code&gt;&lt;/code&gt;&lt;br&gt;
+ layout: search&lt;br&gt;
+ title: search&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;`&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Tiny_search&lt;/code&gt;: If you want to turn &lt;a href=&quot;http://tinysou.com/&quot;&gt;micro search&lt;/a&gt;, you need to register an account, configure an Engine, the Engine of Key Fill in the configuration file&lt;code&gt;id&lt;/code&gt; can.&lt;/p&gt;
+
+&lt;h2 id=&quot;common-problem&quot;&gt;common problem&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;** Q: The default picture is left home, how do I set up the center to make pictures? **&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Use &lt;code&gt;&amp;lt;img src =&amp;quot; &amp;quot;style =&amp;quot; display: block; margin: auto &amp;quot;/&amp;gt;&lt;/code&gt; HTML tags.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;** Q: How to build an image articles (Gallery Post)? **&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Direct Create a Markdown file, &lt;code&gt;front-matter&lt;/code&gt; modified as follows, you can see the theme style image articles provided.&lt;/p&gt;
+
+&lt;h2 id=&quot;&gt;`&lt;code&gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;layout: photo&lt;br&gt;
+title: Gallery Post&lt;br&gt;
+photos:&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;Http://i.minus.com/ibobbTlfxZgITW.jpg&quot;&gt;Http://i.minus.com/ibobbTlfxZgITW.jpg&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;http-i-minus-com-iedpg90y0exfs-jpg&quot;&gt;- &lt;a href=&quot;Http://i.minus.com/iedpg90Y0exFS.jpg&quot;&gt;Http://i.minus.com/iedpg90Y0exFS.jpg&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;`&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;** Q: I am in the configuration file to set the value of an item, but why always see the effect ah? **&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;_config.yml&lt;/code&gt; Front of each attribute value file must leave a space, it is recommended that all open spaces display modes Sublime / Notepad ++ in. Another of each article &lt;code&gt;front-matter&lt;/code&gt; also pay attention to this issue.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;** Q: how comments and suggestions? **&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Topic still evolving, welcome &lt;a href=&quot;https://github.com/Simpleyyt/jekyll-jacman/issues&quot;&gt;open issue&lt;/a&gt; to make recommendations, participate in discussions.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;** Q: Why do I modify the configuration file / published Bowen, parse it out but it is a distortion? **&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Please save your configuration file / markdown files into &lt;code&gt;UTF-8&lt;/code&gt; format.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;** Q: Why open microblogging show display is blank, no content impressions? **&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Each time you modify this parameter will need to refresh a few times, or uploaded to the server just fine.&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
