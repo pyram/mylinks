@@ -1,0 +1,13 @@
+
+/404
+/atom.xml
+/categories/
+/archives/
+/tags/
+/search/
+/about/
+/
+/rss.xml
+/sitemap.txt
+
+/jekyll/2015/09/20/how-to-use-jacman

@@ -1,1091 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="/assets/xslt/atom.xslt" ?>
-<?xml-stylesheet type="text/css" href="/assets/css/atom.css" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<id>https://phlow.github.io/feeling-responsive/</id>
-	<title>Feeling Responsive</title>
-	<updated>2016-09-22T15:29:39+02:00</updated>
+ 
+ <title>Jekyll Jacman</title>
+ <link href="" rel="self"/>
+ <link href=""/>
+ <updated>2016-09-22T23:38:19+02:00</updated>
+ <id></id>
+ <author>
+   <name>yitao</name>
+   <email></email>
+ </author>
 
-	<subtitle>»Feeling Responsive« is a responsive theme for Jekyll based on the fabulous foundation framework with beautiful typography and a bright color palette.</subtitle>
+ 
+ <entry>
+   <title>如何使用 Jacman 主题</title>
+   <link href="/jekyll/2015/09/20/how-to-use-jacman"/>
+   <updated>2015-09-20T00:00:00+02:00</updated>
+   <id>/jekyll/2015/09/20/how-to-use-jacman</id>
+   <content type="html">&lt;h2 id=&quot;&gt;主题介绍&lt;/h2&gt;
 
-	
-		
-		<author>
-			
-				<name>Phlow</name>
-			
-			
-			
-				<uri>http://phlow.de/</uri>
-			
-		</author>
-	
+&lt;p&gt;Jekyll-Jacman 是为 &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; 设计的一款清新且具有响应式的主题，拥有更丰富的特性并支持了很多的国内服务。Jacman 始于 &lt;a href=&quot;https://github.com/wuchong/jacman&quot;&gt;Jacman&lt;/a&gt; 移植而来。&lt;/p&gt;
 
-	<link href="https://phlow.github.io/feeling-responsive/atom.xml" rel="self" type="application/rss+xml" />
-	<link href="https://phlow.github.io/feeling-responsive/" rel="alternate" type="text/html" />
+&lt;!-- more --&gt;
 
-	<generator uri="http://jekyllrb.com" version="3.0.2">Jekyll</generator>
+&lt;h2 id=&quot;&gt;配置指南&lt;/h2&gt;
 
-	
-		<entry>
-			<id>https://phlow.github.io/feeling-responsive/design/mediaelement_js/</id>
-			<title>Play Audio &amp; Video with media&amp;shy;element.js</title>
-			<link href="https://phlow.github.io/feeling-responsive/design/mediaelement_js/" rel="alternate" type="text/html" title="Play Audio &amp; Video with media&amp;shy;element.js" />
-			<updated>2015-10-15T00:00:00+02:00</updated>
+&lt;p&gt;Jacman 主题提供了丰富的配置属性，可以实现您对主题的自定义。配置文件&lt;code&gt;_config.yml&lt;/code&gt;位于主题根目录下。本次更新对配置文件进行了较大调整，如您之前就使用了 Jacman，也需要您根据以下指南进行相应的修改。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;##### 菜单
+menu:
+  主页: /
+  归档: /archives
+  关于: /about
 
-			
-				
-				<author>
-					
-						<name>Phlow</name>
-					
-					
-					
-						<uri>http://phlow.de/</uri>
-					
-				</author>
-			
-			<summary>Do you like music? Or are you a podcaster? Do you want to stream your videos in a nice player? Than you likely will like the integration of &lt;em&gt;mediaelement.js&lt;/em&gt;. It enables you to play music and stream video in a consistent player that looks in each browser delicious. It even works in IE6-8.</summary>
-			<content type="html" xml:base="https://phlow.github.io/feeling-responsive/design/mediaelement_js/">&lt;p&gt;&lt;a href=&quot;http://mediaelementjs.com/&quot;&gt;mediaelement.js&lt;/a&gt; is like magic. It’s browser and device support is perfect. To activate the video or audio player just set the following variable in front matter to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;.&lt;/p&gt;
+#### 控件
+widgets: 
+- category
+- tag
+- links
+- rss
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mediaplayer: true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+#### RSS 
+rss: /atom.xml 
 
-&lt;p&gt;To use the player just use some HTML5-magic like…&lt;/p&gt;
+#### 图片相关
+imglogo:
+  enable: true               ## 是否显示网站 logo
+  src: img/logo.png        
+favicon: img/favicon.ico     ## 网站图标    
+apple_icon: img/jacman.jpg   ## 苹果设备上的图标，背景不要透明
+author_img: img/author.jpg   ## 网站底部的博主头像
+banner_img: img/banner.jpg   ## 博客顶部的图片
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://path-to-file.com/music.mp3&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;audio/mp3&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;controls=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;controls&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/audio&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+close_aside: false      ##是否在文章页面自动关闭侧边栏
 
-&lt;p&gt;All possible functions and how to use &lt;em&gt;mediaelement.js&lt;/em&gt; is well-documented on the &lt;a href=&quot;http://mediaelementjs.com/&quot;&gt;players website&lt;/a&gt;.&lt;/p&gt;
+#### 首页相关
+index:
+  expand: true              ## 首页文章是否展开。默认为展开式，显示 Read More。
+  excerpt_link: Read More    
 
-&lt;h2 id=&quot;music-from-all-around-the-world&quot;&gt;»Music From All Around The World«&lt;/h2&gt;
+#### 作者信息
+author:
+  name: ## 作者名
+  intro_line1:  &quot;Hello ,I'm Larry Page in Google.&quot;    ## 网站底部的个人介绍
+  intro_line2:  &quot;This is my blog,believe it or not.&quot;  
+  weibo_verifier:  ## 微博秀的验证码
+  tsina:           ## 用于微博秀和微博分享
+  weibo:           ## 用于显示网站底部社交按钮，下同
+  douban:         
+  zhihu:  
+  email:     
+  twitter:   
+  github:     
+  facebook: 
+  linkedin:   
+  google_plus:   
+  stackoverflow:  
 
-&lt;p&gt;&lt;a href=&quot;https://archive.org/details/music_from_all_around_the_world&quot;&gt;»Music From All Around The World«&lt;/a&gt; is a compilation curated by Jeannette Corneille and Moritz “mo.” Sauer for &lt;a href=&quot;http://phlow-magazine.com/&quot;&gt;Phlow-Magazine.com&lt;/a&gt;. Cover &lt;a href=&quot;http://mediaelementjs.com/&quot;&gt;Artwork designed by Jeannette Corneille&lt;/a&gt;. All tracks were released under a &lt;a href=&quot;http://jcorneille.de/&quot;&gt;creative commons licence&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;b-ju---philly-run&quot;&gt;B-Ju - »Philly Run«&lt;/h3&gt;
+#### 目录
+toc:
+  article: true   ## 是否在文章中显示目录
+  aside: true     ## 是否在侧边栏显示目录
 
-&lt;audio src=&quot;http://archive.org/download/music_from_all_around_the_world/13._music_from_all_around_the_world_-_b-ju_-_philly_run.mp3&quot; type=&quot;audio/mp3&quot; controls=&quot;controls&quot;&gt;&lt;/audio&gt;
+#### 友情链接
+links:
+  码农圈: https://coderq.com,一个面向程序员交流分享的新一代社区
+  Jark's Blog: http://wuchong.me
 
-&lt;h3 id=&quot;comfort-fit---freeze-the-cut&quot;&gt;Comfort Fit - »Freeze The Cut«&lt;/h3&gt;
+#### 评论
+duoshuo_shortname: 
+disqus_shortname:  
 
-&lt;audio src=&quot;http://archive.org/download/music_from_all_around_the_world/05._music_from_all_around_the_world_-_comfort_fit_-_freeze_the_cut_opolopos_emotional_draft_remix.mp3&quot; type=&quot;audio/mp3&quot; controls=&quot;controls&quot;&gt;&lt;/audio&gt;
+#### 分享按钮
+jiathis:
+  enable: false   ## 默认使用主题内建分享
+  id:    
+  tsina: 
 
-&lt;h3 id=&quot;the-black-atlantic---dandelion&quot;&gt;The Black Atlantic - »Dandelion«&lt;/h3&gt;
+#### 网站统计
+google_analytics:
+  enable: false
+  id:            ## google analytics ID.
+  site:          ## 网站地址.
+baidu_tongji:
+  enable: false
+  sitecode:      ## 百度统计站点特征码
+cnzz_tongji:
+  enable: false
+  siteid:        ## CNZZ统计站点ID
 
-&lt;audio src=&quot;http://archive.org/download/music_from_all_around_the_world/02._music_from_all_around_the_world_-_the_black_atlantic_-_dandelion.mp3&quot; type=&quot;audio/mp3&quot; controls=&quot;controls&quot;&gt;&lt;/audio&gt;
+#### 杂项
+ShowCustomFont: true  
+fancybox: true        
+totop: true           
 
-&lt;p class=&quot;t30 button radius&quot;&gt;&lt;a href=&quot;https://archive.org/details/music_from_all_around_the_world&quot;&gt;Download Compilation ›&lt;/a&gt;&lt;/p&gt;
+#### 自定义搜索
+google_cse: 
+  enable: false
+  cx:  
+baidu_search:    
+  enable: false
+  id:   
+  site: http://zhannei.baidu.com/cse/search 
+tinysou_search:     ## http://tinysou.com/
+  enable: false
+  id: &quot;4ac092ad8d749fdc6293&quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;&gt;属性功能&lt;/h3&gt;
 
-</content>
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;菜单 menu&lt;/strong&gt;
+默认没有启用 &lt;code&gt;/tags&lt;/code&gt; 和 &lt;code&gt;/categories&lt;/code&gt;页面，如果需要启用请在博客目录下的&lt;code&gt;source&lt;/code&gt;文件夹中分别建立&lt;code&gt;tags&lt;/code&gt; 和 &lt;code&gt;categories&lt;/code&gt;文件夹每个文件夹中分别包含一个&lt;code&gt;index.md&lt;/code&gt;文件。内容为：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;layout: tags (或categories)
+title: tags (或categories)
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;因为主题中已经内置了这两个页面的模板，所以他们会被正确的解析出来。&lt;/p&gt;
 
-			
-				<category term="design" />
-			
-			
-				<category term="audio player" />
-			
-				<category term="video player" />
-			
-				<category term="streaming music" />
-			
-
-			<published>2015-10-15T00:00:00+02:00</published>
-		</entry>
-	
-		<entry>
-			<id>https://phlow.github.io/feeling-responsive/design/typography/typography/</id>
-			<title>Wonderful Typography</title>
-			<link href="https://phlow.github.io/feeling-responsive/design/typography/typography/" rel="alternate" type="text/html" title="Wonderful Typography" />
-			<updated>2015-08-16T00:00:00+02:00</updated>
-
-			
-				
-				<author>
-					
-						<name>Phlow</name>
-					
-					
-					
-						<uri>http://phlow.de/</uri>
-					
-				</author>
-			
-			<summary>&lt;em&gt;Feeling Responsive&lt;/em&gt; uses &lt;a href=&#39;https://www.google.com/fonts/specimen/Volkhov&#39;&gt;Volkhov&lt;/a&gt; for headlines, &lt;a href=&#39;https://www.google.com/fonts/specimen/Lato&#39;&gt;Lato&lt;/a&gt; for everything else and if you are in need to show some code, it will be in &lt;a href=&#39;http://www.microsoft.com/typography/fonts/family.aspx?FID=18&#39;&gt;Lucida Console&lt;/a&gt; or &lt;a href=&#39;http://en.wikipedia.org/wiki/Monaco_(typeface)&#39;&gt;Monaco&lt;/a&gt;.</summary>
-			<content type="html" xml:base="https://phlow.github.io/feeling-responsive/design/typography/typography/">&lt;!--more--&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;medium-4 medium-push-8 columns&quot;&gt;
-    &lt;div class=&quot;panel radius&quot;&gt;
-      &lt;p id=&quot;toc&quot;&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/p&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#lato--a-sans-serif-typeface-family&quot; id=&quot;markdown-toc-lato--a-sans-serif-typeface-family&quot;&gt;Lato – A Sans Serif Typeface Family&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#about-volkhov-lth2gt&quot; id=&quot;markdown-toc-about-volkhov-lth2gt&quot;&gt;About Volkhov &amp;lt;h2&amp;gt;&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#feeling-responsive-uses-volkhov-for--lth3gt&quot; id=&quot;markdown-toc-feeling-responsive-uses-volkhov-for--lth3gt&quot;&gt;Feeling Responsive uses Volkhov for…  &amp;lt;h3&amp;gt;&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#heading-in-volkhov-lth4gt&quot; id=&quot;markdown-toc-heading-in-volkhov-lth4gt&quot;&gt;Heading in Volkhov &amp;lt;h4&amp;gt;&lt;/a&gt;            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#heading-in-volkhov-lth5gt&quot; id=&quot;markdown-toc-heading-in-volkhov-lth5gt&quot;&gt;Heading in Volkhov &amp;lt;h5&amp;gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#modular-scale&quot; id=&quot;markdown-toc-modular-scale&quot;&gt;Modular Scale&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#typographical-elements&quot; id=&quot;markdown-toc-typographical-elements&quot;&gt;Typographical Elements&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#lthrgt-horizontal-line&quot; id=&quot;markdown-toc-lthrgt-horizontal-line&quot;&gt;&amp;lt;hr&amp;gt; Horizontal Line&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltpregt-displaying-code&quot; id=&quot;markdown-toc-ltpregt-displaying-code&quot;&gt;&amp;lt;pre&amp;gt; Displaying Code&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltblockquotegt-quotation&quot; id=&quot;markdown-toc-ltblockquotegt-quotation&quot;&gt;&amp;lt;blockquote&amp;gt; Quotation&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltblockquotegt-and-ltcitegt--together&quot; id=&quot;markdown-toc-ltblockquotegt-and-ltcitegt--together&quot;&gt;&amp;lt;blockquote&amp;gt; and &amp;lt;cite&amp;gt;  together&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltolgt-ordered-lists&quot; id=&quot;markdown-toc-ltolgt-ordered-lists&quot;&gt;&amp;lt;ol&amp;gt; Ordered Lists&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltulgt-unordered-lists&quot; id=&quot;markdown-toc-ltulgt-unordered-lists&quot;&gt;&amp;lt;ul&amp;gt; Unordered Lists&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltdlgt-definition-lists&quot; id=&quot;markdown-toc-ltdlgt-definition-lists&quot;&gt;&amp;lt;dl&amp;gt; Definition Lists&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltagt&quot; id=&quot;markdown-toc-ltagt&quot;&gt;&amp;lt;a&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltemgt&quot; id=&quot;markdown-toc-ltemgt&quot;&gt;&amp;lt;em&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltstronggt&quot; id=&quot;markdown-toc-ltstronggt&quot;&gt;&amp;lt;strong&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltsmallgt&quot; id=&quot;markdown-toc-ltsmallgt&quot;&gt;&amp;lt;small&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltsgt&quot; id=&quot;markdown-toc-ltsgt&quot;&gt;&amp;lt;s&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltcitegt&quot; id=&quot;markdown-toc-ltcitegt&quot;&gt;&amp;lt;cite&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltqgt&quot; id=&quot;markdown-toc-ltqgt&quot;&gt;&amp;lt;q&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltdfngt&quot; id=&quot;markdown-toc-ltdfngt&quot;&gt;&amp;lt;dfn&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltabbrgt&quot; id=&quot;markdown-toc-ltabbrgt&quot;&gt;&amp;lt;abbr&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#lttimegt&quot; id=&quot;markdown-toc-lttimegt&quot;&gt;&amp;lt;time&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltcodegt&quot; id=&quot;markdown-toc-ltcodegt&quot;&gt;&amp;lt;code&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltvargt&quot; id=&quot;markdown-toc-ltvargt&quot;&gt;&amp;lt;var&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltsampgt&quot; id=&quot;markdown-toc-ltsampgt&quot;&gt;&amp;lt;samp&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltkbdgt&quot; id=&quot;markdown-toc-ltkbdgt&quot;&gt;&amp;lt;kbd&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltsubgt&quot; id=&quot;markdown-toc-ltsubgt&quot;&gt;&amp;lt;sub&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltsupgt&quot; id=&quot;markdown-toc-ltsupgt&quot;&gt;&amp;lt;sup&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltigt&quot; id=&quot;markdown-toc-ltigt&quot;&gt;&amp;lt;i&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltbgt&quot; id=&quot;markdown-toc-ltbgt&quot;&gt;&amp;lt;b&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltugt&quot; id=&quot;markdown-toc-ltugt&quot;&gt;&amp;lt;u&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltmarkgt&quot; id=&quot;markdown-toc-ltmarkgt&quot;&gt;&amp;lt;mark&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ltbrgt&quot; id=&quot;markdown-toc-ltbrgt&quot;&gt;&amp;lt;br&amp;gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#footnotes&quot; id=&quot;markdown-toc-footnotes&quot;&gt;Footnotes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#lth1gt-heading-in-volkhov&quot; id=&quot;markdown-toc-lth1gt-heading-in-volkhov&quot;&gt;&amp;lt;h1&amp;gt;-Heading in Volkhov&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#lth2gt-heading-in-volkhov&quot; id=&quot;markdown-toc-lth2gt-heading-in-volkhov&quot;&gt;&amp;lt;h2&amp;gt;-Heading in Volkhov&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#lth3gt-heading-in-volkhov&quot; id=&quot;markdown-toc-lth3gt-heading-in-volkhov&quot;&gt;&amp;lt;h3&amp;gt;-Heading in Volkhov&lt;/a&gt;            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#lth4gt-heading-in-volkhov&quot; id=&quot;markdown-toc-lth4gt-heading-in-volkhov&quot;&gt;&amp;lt;h4&amp;gt;-Heading in Volkhov&lt;/a&gt;                &lt;ul&gt;
-                  &lt;li&gt;&lt;a href=&quot;#lth5gt-heading-in-volkhov&quot; id=&quot;markdown-toc-lth5gt-heading-in-volkhov&quot;&gt;&amp;lt;h5&amp;gt;-Heading in Volkhov&lt;/a&gt;                    &lt;ul&gt;
-                      &lt;li&gt;&lt;a href=&quot;#lth6gt-heading-in-volkhov&quot; id=&quot;markdown-toc-lth6gt-heading-in-volkhov&quot;&gt;&amp;lt;h6&amp;gt;-Heading in Volkhov&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                  &lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#tables&quot; id=&quot;markdown-toc-tables&quot;&gt;Tables&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;控件 widgets&lt;/strong&gt;
+提供了7种小工具。包括标签、分类、RSS、友情链接、微博秀。&lt;/li&gt;
 &lt;/ul&gt;
 
-    &lt;/div&gt;
-  &lt;/div&gt;&lt;!-- /.medium-4.columns --&gt;
+&lt;p&gt;&lt;strong&gt;友情链接&lt;/strong&gt;：友情链接的网址添加可以在&lt;code&gt;links&lt;/code&gt;属性下添加。&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;微博秀&lt;/strong&gt;：需要注意的是，如果要启用微博秀，您必须填上&lt;code&gt;author&lt;/code&gt;属性下&lt;code&gt;tsina&lt;/code&gt;和&lt;code&gt;weibo_verifier&lt;/code&gt;的值，前者是您微博ID，后者是您微博秀的验证码，访问 &lt;a href=&quot;http://app.weibo.com/tool/weiboshow&quot;&gt;http://app.weibo.com/tool/weiboshow&lt;/a&gt; 在如下图位置，可以获得您的 verifier，如：我的是&lt;code&gt;b3593ceb&lt;/code&gt;。&lt;br&gt;
+&lt;img src=&quot;http://ww1.sinaimg.cn/large/81b78497jw1emegd6b0ytj209204pweu.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
+&lt;p&gt;如果要关闭侧边栏，将&lt;code&gt;close_aside&lt;/code&gt;置为&lt;code&gt;true&lt;/code&gt;，就会在博文页面自动关闭侧边栏。&lt;/p&gt;
 
-&lt;div class=&quot;medium-8 medium-pull-4 columns&quot;&gt;
-
-    &lt;h2 id=&quot;lato--a-sans-serif-typeface-family&quot;&gt;Lato – A Sans Serif Typeface Family&lt;/h2&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://www.google.com/fonts/specimen/Lato&quot;&gt;&lt;dfn&gt;Lato&lt;/dfn&gt;&lt;/a&gt; is a sans serif typeface family started in the summer of 2010 by Warsaw-based designer Łukasz Dziedzic. »Lato« means »Summer« in Polish. In December 2010 the Lato family was published under the Open Font License by his foundry tyPoland, with support from Google.&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;&lt;span class=&quot;teaser&quot;&gt;I do not think of type as something that should be readable. It should be beautiful.&lt;/span&gt;&lt;cite&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Ed_Benguiat&quot;&gt;Ed Benguiat&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;p&gt;In the last ten or so years, during which Łukasz has been designing type, most of his projects were rooted in a particular design task that he needed to solve. With Lato, it was no different. Originally, the family was conceived as a set of corporate fonts for a large client — who in the end decided to go in different stylistic direction, so the family became available for a public release.&lt;/p&gt;
-
-    &lt;p&gt;When working on Lato, Łukasz tried to carefully balance some potentially conflicting priorities. He wanted to create a typeface that would seem quite “transparent” when used in body text but would display some original traits when used in larger sizes. He used classical proportions (particularly visible in the uppercase) to give the letterforms familiar harmony and elegance. At the same time, he created a sleek sans serif look, which makes evident the fact that Lato was designed in 2010 — even though it does not follow any current trend.&lt;/p&gt;
-
-    &lt;p&gt;The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness. “Male and female, serious but friendly. With the feeling of the Summer,” says Łukasz. Learn more at &lt;a href=&quot;http://www.latofonts.com/&quot;&gt;www.latofonts.com&lt;/a&gt;&lt;/p&gt;
-
-    &lt;h2 id=&quot;about-volkhov-lth2gt&quot;&gt;About Volkhov &amp;lt;h2&amp;gt;&lt;/h2&gt;
-
-    &lt;p&gt;&lt;dfn&gt;Volkhov&lt;/dfn&gt; is a low-contrast seriffed typeface with a robust character, intended for providing a motivating reading experience. Volkhov was designed by Ivan Petrov.&lt;/p&gt;
-
-    &lt;h3 id=&quot;feeling-responsive-uses-volkhov-for--lth3gt&quot;&gt;Feeling Responsive uses Volkhov for…  &amp;lt;h3&amp;gt;&lt;/h3&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&amp;lt;h1&amp;gt;-headings&lt;/li&gt;
-      &lt;li&gt;&amp;lt;h2&amp;gt;-headings&lt;/li&gt;
-      &lt;li&gt;&amp;lt;h3&amp;gt;-headings&lt;/li&gt;
-      &lt;li&gt;&amp;lt;h4&amp;gt;-headings&lt;/li&gt;
-      &lt;li&gt;&amp;lt;h5&amp;gt;-headings&lt;/li&gt;
-      &lt;li&gt;&amp;lt;h6&amp;gt;-headings&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;h4 id=&quot;heading-in-volkhov-lth4gt&quot;&gt;Heading in Volkhov &amp;lt;h4&amp;gt;&lt;/h4&gt;
-
-    &lt;p&gt;As a four-weight family it is well-suited for complex text environments being economic and legible, contemporary and prominent. Many of its design solutions relate to this purpose: large open counters, rather short descenders, and brutal asymmetric serifs.&lt;/p&gt;
-
-    &lt;h5 id=&quot;heading-in-volkhov-lth5gt&quot;&gt;Heading in Volkhov &amp;lt;h5&amp;gt;&lt;/h5&gt;
-
-    &lt;p&gt;Spacing in Bold is slightly increased compared to the normal weight, because the bold mass is mostly grown inwards. The Italic has a steep angle and a distinctive calligraphically reminiscent character, as a counterpart to the rigorous Regular.&lt;/p&gt;
-
-    &lt;h2 id=&quot;modular-scale&quot;&gt;Modular Scale&lt;/h2&gt;
-
-    &lt;p&gt;&lt;em&gt;Feeling Responsive&lt;/em&gt; explores the &lt;em&gt;2:3 perfect fifth&lt;/em&gt; modular scale created with &lt;a href=&quot;http://modularscale.com/&quot;&gt;www.modular-scale.com&lt;/a&gt;. This is the modular scale of  &lt;em&gt;Feeling Responsive&lt;/em&gt;.&lt;/p&gt;
-
-    &lt;p&gt;44px @ 1:1.5 – Ideal text size&lt;br /&gt;
-16px @ 1:1.5 – Important number&lt;/p&gt;
-
-    &lt;table&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;Modular Scale&lt;/th&gt;
-          &lt;th&gt; &lt;/th&gt;
-          &lt;th&gt; &lt;/th&gt;
-          &lt;th&gt; &lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;44.000&lt;/td&gt;
-          &lt;td&gt;1&lt;/td&gt;
-          &lt;td&gt;2.75&lt;/td&gt;
-          &lt;td&gt;338.462&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;36.000&lt;/td&gt;
-          &lt;td&gt;0.818&lt;/td&gt;
-          &lt;td&gt;2.25&lt;/td&gt;
-          &lt;td&gt;276.923&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;29.333&lt;/td&gt;
-          &lt;td&gt;0.667&lt;/td&gt;
-          &lt;td&gt;1.833&lt;/td&gt;
-          &lt;td&gt;225.638&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;24.000&lt;/td&gt;
-          &lt;td&gt;0.545&lt;/td&gt;
-          &lt;td&gt;1.5&lt;/td&gt;
-          &lt;td&gt;184.615&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;19.555&lt;/td&gt;
-          &lt;td&gt;0.444&lt;/td&gt;
-          &lt;td&gt;1.222&lt;/td&gt;
-          &lt;td&gt;150.423&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;16.000&lt;/td&gt;
-          &lt;td&gt;0.364&lt;/td&gt;
-          &lt;td&gt;1&lt;/td&gt;
-          &lt;td&gt;123.077&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-
-    &lt;h2 class=&quot;t60&quot; id=&quot;typographical-elements&quot;&gt;Typographical Elements&lt;/h2&gt;
-
-    &lt;p&gt;Here you’ll find the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list&quot;&gt;complete list of HTML5-Tags&lt;/a&gt; and this is how they look like.&lt;/p&gt;
-
-    &lt;h3 id=&quot;lthrgt-horizontal-line&quot;&gt;&amp;lt;hr&amp;gt; Horizontal Line&lt;/h3&gt;
-    &lt;hr /&gt;
-
-    &lt;h3 id=&quot;ltpregt-displaying-code&quot;&gt;&amp;lt;pre&amp;gt; Displaying Code&lt;/h3&gt;
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Code Blocks&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-
-    &lt;h3 id=&quot;ltblockquotegt-quotation&quot;&gt;&amp;lt;blockquote&amp;gt; Quotation&lt;/h3&gt;
-    &lt;blockquote&gt;Everything happens for a reason. (Britney Spears)&lt;/blockquote&gt;
-
-    &lt;h3 id=&quot;ltblockquotegt-and-ltcitegt--together&quot;&gt;&amp;lt;blockquote&amp;gt; and &amp;lt;cite&amp;gt;  together&lt;/h3&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Age is an issue of mind over matter. If you don’t mind, it doesn’t matter.
-&lt;cite&gt;Mark Twain&lt;/cite&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;h3 id=&quot;ltolgt-ordered-lists&quot;&gt;&amp;lt;ol&amp;gt; Ordered Lists&lt;/h3&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Ordered List&lt;/li&gt;
-      &lt;li&gt;Second List Item&lt;/li&gt;
-      &lt;li&gt;Third List Item
-        &lt;ol&gt;
-          &lt;li&gt;Second Level First Item&lt;/li&gt;
-          &lt;li&gt;Second Level Second Item&lt;/li&gt;
-          &lt;li&gt;Second Level Third Item
-            &lt;ol&gt;
-              &lt;li&gt;And a third level First Item&lt;/li&gt;
-              &lt;li&gt;And a third level Second Item&lt;/li&gt;
-              &lt;li&gt;And a third level Third Item&lt;/li&gt;
-            &lt;/ol&gt;
-          &lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Fourth List Item&lt;/li&gt;
-      &lt;li&gt;Fifth List Item&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;h3 id=&quot;ltulgt-unordered-lists&quot;&gt;&amp;lt;ul&amp;gt; Unordered Lists&lt;/h3&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Unordered List&lt;/li&gt;
-      &lt;li&gt;Second List Item&lt;/li&gt;
-      &lt;li&gt;Third List Item
-        &lt;ul&gt;
-          &lt;li&gt;Second Level First Item&lt;/li&gt;
-          &lt;li&gt;Second Level Second Item&lt;/li&gt;
-          &lt;li&gt;Second Level Third Item
-            &lt;ul&gt;
-              &lt;li&gt;And a third level First Item&lt;/li&gt;
-              &lt;li&gt;And a third level Second Item&lt;/li&gt;
-              &lt;li&gt;And a third level Third Item&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Fourth List Item&lt;/li&gt;
-      &lt;li&gt;Fifth List Item&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;h3 id=&quot;ltdlgt-definition-lists&quot;&gt;&amp;lt;dl&amp;gt; Definition Lists&lt;/h3&gt;
-
-    &lt;dl&gt;
-      &lt;dt&gt;Definition List&lt;/dt&gt;
-      &lt;dd&gt;Bacon ipsum dolor sit amet spare ribs brisket ribeye, andouille sirloin bresaola frankfurter corned beef capicola bacon. Salami beef ribs sirloin, short loin hamburger shoulder t-bone.&lt;/dd&gt;
-      &lt;dt&gt;Beef ribs jowl swine porchetta&lt;/dt&gt;
-      &lt;dd&gt;Sirloin tenderloin swine frankfurter pork loin pork capicola ham hock strip steak ribeye beef ribs. Hamburger t-bone ribeye ham prosciutto bresaola.&lt;/dd&gt;
-      &lt;dt&gt;Pancetta flank sirloin pork&lt;/dt&gt;
-      &lt;dd&gt;short ribs shankle prosciutto landjaeger. Beef ribs turkey shoulder drumstick. Leberkas pork belly ribeye, bresaola jerky strip steak tenderloin bacon landjaeger short ribs beef ribs. Flank pork chop fatback tail kielbasa filet mignon jowl landjaeger bresaola tongue corned beef biltong.&lt;/dd&gt;
-      &lt;dd&gt;Landjaeger spare ribs fatback corned beef tenderloin drumstick, swine chicken beef turkey biltong doner tri-tip filet mignon.&lt;/dd&gt;
-    &lt;/dl&gt;
-
-    &lt;h3 id=&quot;ltagt&quot;&gt;&amp;lt;a&amp;gt;&lt;/h3&gt;
-    &lt;p&gt;&lt;a href=&quot;http://phlow.de/&quot;&gt;Links&lt;/a&gt; make the web exceptional.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltemgt&quot;&gt;&amp;lt;em&amp;gt;&lt;/h3&gt;
-    &lt;p&gt;Let’s &lt;em&gt;emphasize&lt;/em&gt; how important responsive webdesign is.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltstronggt&quot;&gt;&amp;lt;strong&amp;gt;&lt;/h3&gt;
-    &lt;p&gt;This looks like &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltsmallgt&quot;&gt;&amp;lt;small&amp;gt;&lt;/h3&gt;
-    &lt;p&gt;&lt;small&gt;This is small text.&lt;/small&gt;&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltsgt&quot;&gt;&amp;lt;s&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;It’s nice getting things done. Just strike through &lt;s&gt;finished tasks&lt;/s&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltcitegt&quot;&gt;&amp;lt;cite&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;&lt;cite&gt;Albert Einstein&lt;/cite&gt;&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltqgt&quot;&gt;&amp;lt;q&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;If you use &amp;lt;q&amp;gt; your text gets &lt;q&gt;automagically quotes around the text passage&lt;/q&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltdfngt&quot;&gt;&amp;lt;dfn&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;The &amp;lt;dfn&amp;gt; tag is a phrase tag. It defines a &lt;dfn&gt;definition term&lt;/dfn&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltabbrgt&quot;&gt;&amp;lt;abbr&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;The &lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; was founded in 1948.&lt;/p&gt;
-
-    &lt;h3 id=&quot;lttimegt&quot;&gt;&amp;lt;time&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;The concert took place on &lt;time datetime=&quot;2001-05-15 19:00&quot;&gt;May 15&lt;/time&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltcodegt&quot;&gt;&amp;lt;code&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;Some &lt;code class=&quot;highlighter-rouge&quot;&gt;code: lucida console&lt;/code&gt; displayed.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltvargt&quot;&gt;&amp;lt;var&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;The &amp;lt;var&amp;gt; tag is a phrase tag. It defines a &lt;var&gt;variable&lt;/var&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltsampgt&quot;&gt;&amp;lt;samp&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;Text surrounded by &amp;lt;samp&amp;gt; &lt;samp&gt;looks like this in monospace&lt;/samp&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltkbdgt&quot;&gt;&amp;lt;kbd&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;Copycats enjoy pressing &lt;kbd&gt;CMD&lt;/kbd&gt; + &lt;kbd&gt;c&lt;/kbd&gt; and &lt;kbd&gt;CMD&lt;/kbd&gt; + &lt;kbd&gt;v&lt;/kbd&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltsubgt&quot;&gt;&amp;lt;sub&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;This text &lt;sub&gt;lays low&lt;/sub&gt; and chills a bit.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltsupgt&quot;&gt;&amp;lt;sup&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;This text &lt;sup&gt;gets high&lt;/sup&gt; above the clouds.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltigt&quot;&gt;&amp;lt;i&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;This looks &lt;i&gt;italic&lt;/i&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltbgt&quot;&gt;&amp;lt;b&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;This looks &lt;b&gt;bold&lt;/b&gt;, too.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltugt&quot;&gt;&amp;lt;u&amp;gt;&lt;/h3&gt;
-
-    &lt;div&gt;&lt;p&gt;&lt;u&gt;Underlining&lt;/u&gt; content for emphasize is not the best choice. You can&#39;t read it so well.&lt;/p&gt;&lt;/div&gt;
-
-    &lt;h3 id=&quot;ltmarkgt&quot;&gt;&amp;lt;mark&amp;gt;&lt;/h3&gt;
-    &lt;p&gt;Let’s &lt;mark&gt;mark this hint&lt;/mark&gt; to give you a clue.&lt;/p&gt;
-
-    &lt;h3 id=&quot;ltbrgt&quot;&gt;&amp;lt;br&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;Need a break? I give you three!&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
-
-    &lt;p&gt;If you need footnotes for your posts, articles and entries, the Kramdown-Parser &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; got you covered. How to use footnotes? Read this footnote. &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-    &lt;h1 id=&quot;lth1gt-heading-in-volkhov&quot;&gt;&amp;lt;h1&amp;gt;-Heading in Volkhov&lt;/h1&gt;
-
-    &lt;h2 id=&quot;lth2gt-heading-in-volkhov&quot;&gt;&amp;lt;h2&amp;gt;-Heading in Volkhov&lt;/h2&gt;
-
-    &lt;h3 id=&quot;lth3gt-heading-in-volkhov&quot;&gt;&amp;lt;h3&amp;gt;-Heading in Volkhov&lt;/h3&gt;
-
-    &lt;h4 id=&quot;lth4gt-heading-in-volkhov&quot;&gt;&amp;lt;h4&amp;gt;-Heading in Volkhov&lt;/h4&gt;
-
-    &lt;h5 id=&quot;lth5gt-heading-in-volkhov&quot;&gt;&amp;lt;h5&amp;gt;-Heading in Volkhov&lt;/h5&gt;
-
-    &lt;h6 id=&quot;lth6gt-heading-in-volkhov&quot;&gt;&amp;lt;h6&amp;gt;-Heading in Volkhov&lt;/h6&gt;
-
-    &lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
-
-    &lt;p&gt;Even tables are responsive thanks to foundation. A table can consist of these elements.&lt;/p&gt;
-
-    &lt;table&gt;
-  &lt;caption&gt;&amp;lt;table&amp;gt; defines an HTML table&lt;/caption&gt;
-  &lt;colgroup&gt;
-    &lt;col span=&quot;1&quot; style=&quot;width: 15%;&quot; /&gt;
-    &lt;col span=&quot;1&quot; style=&quot;width: 50%;&quot; /&gt;
-    &lt;col span=&quot;1&quot; style=&quot;width: 35%;&quot; /&gt;
-  &lt;/colgroup&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;HTML Tag&lt;/th&gt;
-      &lt;th&gt;Defintion&lt;/th&gt;
-      &lt;th&gt;Style&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;caption&amp;gt;&lt;/td&gt;
-      &lt;td&gt;defines a table caption&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;font-weight: bold;&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;colgroup&amp;gt;&lt;/td&gt;
-      &lt;td&gt;specifies a group of one or more columns in a table for 
-formatting. The &amp;lt;colgroup&amp;gt; tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.&lt;/td&gt;
-      &lt;td&gt;no styling needed&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;col&amp;gt;&lt;/td&gt;
-      &lt;td&gt;specifies column properties for each column within a `&amp;lt;colgroup&amp;gt;` 
-element&lt;/td&gt;
-      &lt;td&gt;no styling needed&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;thead&amp;gt;&lt;/td&gt;
-      &lt;td&gt;is used to group header content in an HTML table&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;font-weight: bold;&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;tbody&amp;gt;&lt;/td&gt;
-      &lt;td&gt;is used to group the body content in an HTML table&lt;/td&gt;
-      &lt;td&gt;no styling needed&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;tr&amp;gt;&lt;/td&gt;
-      &lt;td&gt;defines a row in an HTML table&lt;/td&gt;
-      &lt;td&gt;no styling needed&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;th&amp;gt;&lt;/td&gt;
-      &lt;td&gt;defines a header cell in an HTML table&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;font-weight: bold;&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;td&amp;gt;&lt;/td&gt;
-      &lt;td&gt;defines a standard cell in an HTML table&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;font-weight: normal;&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;tfoot&amp;gt;&lt;/td&gt;
-      &lt;td&gt;is used to group footer content in an HTML table&lt;/td&gt;
-      &lt;td&gt;no styling needed&lt;/td&gt;
-    &lt;/tr&gt;
-&amp;lt;/table&amp;gt;
-
-
-
-
-
-
-
-&amp;lt;/div&amp;gt;&lt;!-- /.medium-8.columns --&gt;
-&amp;lt;/div&amp;gt;&lt;!-- /.row --&gt;
-
-
-&lt;/tbody&gt;&lt;/table&gt;
-  &lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Find out more about Kramdown on &lt;a href=&quot;http://kramdown.gettalong.org/&quot;&gt;http://kramdown.gettalong.org/&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Kramdown has an excellent documentation of all its features. Check out, on how to &lt;a href=&quot;http://kramdown.gettalong.org/syntax.html#footnotes&quot;&gt;footnotes&lt;/a&gt;. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</content>
-
-			
-				<category term="design" />
-			
-				<category term="typography" />
-			
-			
-
-			<published>2015-08-16T00:00:00+02:00</published>
-		</entry>
-	
-		<entry>
-			<id>https://phlow.github.io/feeling-responsive/design/comments/</id>
-			<title>Now with Comments!</title>
-			<link href="https://phlow.github.io/feeling-responsive/design/comments/" rel="alternate" type="text/html" title="Now with Comments!" />
-			<updated>2015-08-15T00:00:00+02:00</updated>
-
-			
-				
-				<author>
-					
-						<name>Phlow</name>
-					
-					
-					
-						<uri>http://phlow.de/</uri>
-					
-				</author>
-			
-			<summary>For a blog you need comments. Like all those other jekyll themes we baked in Disqus. It&#39;s easy to set, it works and makes a static jekyll blog more dynamic.</summary>
-			<content type="html" xml:base="https://phlow.github.io/feeling-responsive/design/comments/">&lt;p&gt;If you want to use Disqus-Comments with &lt;em&gt;Feeling Responsive&lt;/em&gt;, just open &lt;code class=&quot;highlighter-rouge&quot;&gt;config.yml&lt;/code&gt; and add your &lt;code class=&quot;highlighter-rouge&quot;&gt;disqus_shortname&lt;/code&gt;. &lt;a href=&quot;https://disqus.com/websites/&quot;&gt;More on how to use Disqus ›&lt;/a&gt;
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;p&gt;By default comments are turned off. You can customize the default behaviour in &lt;code class=&quot;highlighter-rouge&quot;&gt;config.yml&lt;/code&gt;. To &lt;strong&gt;turn on comments&lt;/strong&gt; just add &lt;code class=&quot;highlighter-rouge&quot;&gt;comments: true&lt;/code&gt; to front matter using the page layout &lt;code class=&quot;highlighter-rouge&quot;&gt;layout: page&lt;/code&gt;.&lt;/p&gt;
-</content>
-
-			
-				<category term="design" />
-			
-			
-
-			<published>2015-08-15T00:00:00+02:00</published>
-		</entry>
-	
-		<entry>
-			<id>https://phlow.github.io/feeling-responsive/design/no-header/</id>
-			<title>No Header</title>
-			<link href="https://phlow.github.io/feeling-responsive/design/no-header/" rel="alternate" type="text/html" title="No Header" />
-			<updated>2015-08-11T00:00:00+02:00</updated>
-
-			
-				
-				<author>
-					
-						<name>Phlow</name>
-					
-					
-					
-						<uri>http://phlow.de/</uri>
-					
-				</author>
-			
-			<summary>Feeling Responsive allows you to use all kinds of headers. This example shows &lt;em&gt;no&lt;/em&gt; header at all. Just the navigation.</summary>
-			<content type="html" xml:base="https://phlow.github.io/feeling-responsive/design/no-header/">&lt;p&gt;&lt;em&gt;Silence is beautiful.&lt;/em&gt; Sometimes you just want no distractions at all. Whether you like the content to speak for itself or enjoy pure typography on a plain background: &lt;em&gt;Feeling Responsive&lt;/em&gt; got you covered. Just say &lt;em&gt;no&lt;/em&gt; like this:
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;header: no
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 class=&quot;t60&quot; id=&quot;all-header-styles&quot;&gt;All Header-Styles&lt;/h3&gt;
-
-&lt;ul class=&quot;side-nav&quot;&gt;
-
-  
-
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header-but-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header but Article Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-with-text/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Text&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-logo-only/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Logo Only&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-color/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Background Color&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-full-width-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header with a Full-Width-Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-pattern/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Pattern&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-
-  
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;图片相关 Image&lt;/strong&gt;&lt;br&gt;
+本主题可以设置网站相关图片，例如网站图标（&lt;code&gt;favicon&lt;/code&gt;）、网站logo（&lt;code&gt;imglogo&lt;/code&gt;）、作者头像（&lt;code&gt;author_img&lt;/code&gt;）。建议启用网站logo，格式建议为&lt;code&gt;.svg&lt;/code&gt;或&lt;code&gt;.png&lt;/code&gt;格式。同时建议提供配套的 favicon 以及在苹果设备上的图标&lt;code&gt;apple_icon&lt;/code&gt;（背景不要透明）。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;首页显示模式 Index&lt;/strong&gt;&lt;br&gt;
+目前首页的显示模式支持两种，一种是原先的卡片式（前往 &lt;a href=&quot;http://wuchong.me/jacman&quot;&gt;Demo&lt;/a&gt; 预览），另一种是类似官方主题的文章展开式（&lt;a href=&quot;http://wuchong.me&quot;&gt;本站&lt;/a&gt;即采用的这种）。两者各有优劣，前者首页加载速度更快，后者文章内容更能吸引读者。主题默认采用后一种展开式，如需开启第一种卡片式，请设置&lt;code&gt;index&lt;/code&gt;属性下的&lt;code&gt;expand: false&lt;/code&gt;。&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-</content>
+&lt;p&gt;卡片式的文章摘要是截取文章内容的前140个字，也可以自己总结&lt;code&gt;description&lt;/code&gt;并将其放在开头的&lt;code&gt;front-matter&lt;/code&gt;中。展开式的文章摘要就是使用&lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;/code&gt;截取了。&lt;/p&gt;
 
-			
-				<category term="design" />
-			
-			
-				<category term="design" />
-			
-				<category term="background color" />
-			
-				<category term="header" />
-			
-
-			<published>2015-08-11T00:00:00+02:00</published>
-		</entry>
-	
-		<entry>
-			<id>https://phlow.github.io/feeling-responsive/design/no-header-but-image/</id>
-			<title>No Header but Article Image</title>
-			<link href="https://phlow.github.io/feeling-responsive/design/no-header-but-image/" rel="alternate" type="text/html" title="No Header but Article Image" />
-			<updated>2015-03-12T00:00:00+01:00</updated>
-
-			
-				
-				<author>
-					
-						<name>Phlow</name>
-					
-					
-					
-						<uri>http://phlow.de/</uri>
-					
-				</author>
-			
-			<summary>Feeling Responsive enables you to get the attention of visitors. If you don&#39;t want to use a big header, use an image for the article instead.</summary>
-			<content type="html" xml:base="https://phlow.github.io/feeling-responsive/design/no-header-but-image/">&lt;p&gt;First turn of the header with &lt;code class=&quot;highlighter-rouge&quot;&gt;header: no&lt;/code&gt;. Then add an image to with the following code. The caption is optional.
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;header: no
-image:
-    title: unsplash_eagle.jpg
-    caption: This is a caption for the header image with link
-    caption_url: https://unsplash.com/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 class=&quot;t60&quot; id=&quot;all-header-styles&quot;&gt;All Header-Styles&lt;/h3&gt;
-
-&lt;ul class=&quot;side-nav&quot;&gt;
-
-  
-
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header-but-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header but Article Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-with-text/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Text&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-logo-only/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Logo Only&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-color/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Background Color&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-full-width-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header with a Full-Width-Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-pattern/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Pattern&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-
-  
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;作者信息 author&lt;/strong&gt;&lt;br&gt;
+作者信息，建议尽量填写完整。其中&lt;code&gt;tsina&lt;/code&gt;是你的新浪微博ID，不同于用户名或微博主页地址。启用这个属性后，其他用户在微博上分享你文章的同时会自动@你。同时它和&lt;code&gt;weibo_verifier&lt;/code&gt;一起作用生成微博秀。&lt;code&gt;intro_line1&lt;/code&gt;和&lt;code&gt;intro_line2&lt;/code&gt;是网站底部的个人介绍。&lt;code&gt;weibo&lt;/code&gt;、&lt;code&gt;twitter&lt;/code&gt;、&lt;code&gt;facebook&lt;/code&gt;等是用来显示网站右下角的社交按钮的，如下图所示。&lt;br&gt;
+&lt;img src=&quot;http://ww4.sinaimg.cn/large/81b78497jw1emgscr3575j2078050jrc.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;目录 toc&lt;/strong&gt;&lt;br&gt;
+是否启用在文章中或侧边栏中的目录功能。二者可以都为&lt;code&gt;true&lt;/code&gt;或都为&lt;code&gt;false&lt;/code&gt;。同时，如果你希望在特定的某一篇文章中关闭目录功能你可以在文章文件开头中的&lt;code&gt;front-matter&lt;/code&gt;中加上一行&lt;code&gt;toc: false&lt;/code&gt;。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;评论 comments&lt;/strong&gt;&lt;br&gt;
+填写&lt;code&gt;duoshuo_shortname&lt;/code&gt;&lt;a href=&quot;http://duoshuo.com/&quot;&gt;多说&lt;/a&gt;的用户名，启用多说评论系统。在大陆地区更好用的评论系统。&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-</content>
+&lt;p&gt;填写&lt;code&gt;disqus_shortname&lt;/code&gt;&lt;a href=&quot;http://disqus.com/&quot;&gt;disqus&lt;/a&gt; 的用户名，启用 disqus 评论系统。国际上更广泛使用的评论系统。设置博客根目录下的&lt;code&gt;_config.yml&lt;/code&gt;文件中的&lt;code&gt;disqus_shortname&lt;/code&gt;同样也能开启该功能。&lt;/p&gt;
 
-			
-				<category term="design" />
-			
-			
-				<category term="design" />
-			
-				<category term="background color" />
-			
-				<category term="header" />
-			
-
-			<published>2015-03-12T00:00:00+01:00</published>
-		</entry>
-	
-		<entry>
-			<id>https://phlow.github.io/feeling-responsive/design/header-with-text/</id>
-			<title>Header With Text</title>
-			<link href="https://phlow.github.io/feeling-responsive/design/header-with-text/" rel="alternate" type="text/html" title="Header With Text" />
-			<updated>2015-02-10T00:00:00+01:00</updated>
-
-			
-				
-				<author>
-					
-						<name>Phlow</name>
-					
-					
-					
-						<uri>http://phlow.de/</uri>
-					
-				</author>
-			
-			<summary>Feeling Responsive allows you to use all kinds of headers. This header is with text.</summary>
-			<content type="html" xml:base="https://phlow.github.io/feeling-responsive/design/header-with-text/">&lt;!--more--&gt;
-
-&lt;h2 id=&quot;front-matter-code&quot;&gt;Front Matter Code&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;header:
-    title: header with text
-    image_fullwidth: unsplash_brooklyn-bridge_header.jpg
-    caption: This is a caption for the header image with link
-    caption_url: https://unsplash.com/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 class=&quot;t60&quot; id=&quot;all-header-styles&quot;&gt;All Header-Styles&lt;/h3&gt;
-
-&lt;ul class=&quot;side-nav&quot;&gt;
-
-  
-
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header-but-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header but Article Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-with-text/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Text&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-logo-only/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Logo Only&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-color/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Background Color&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-full-width-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header with a Full-Width-Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-pattern/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Pattern&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-
-  
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;加网分享 jiathis&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&quot;http://www.jiathis.com/&quot;&gt;加网&lt;/a&gt;分享系统。默认关闭，因为主题已经内置了原生的分享功能。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;网站统计 Analytics&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;google_analytics&lt;/code&gt;：Google Analytics追踪代码。请注意：Google Analytics已经升级到了Universal Analytics。请先前往后台升级你的Google Analytics版本后再启用追踪代码，更多信息请&lt;a href=&quot;https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN&quot;&gt;点击这里&lt;/a&gt;了解。&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-</content>
+&lt;p&gt;&lt;code&gt;baidu_tongji&lt;/code&gt;：百度统计功能。需要填写站点特征码&lt;code&gt;sitecode&lt;/code&gt;，在&lt;a href=&quot;http://tongji.baidu.com/web/welcome/login&quot;&gt;官网&lt;/a&gt;注册并配置站点后，获取特征码。特征码可以在「网站中心」-&amp;gt; 「代码获取」中查看，如下图所示的&lt;code&gt;e6d1f421bbc9962127a50488f9ed37d1&lt;/code&gt;，注意去掉前面的&lt;code&gt;3F&lt;/code&gt;。&lt;br&gt;
+&lt;img src=&quot;http://ww4.sinaimg.cn/large/81b78497jw1emf4v6qf91j20kf07sq8v.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
-			
-				<category term="design" />
-			
-			
-				<category term="design" />
-			
-				<category term="background color" />
-			
-				<category term="header" />
-			
+&lt;p&gt;&lt;code&gt;cnzz_tongji&lt;/code&gt;：站长统计功能。需要填写站点ID&lt;code&gt;siteid&lt;/code&gt;，同理在&lt;a href=&quot;http://www.cnzz.com&quot;&gt;站长官网&lt;/a&gt;注册并配置站点后获得。&lt;/p&gt;
 
-			<published>2015-02-10T00:00:00+01:00</published>
-		</entry>
-	
-		<entry>
-			<id>https://phlow.github.io/feeling-responsive/design/header-logo-only/</id>
-			<title>Header With Logo Only</title>
-			<link href="https://phlow.github.io/feeling-responsive/design/header-logo-only/" rel="alternate" type="text/html" title="Header With Logo Only" />
-			<updated>2014-10-09T00:00:00+02:00</updated>
-
-			
-				
-				<author>
-					
-						<name>Phlow</name>
-					
-					
-					
-						<uri>http://phlow.de/</uri>
-					
-				</author>
-			
-			<summary>Feeling Responsive allows you to use all kinds of headers. This is the default mode. It shows a header just with your logo on the standard background.</summary>
-			<content type="html" xml:base="https://phlow.github.io/feeling-responsive/design/header-logo-only/">&lt;p&gt;No front matter code needed.
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;h3 class=&quot;t60&quot; id=&quot;all-header-styles&quot;&gt;All Header-Styles&lt;/h3&gt;
-
-&lt;ul class=&quot;side-nav&quot;&gt;
-
-  
-
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header-but-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header but Article Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-with-text/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Text&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-logo-only/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Logo Only&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-color/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Background Color&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-full-width-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header with a Full-Width-Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-pattern/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Pattern&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-
-  
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;数学公式 mathjax&lt;/strong&gt;&lt;br&gt;
+主题支持写 LaTex 数学公式。只需要在文章文件开头的&lt;code&gt;front-matter&lt;/code&gt;中，加上一行&lt;code&gt;mathjax: true&lt;/code&gt;，即可在文中写 LaTex 公式。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;图片浏览 fancybox&lt;/strong&gt;&lt;br&gt;
+默认关闭，如果你经常发表 Gallery 类型的文章，那么请设置为&lt;code&gt;true&lt;/code&gt;。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;返回顶部 totop&lt;/strong&gt;&lt;br&gt;
+右下角&lt;code&gt;返回顶部&lt;/code&gt;按钮，默认开启。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;自定义搜索 Search&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;baidu_search&lt;/code&gt;：如果开启百度站内搜索需要登录 &lt;a href=&quot;http://zn.baidu.com/&quot;&gt;百度站内搜索&lt;/a&gt;，配置好你的站点，并开启站内搜索获取搜索ID，另外&lt;code&gt;site&lt;/code&gt;属性可以填默认值，也可以填自己做了CNAME的二级域名，更详细的可以阅读&lt;a href=&quot;http://gengbiao.me/hexo/hexo%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/&quot;&gt;这篇博客&lt;/a&gt;了解。&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-</content>
+&lt;p&gt;&lt;code&gt;google_cse&lt;/code&gt;：如果开启谷歌自定义搜索需要先登录 &lt;a href=&quot;https://www.google.com/cse/&quot;&gt;Google CSE&lt;/a&gt;，配置好你的站点，并获得此自定义搜索的ID。此外你需要在博客目录下的&lt;code&gt;source&lt;/code&gt;文件夹中建立&lt;code&gt;search&lt;/code&gt;文件夹并包含一个&lt;code&gt;index.md&lt;/code&gt;文件。内容为：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt; layout: search
+ title: search
+ ---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;tiny_search&lt;/code&gt;: 如果要开启&lt;a href=&quot;http://tinysou.com/&quot;&gt;微搜索&lt;/a&gt;，需要先注册一个帐号，配置一个Engine，将Engine的Key填入配置文件中的&lt;code&gt;id&lt;/code&gt;即可。&lt;/p&gt;
 
-			
-				<category term="design" />
-			
-			
-				<category term="design" />
-			
-				<category term="background color" />
-			
-				<category term="header" />
-			
+&lt;h2 id=&quot;&gt;常见问题&lt;/h2&gt;
 
-			<published>2014-10-09T00:00:00+02:00</published>
-		</entry>
-	
-		<entry>
-			<id>https://phlow.github.io/feeling-responsive/design/header-image-color/</id>
-			<title>Header Image With Background Color</title>
-			<link href="https://phlow.github.io/feeling-responsive/design/header-image-color/" rel="alternate" type="text/html" title="Header Image With Background Color" />
-			<updated>2014-10-09T00:00:00+02:00</updated>
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Q：图片默认都是居左的，我怎么设置能让图片居中呢？&lt;/strong&gt;&lt;/p&gt;
 
-			
-				
-				<author>
-					
-						<name>Phlow</name>
-					
-					
-					
-						<uri>http://phlow.de/</uri>
-					
-				</author>
-			
-			<summary>Feeling Responsive allows you to use all kinds of headers. This example shows a header image with a defined background color via front matter.</summary>
-			<content type="html" xml:base="https://phlow.github.io/feeling-responsive/design/header-image-color/">&lt;p&gt;It’s so easy to do. Just define in front matter an image and a background color. Instead of a color you can also use a pattern image. Have a look at the &lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-pattern/&quot;&gt;example with a background pattern&lt;/a&gt;.
-&lt;!--more--&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 &lt;code&gt;&amp;lt;img src=&amp;quot;&amp;quot; style=&amp;quot;display:block;margin:auto&amp;quot;/&amp;gt;&lt;/code&gt;的HTML标签。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Q：如何建立一篇图片类文章（Gallery Post）？&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;front-matter-code&quot;&gt;Front Matter Code&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;直接新建一个 Markdown 文件，将其&lt;code&gt;front-matter&lt;/code&gt;修改为如下，即可看到主题为图片类文章提供的样式。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;---
+layout: photo
+title: Gallery Post
+photos:
+- http://i.minus.com/ibobbTlfxZgITW.jpg
+- http://i.minus.com/iedpg90Y0exFS.jpg
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Q：我在配置文件中给某一项设置了值，但为什么总是看不到效果啊？&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;alert-box alert &quot;&gt;&lt;p&gt;WARNING: To make this work the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;background-color&lt;/code&gt; must be inbetween quotes.&lt;/p&gt;
-&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;_config.yml&lt;/code&gt;文件中的每个属性值前面必须留一个空格，建议在 Sublime/Notepad++ 中开启显示所有空格模式。另每篇文章的 &lt;code&gt;front-matter&lt;/code&gt; 也要注意这个问题。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Q：怎么提意见和建议？&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;header:
-    image: &quot;header_unsplash_2-970x.jpg&quot;
-    background-color: &quot;#fabb00&quot;
-    caption: This is a caption for the header image with link
-    caption_url: https://unsplash.com/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;主题还在不断完善中，欢迎 &lt;a href=&quot;https://github.com/Simpleyyt/jekyll-jacman/issues&quot;&gt;open issue&lt;/a&gt; 来提建议，参与讨论。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;*&lt;em&gt;Q：为什么我修改了配置文件/发表了博文，解析出来的却是乱码呢？ *&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 class=&quot;t60&quot; id=&quot;all-header-styles&quot;&gt;All Header-Styles&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请将你的配置文件/markdown文件保存成 &lt;code&gt;UTF-8&lt;/code&gt; 格式。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;*&lt;em&gt;Q：为什么开启了微博秀后，显示是空白的，没有内容展示？ *&lt;/em&gt;&lt;/p&gt;
 
-&lt;ul class=&quot;side-nav&quot;&gt;
-
-  
-
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header-but-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header but Article Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-with-text/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Text&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-logo-only/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Logo Only&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-color/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Background Color&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-full-width-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header with a Full-Width-Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-pattern/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Pattern&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-
-  
+&lt;blockquote&gt;
+&lt;p&gt;每次修改参数都会这样，需要多刷新几次或者上传到服务器上就好了。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 </content>
-
-			
-				<category term="design" />
-			
-			
-				<category term="design" />
-			
-				<category term="background color" />
-			
-				<category term="header" />
-			
-
-			<published>2014-10-09T00:00:00+02:00</published>
-		</entry>
-	
-		<entry>
-			<id>https://phlow.github.io/feeling-responsive/design/header-full-width-image/</id>
-			<title>Header with a Full-Width-Image</title>
-			<link href="https://phlow.github.io/feeling-responsive/design/header-full-width-image/" rel="alternate" type="text/html" title="Header with a Full-Width-Image" />
-			<updated>2014-10-09T00:00:00+02:00</updated>
-
-			
-				
-				<author>
-					
-						<name>Phlow</name>
-					
-					
-					
-						<uri>http://phlow.de/</uri>
-					
-				</author>
-			
-			<summary>Feeling Responsive allows you to use all kinds of headers. This example shows a header with a &lt;em&gt;full-width-image&lt;/em&gt;.</summary>
-			<content type="html" xml:base="https://phlow.github.io/feeling-responsive/design/header-full-width-image/">&lt;p&gt;It’s so easy to do. Just define in front matter your image.
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;front-matter-code&quot;&gt;Front Matter Code&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;header:
-    image_fullwidth: &quot;unsplash_brooklyn-bridge_header.jpg&quot;
-    caption: This is a caption for the header image with link
-    caption_url: https://unsplash.com/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 class=&quot;t60&quot; id=&quot;all-header-styles&quot;&gt;All Header-Styles&lt;/h3&gt;
-
-&lt;ul class=&quot;side-nav&quot;&gt;
-
-  
-
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header-but-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header but Article Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-with-text/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Text&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-logo-only/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Logo Only&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-color/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Background Color&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-full-width-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header with a Full-Width-Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-pattern/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Pattern&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-
-  
-&lt;/ul&gt;
-
-</content>
-
-			
-				<category term="design" />
-			
-			
-				<category term="design" />
-			
-				<category term="background color" />
-			
-				<category term="header" />
-			
-
-			<published>2014-10-09T00:00:00+02:00</published>
-		</entry>
-	
-		<entry>
-			<id>https://phlow.github.io/feeling-responsive/design/header-image-pattern/</id>
-			<title>Header Image With Pattern</title>
-			<link href="https://phlow.github.io/feeling-responsive/design/header-image-pattern/" rel="alternate" type="text/html" title="Header Image With Pattern" />
-			<updated>2014-10-08T00:00:00+02:00</updated>
-
-			
-				
-				<author>
-					
-						<name>Phlow</name>
-					
-					
-					
-						<uri>http://phlow.de/</uri>
-					
-				</author>
-			
-			<summary>Feeling Responsive allows you to use all kinds of headers. This example shows a header image in front of a pattern.</summary>
-			<content type="html" xml:base="https://phlow.github.io/feeling-responsive/design/header-image-pattern/">&lt;p&gt;It’s so easy to do. Just define in front matter an image and a pattern image. Instead of a pattern you can also use a color. Have a look at the &lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-color/&quot;&gt;example with a background color&lt;/a&gt;.
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;front-matter-code&quot;&gt;Front Matter Code&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;header:
-    image:  &quot;header_unsplash_2-970x.jpg&quot;
-    pattern:  &quot;pattern_concrete.jpg&quot;
-    caption: This is a caption for the header image with link
-    caption_url: https://unsplash.com/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 class=&quot;t60&quot; id=&quot;all-header-styles&quot;&gt;All Header-Styles&lt;/h3&gt;
-
-&lt;ul class=&quot;side-nav&quot;&gt;
-
-  
-
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/no-header-but-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;No Header but Article Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-with-text/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Text&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-logo-only/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header With Logo Only&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-color/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Background Color&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-full-width-image/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header with a Full-Width-Image&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-      &lt;li&gt;&lt;a href=&quot;https://phlow.github.io/feeling-responsive/design/header-image-pattern/&quot;&gt;Headers With Style &amp;middot; &lt;strong&gt;Header Image With Pattern&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-    
-
-  
-&lt;/ul&gt;
-
-</content>
-
-			
-				<category term="design" />
-			
-			
-				<category term="design" />
-			
-				<category term="pattern" />
-			
-				<category term="header" />
-			
-
-			<published>2014-10-08T00:00:00+02:00</published>
-		</entry>
-	
+ </entry>
+ 
+ 
 </feed>
