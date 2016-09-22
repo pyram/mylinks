@@ -16,9 +16,9 @@
         <loc>/p/hello.html</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/p/hello.html" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/p/hello.html" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/p/bonjour.html" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/p/bonjour.html" />
         
         <lastmod>2016-04-16T00:00:00-04:00</lastmod>
         <changefreq>weekly</changefreq>
@@ -30,9 +30,9 @@
         <loc>/p/bonjour.html</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/p/hello.html" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/p/hello.html" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/p/bonjour.html" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/p/bonjour.html" />
         
         <lastmod>2016-04-16T00:00:00-04:00</lastmod>
         <changefreq>weekly</changefreq>
@@ -85,9 +85,9 @@
         <loc>/a-propos/</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/a-propos/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/a-propos/" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/about/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/about/" />
         
         <changefreq>weekly</changefreq>
       </url>
@@ -98,9 +98,9 @@
         <loc>/about/</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/a-propos/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/a-propos/" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/about/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/about/" />
         
         <changefreq>weekly</changefreq>
       </url>
@@ -120,9 +120,9 @@
         <loc>/blog/</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/blog/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/blog/" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/blogue/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/blogue/" />
         
         <changefreq>weekly</changefreq>
       </url>
@@ -133,9 +133,9 @@
         <loc>/blogue/</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/blog/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/blog/" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/blogue/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/blogue/" />
         
         <changefreq>weekly</changefreq>
       </url>
@@ -146,9 +146,9 @@
         <loc>/create/</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/create/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/create/" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/creer/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/creer/" />
         
         <changefreq>weekly</changefreq>
       </url>
@@ -159,9 +159,9 @@
         <loc>/creer/</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/create/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/create/" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/creer/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/creer/" />
         
         <changefreq>weekly</changefreq>
       </url>
@@ -172,9 +172,9 @@
         <loc>/endroits/</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/endroits/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/endroits/" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/locations/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/locations/" />
         
         <changefreq>weekly</changefreq>
       </url>
@@ -203,9 +203,9 @@
         <loc>/</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/welcome/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/welcome/" />
         
         <changefreq>weekly</changefreq>
       </url>
@@ -216,9 +216,9 @@
         <loc>/locations/</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/endroits/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/endroits/" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/locations/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/locations/" />
         
         <changefreq>weekly</changefreq>
       </url>
@@ -238,9 +238,9 @@
         <loc>/network/</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/network/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/network/" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/reseau/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/reseau/" />
         
         <changefreq>weekly</changefreq>
       </url>
@@ -251,9 +251,9 @@
         <loc>/reseau/</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/network/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/network/" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/reseau/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/reseau/" />
         
         <changefreq>weekly</changefreq>
       </url>
@@ -273,9 +273,9 @@
         <loc>/welcome/</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="en" href="/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/" />
         
-          <xhtml:link rel="alternate" hreflang="en" href="/welcome/" />
+          <xhtml:link rel="alternate" hreflang="en" href="/mylinks/welcome/" />
         
         <changefreq>weekly</changefreq>
       </url>
