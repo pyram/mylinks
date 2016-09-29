@@ -39,8 +39,13 @@ defaults:
 ##### Menu
 menu:
   Home: /
-  Archives: /archives
-  About: /about
+  About Us: /about-us
+  Services: /Services
+  Case Studies: /case-studies
+  Expertise: /expertise
+  Blog: /blog
+  Contact: /contact
+
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as
