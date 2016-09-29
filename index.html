@@ -67,9 +67,17 @@
 					 
 						<li><a href="/mylinks/">Home</a></li>
 					
-						<li><a href="/mylinks/archives">Archives</a></li>
+						<li><a href="/mylinks/about-us">About Us</a></li>
 					
-						<li><a href="/mylinks/about">About</a></li>
+						<li><a href="/mylinks/Services">Services</a></li>
+					
+						<li><a href="/mylinks/case-studies">Case Studies</a></li>
+					
+						<li><a href="/mylinks/expertise">Expertise</a></li>
+					
+						<li><a href="/mylinks/blog">Blog</a></li>
+					
+						<li><a href="/mylinks/contact">Contact</a></li>
 					
 					<li>
  					
@@ -113,6 +121,8 @@
   主页: /<br>
   归档: /archives<br>
   关于: /about</p>
+
+<p>to taki test</p>
 
         
         
@@ -197,6 +207,262 @@
         <h2 id="topic-introduction">Topic Introduction</h2>
 
 <p>Jekyll-Jacman is <a href="http://jekyllrb.com">Jekyll</a> has designed a fresh and responsive theme, has a richer feature support and a lot of domestic service. Jacman began <a href="https://github.com/wuchong/jacman">Jacman</a> transplanted from.</p>
+
+<p>&lt;-! More -&gt;</p>
+
+<h2 id="configuration-guide">Configuration Guide</h2>
+
+<p>Jacman topic provides a wealth of configuration properties, you can achieve your own definition of the subject matter. <code>_config.yml</code> Configuration file located in the root directory of the theme. This update to the configuration file for a major adjustment, if you use it before the Jacman, also require you to be modified according to the following guidelines.</p>
+
+<p>`<code></code></p>
+
+<h5 id="menu">Menu</h5>
+
+<p>menu:<br>
+  Home: /<br>
+  Archive: / archives<br>
+  About: / about</p>
+
+<h4 id="controls">Controls</h4>
+
+<p>widgets:</p>
+
+<ul>
+<li>Category</li>
+<li>Tag</li>
+<li>Links</li>
+<li>Rss</li>
+</ul>
+
+<h4 id="rss">RSS</h4>
+
+<p>rss: /atom.xml</p>
+
+<h4 id="pictures">Pictures</h4>
+
+<p>imglogo:<br>
+  enable: true ## whether to display the website logo<br>
+  src: img / logo.png<br>
+favicon: img / favicon.ico ## favicon<br>
+apple_icon: img / jacman.jpg ## Apple icon on your device, do not transparent background<br>
+author_img: img / author.jpg ## at the bottom of the site&#39;s bloggers Avatar<br>
+banner_img: img / banner.jpg ## blog top pictures</p>
+
+<p>close_aside: false ## whether to automatically turn off the sidebar in the article page</p>
+
+<h4 id="home-related">Home related</h4>
+
+<p>index:<br>
+  expand: true ## Home Articles whether to expand. The default is expandable display Read More.<br>
+  excerpt_link: Read More</p>
+
+<h4 id="author-information">author information</h4>
+
+<p>author:<br>
+  name: ## Author Name<br>
+  intro_line1: &quot;. Hello, I&#39;m Larry Page in Google&quot; ## at the bottom of the site&#39;s personal introduction<br>
+  intro_line2: &quot;This is my blog, believe it or not.&quot;<br>
+  weibo_verifier: ## microblogging show verification code<br>
+  tsina: ## for the show and microblogging microblogging Share<br>
+  weibo: ## social buttons to display the bottom of the site, the same below<br>
+  douban:<br>
+  zhihu:<br>
+  email:<br>
+  twitter:<br>
+  github:<br>
+  facebook:<br>
+  linkedin:<br>
+  google_plus:<br>
+  stackoverflow:</p>
+
+<h4 id="table-of-contents">table of Contents</h4>
+
+<p>toc:<br>
+  article: true ## is displayed in the article directory<br>
+  aside: true ## whether to display the directory in the sidebar</p>
+
+<h4 id="links">Links</h4>
+
+<p>links:<br>
+  Code Agricultural circle: <a href="https://coderq.com">https://coderq.com</a>, a programmer for the exchange and sharing of new generation community<br>
+  Jark&#39;s Blog: <a href="http://wuchong.me">http://wuchong.me</a></p>
+
+<h4 id="reviews">Reviews</h4>
+
+<p>duoshuo_shortname:<br>
+disqus_shortname:</p>
+
+<h4 id="share-button">Share button</h4>
+
+<p>jiathis:<br>
+  enable: false ## default theme built-share<br>
+  id:<br>
+  tsina:</p>
+
+<h4 id="site-statistics">Site Statistics</h4>
+
+<p>google_analytics:<br>
+  enable: false<br>
+  id: ## google analytics ID.<br>
+  site: ## Web site addresses.<br>
+baidu_tongji:<br>
+  enable: false<br>
+  sitecode: ## Baidu statistics signature site<br>
+cnzz_tongji:<br>
+  enable: false<br>
+  siteid: ## CNZZ Statistics Site ID</p>
+
+<h4 id="miscellaneous">Miscellaneous</h4>
+
+<p>ShowCustomFont: true<br>
+fancybox: true<br>
+totop: true</p>
+
+<h4 id="custom-search">Custom Search</h4>
+
+<p>google_cse:<br>
+  enable: false<br>
+  cx:<br>
+baidu_search:<br>
+  enable: false<br>
+  id:<br>
+  site: <a href="http://zhannei.baidu.com/cse/search">http://zhannei.baidu.com/cse/search</a><br>
+tinysou_search: ## <a href="http://tinysou.com/">http://tinysou.com/</a><br>
+  enable: false<br>
+  id: &quot;4ac092ad8d749fdc6293&quot;<br>
+`<code></code></p>
+
+<h3 id="properties-function">Properties function</h3>
+
+<ul>
+<li>Menu menu ** **
+Not enabled by default <code>/ tags</code> and<code>/ categories</code> page, if you need to enable file in the <code>source</code> blog directory folders are established<code>tags</code> and <code>categories</code> Folders Each folder contains a<code>index respectively .md</code> file. Content:</li>
+</ul>
+
+<p>`<code></code><br>
+layout: tags (or categories)</p>
+
+<h2 id="title-tags-or-categories">title: tags (or categories)</h2>
+
+<p>`<code></code></p>
+
+<p>&amp; Nbsp; &amp; nbsp; &amp; nbsp; &amp; nbsp; &amp; nbsp; &amp; nbsp; because the topic has built templates on these two pages, so they will be properly parsed.</p>
+
+<ul>
+<li>Controls ** widgets **
+Providing the seven kinds of gadgets. Including labeling, sorting, RSS, Links, microblogging show.</li>
+</ul>
+
+<p>** ** Link: Link URL Add to add the <code>links</code> attributes.</p>
+
+<p>** ** Microblogging show: Note that, if you want to enable microblogging show, you must fill in the value of <code>author</code> attributes<code>tsina</code> and <code>weibo_verifier</code>, the former is your Twitter ID, which is your microblogging show codes, visit the following figure <a href="http://app.weibo.com/tool/weiboshow">http://app.weibo.com/tool/weiboshow</a> in position, you can get your verifier, such as: I was <code>b3593ceb</code>.<br>
+! <a href="Http://ww1.sinaimg.cn/large/81b78497jw1emegd6b0ytj209204pweu.jpg"></a></p>
+
+<p>If you want to turn off the sidebar, the <code>close_aside</code> set to<code>true</code>, it will automatically turn off the sidebar in blog page.</p>
+
+<ul>
+<li><p>Pictures Image ** **<br>
+This topic can set up a website related images, such as site icon ( <code>favicon</code>), website logo (<code>imglogo</code>), author avatar ( <code>author_img</code>). We recommend enabling website logo, format or suggestions for <code>.svg</code><code>.png</code> format. At the same time it proposed to provide supporting and favicon icon <code>apple_icon</code> on Apple devices (not transparent background).</p></li>
+<li><p>Display Mode Index ** ** Home<br>
+Home currently supports two display modes, one is the original card of formula (Go to <a href="http://wuchong.me/jacman">Demo</a> Preview), and the other is similar to the official theme of the article Expanding (<a href="http://wuchong.me">site </a> which uses this). Both have advantages and disadvantages, the former home load faster, the latter article content more attractive to readers. After expanding uses a default theme, open for the first card type, set the <code>expand</code> index<code>attributes of: false</code>.</p></li>
+</ul>
+
+<p>The card is a summary of the article contents of the article before the interception of 140 words to be summarized <code>description</code> own and at the beginning of the<code>front-matter</code> in. Expanding the page is to use the <code>&lt;-! More -&gt;</code> intercepted.</p>
+
+<ul>
+<li><p>Author information author ** **<br>
+On information, we recommended to completed. Where <code>tsina</code> your Weibo ID, different from the user name or Twitter homepage addresses. Enabling this attribute, other users can share your articles on the microblogging while automatically! You. At the same time it <code>weibo_verifier</code> act together to generate microblogging show. <code>Intro_line1</code> and<code>intro_line2</code> is a personal website at the bottom of the presentation. <code>Weibo</code>,<code>twitter</code>, <code>facebook</code> the like is used to display the lower right corner of the site&#39;s social buttons, as shown below.<br>
+! <a href="Http://ww4.sinaimg.cn/large/81b78497jw1emgscr3575j2078050jrc.jpg"></a></p></li>
+<li><p>** Contents toc **<br>
+Whether in the article or directory function sidebar enabled. Both may have to <code>true</code> or are<code>false</code>. Also, if you want to turn off a specific directory features an article at the beginning of the article you can file <code>front-matter</code> add a line in<code>toc: false</code>.</p></li>
+<li><p>Comments comments ** **<br>
+Fill <code>duoshuo_shortname</code> <a href="http://duoshuo.com/">say</a> user name, say enabled commenting system. In mainland China with a better comment system.</p></li>
+</ul>
+
+<p>Fill <code>disqus_shortname</code> <a href="http://disqus.com/">disqus</a> user name, enable disqus comment system. Wider international use of the commenting system. <code>_config.yml</code> Blog settings file in the root directory of the<code>disqus_shortname</code> also can open the function.</p>
+
+<ul>
+<li><p>Share jiathis ** ** Screening<br>
+<a href="http://www.jiathis.com/">Screening</a> sharing system. It turned off by default, because the theme has built native sharing.</p></li>
+<li><p>Site Stats Analytics ** **<br>
+<code>Google_analytics</code>: Google Analytics tracking code. Note: Google Analytics has been upgraded to Universal Analytics. Please go back to upgrade your version of Google Analytics tracking code is then enabled, for more information please <a href="https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN">CLICK HERE</a> understanding.</p></li>
+</ul>
+
+<p><code>Baidu_tongji</code>: Baidu statistics. Sites need to fill pattern <code>sitecode</code>, in <a href="http://tongji.baidu.com/web/welcome/login">official website</a> to register and configure a site, to obtain signatures. Signature in the &quot;Site Center&quot; -&gt; &quot;Get the code&quot; view, <code>e6d1f421bbc9962127a50488f9ed37d1</code> shown in the following figure, remove the front of the note<code>3F</code>.<br>
+! <a href="Http://ww4.sinaimg.cn/large/81b78497jw1emf4v6qf91j20kf07sq8v.jpg"></a></p>
+
+<p><code>Cnzz_tongji</code>: Master statistics. After the need to fill the site ID<code>siteid</code>, empathy in <a href="http://www.cnzz.com">Station Executive Network</a> register and configure the site to get.</p>
+
+<ul>
+<li><p>Mathematical formulas mathjax ** **<br>
+Theme Support LaTex write mathematical formulas. Only at the beginning of the article file <code>front-matter</code> in, add a line<code>mathjax: true</code>, LaTex to write the formula in the text.</p></li>
+<li><p>Photo browser fancybox ** **<br>
+Off by default, if you regularly publish articles Gallery type, then set to <code>true</code>.</p></li>
+<li><p>** Top totop **<br>
+`` Back to top the bottom right button is enabled by default.</p></li>
+<li><p>Custom Search Search ** **<br>
+<code>Baidu_search</code>: If enabled within the Baidu search the station need to sign <a href="http://zn.baidu.com/">Baidu Search stations</a>, configure your site and get the search open search Site ID, additional attributes can fill<code>site</code> the default value can also fill in their own second-level domain of the CNAME, more detail can be read <a href="http://gengbiao.me/hexo/hexo%E6%B7%BB%E5%8A%A0%%20E7%%2099%%20BE%%20E5%%20BA%%20A6%%20E7%%20AB%%2099%%20E5%%2086%%2085%%20E6%%2090%%209C%%20E7%%20B4%%20A2%20/">this blog</a> understanding.</p></li>
+</ul>
+
+<p><code>Google_cse</code>: If enabled Google Custom Search need to sign <a href="https://www.google.com/cse/">Google CSE</a>, configure your site and get this custom search ID. In addition, you need to create <code>search</code> file<code>source</code> file blog directory folder in the folder and file contains a <code>index.md</code>. Content:<br>
+ `<code></code><br>
+ layout: search<br>
+ title: search</p>
+
+<hr>
+
+<p>`<code></code></p>
+
+<p><code>Tiny_search</code>: If you want to turn <a href="http://tinysou.com/">micro search</a>, you need to register an account, configure an Engine, the Engine of Key Fill in the configuration file<code>id</code> can.</p>
+
+<h2 id="common-problem">common problem</h2>
+
+<ul>
+<li><p>** Q: The default picture is left home, how do I set up the center to make pictures? **</p>
+
+<blockquote>
+<p>Use <code>&lt;img src =&quot; &quot;style =&quot; display: block; margin: auto &quot;/&gt;</code> HTML tags.</p>
+</blockquote></li>
+<li><p>** Q: How to build an image articles (Gallery Post)? **</p>
+
+<blockquote>
+<p>Direct Create a Markdown file, <code>front-matter</code> modified as follows, you can see the theme style image articles provided.</p>
+
+<h2 id=">`<code></code></h2>
+
+<p>layout: photo<br>
+title: Gallery Post<br>
+photos:</p>
+</blockquote></li>
+<li><p><a href="Http://i.minus.com/ibobbTlfxZgITW.jpg">Http://i.minus.com/ibobbTlfxZgITW.jpg</a></p></li>
+</ul>
+
+<h2 id="http-i-minus-com-iedpg90y0exfs-jpg">- <a href="Http://i.minus.com/iedpg90Y0exFS.jpg">Http://i.minus.com/iedpg90Y0exFS.jpg</a></h2>
+
+<p>`<code></code></p>
+
+<ul>
+<li><p>** Q: I am in the configuration file to set the value of an item, but why always see the effect ah? **</p>
+
+<blockquote>
+<p><code>_config.yml</code> Front of each attribute value file must leave a space, it is recommended that all open spaces display modes Sublime / Notepad ++ in. Another of each article <code>front-matter</code> also pay attention to this issue.</p>
+</blockquote></li>
+<li><p>** Q: how comments and suggestions? **</p>
+
+<blockquote>
+<p>Topic still evolving, welcome <a href="https://github.com/Simpleyyt/jekyll-jacman/issues">open issue</a> to make recommendations, participate in discussions.</p>
+</blockquote></li>
+<li><p>** Q: Why do I modify the configuration file / published Bowen, parse it out but it is a distortion? **</p>
+
+<blockquote>
+<p>Please save your configuration file / markdown files into <code>UTF-8</code> format.</p>
+</blockquote></li>
+<li><p>** Q: Why open microblogging show display is blank, no content impressions? **</p>
+
+<blockquote>
+<p>Each time you modify this parameter will need to refresh a few times, or uploaded to the server just fine.</p>
+</blockquote></li>
+</ul>
 
         
         
@@ -283,6 +549,262 @@
         <h2 id="topic-introduction">Topic Introduction</h2>
 
 <p>Jekyll-Jacman is <a href="http://jekyllrb.com">Jekyll</a> has designed a fresh and responsive theme, has a richer feature support and a lot of domestic service. Jacman began <a href="https://github.com/wuchong/jacman">Jacman</a> transplanted from.</p>
+
+<p>&lt;-! More -&gt;</p>
+
+<h2 id="configuration-guide">Configuration Guide</h2>
+
+<p>Jacman topic provides a wealth of configuration properties, you can achieve your own definition of the subject matter. <code>_config.yml</code> Configuration file located in the root directory of the theme. This update to the configuration file for a major adjustment, if you use it before the Jacman, also require you to be modified according to the following guidelines.</p>
+
+<p>`<code></code></p>
+
+<h5 id="menu">Menu</h5>
+
+<p>menu:<br>
+  Home: /<br>
+  Archive: / archives<br>
+  About: / about</p>
+
+<h4 id="controls">Controls</h4>
+
+<p>widgets:</p>
+
+<ul>
+<li>Category</li>
+<li>Tag</li>
+<li>Links</li>
+<li>Rss</li>
+</ul>
+
+<h4 id="rss">RSS</h4>
+
+<p>rss: /atom.xml</p>
+
+<h4 id="pictures">Pictures</h4>
+
+<p>imglogo:<br>
+  enable: true ## whether to display the website logo<br>
+  src: img / logo.png<br>
+favicon: img / favicon.ico ## favicon<br>
+apple_icon: img / jacman.jpg ## Apple icon on your device, do not transparent background<br>
+author_img: img / author.jpg ## at the bottom of the site&#39;s bloggers Avatar<br>
+banner_img: img / banner.jpg ## blog top pictures</p>
+
+<p>close_aside: false ## whether to automatically turn off the sidebar in the article page</p>
+
+<h4 id="home-related">Home related</h4>
+
+<p>index:<br>
+  expand: true ## Home Articles whether to expand. The default is expandable display Read More.<br>
+  excerpt_link: Read More</p>
+
+<h4 id="author-information">author information</h4>
+
+<p>author:<br>
+  name: ## Author Name<br>
+  intro_line1: &quot;. Hello, I&#39;m Larry Page in Google&quot; ## at the bottom of the site&#39;s personal introduction<br>
+  intro_line2: &quot;This is my blog, believe it or not.&quot;<br>
+  weibo_verifier: ## microblogging show verification code<br>
+  tsina: ## for the show and microblogging microblogging Share<br>
+  weibo: ## social buttons to display the bottom of the site, the same below<br>
+  douban:<br>
+  zhihu:<br>
+  email:<br>
+  twitter:<br>
+  github:<br>
+  facebook:<br>
+  linkedin:<br>
+  google_plus:<br>
+  stackoverflow:</p>
+
+<h4 id="table-of-contents">table of Contents</h4>
+
+<p>toc:<br>
+  article: true ## is displayed in the article directory<br>
+  aside: true ## whether to display the directory in the sidebar</p>
+
+<h4 id="links">Links</h4>
+
+<p>links:<br>
+  Code Agricultural circle: <a href="https://coderq.com">https://coderq.com</a>, a programmer for the exchange and sharing of new generation community<br>
+  Jark&#39;s Blog: <a href="http://wuchong.me">http://wuchong.me</a></p>
+
+<h4 id="reviews">Reviews</h4>
+
+<p>duoshuo_shortname:<br>
+disqus_shortname:</p>
+
+<h4 id="share-button">Share button</h4>
+
+<p>jiathis:<br>
+  enable: false ## default theme built-share<br>
+  id:<br>
+  tsina:</p>
+
+<h4 id="site-statistics">Site Statistics</h4>
+
+<p>google_analytics:<br>
+  enable: false<br>
+  id: ## google analytics ID.<br>
+  site: ## Web site addresses.<br>
+baidu_tongji:<br>
+  enable: false<br>
+  sitecode: ## Baidu statistics signature site<br>
+cnzz_tongji:<br>
+  enable: false<br>
+  siteid: ## CNZZ Statistics Site ID</p>
+
+<h4 id="miscellaneous">Miscellaneous</h4>
+
+<p>ShowCustomFont: true<br>
+fancybox: true<br>
+totop: true</p>
+
+<h4 id="custom-search">Custom Search</h4>
+
+<p>google_cse:<br>
+  enable: false<br>
+  cx:<br>
+baidu_search:<br>
+  enable: false<br>
+  id:<br>
+  site: <a href="http://zhannei.baidu.com/cse/search">http://zhannei.baidu.com/cse/search</a><br>
+tinysou_search: ## <a href="http://tinysou.com/">http://tinysou.com/</a><br>
+  enable: false<br>
+  id: &quot;4ac092ad8d749fdc6293&quot;<br>
+`<code></code></p>
+
+<h3 id="properties-function">Properties function</h3>
+
+<ul>
+<li>Menu menu ** **
+Not enabled by default <code>/ tags</code> and<code>/ categories</code> page, if you need to enable file in the <code>source</code> blog directory folders are established<code>tags</code> and <code>categories</code> Folders Each folder contains a<code>index respectively .md</code> file. Content:</li>
+</ul>
+
+<p>`<code></code><br>
+layout: tags (or categories)</p>
+
+<h2 id="title-tags-or-categories">title: tags (or categories)</h2>
+
+<p>`<code></code></p>
+
+<p>&amp; Nbsp; &amp; nbsp; &amp; nbsp; &amp; nbsp; &amp; nbsp; &amp; nbsp; because the topic has built templates on these two pages, so they will be properly parsed.</p>
+
+<ul>
+<li>Controls ** widgets **
+Providing the seven kinds of gadgets. Including labeling, sorting, RSS, Links, microblogging show.</li>
+</ul>
+
+<p>** ** Link: Link URL Add to add the <code>links</code> attributes.</p>
+
+<p>** ** Microblogging show: Note that, if you want to enable microblogging show, you must fill in the value of <code>author</code> attributes<code>tsina</code> and <code>weibo_verifier</code>, the former is your Twitter ID, which is your microblogging show codes, visit the following figure <a href="http://app.weibo.com/tool/weiboshow">http://app.weibo.com/tool/weiboshow</a> in position, you can get your verifier, such as: I was <code>b3593ceb</code>.<br>
+! <a href="Http://ww1.sinaimg.cn/large/81b78497jw1emegd6b0ytj209204pweu.jpg"></a></p>
+
+<p>If you want to turn off the sidebar, the <code>close_aside</code> set to<code>true</code>, it will automatically turn off the sidebar in blog page.</p>
+
+<ul>
+<li><p>Pictures Image ** **<br>
+This topic can set up a website related images, such as site icon ( <code>favicon</code>), website logo (<code>imglogo</code>), author avatar ( <code>author_img</code>). We recommend enabling website logo, format or suggestions for <code>.svg</code><code>.png</code> format. At the same time it proposed to provide supporting and favicon icon <code>apple_icon</code> on Apple devices (not transparent background).</p></li>
+<li><p>Display Mode Index ** ** Home<br>
+Home currently supports two display modes, one is the original card of formula (Go to <a href="http://wuchong.me/jacman">Demo</a> Preview), and the other is similar to the official theme of the article Expanding (<a href="http://wuchong.me">site </a> which uses this). Both have advantages and disadvantages, the former home load faster, the latter article content more attractive to readers. After expanding uses a default theme, open for the first card type, set the <code>expand</code> index<code>attributes of: false</code>.</p></li>
+</ul>
+
+<p>The card is a summary of the article contents of the article before the interception of 140 words to be summarized <code>description</code> own and at the beginning of the<code>front-matter</code> in. Expanding the page is to use the <code>&lt;-! More -&gt;</code> intercepted.</p>
+
+<ul>
+<li><p>Author information author ** **<br>
+On information, we recommended to completed. Where <code>tsina</code> your Weibo ID, different from the user name or Twitter homepage addresses. Enabling this attribute, other users can share your articles on the microblogging while automatically! You. At the same time it <code>weibo_verifier</code> act together to generate microblogging show. <code>Intro_line1</code> and<code>intro_line2</code> is a personal website at the bottom of the presentation. <code>Weibo</code>,<code>twitter</code>, <code>facebook</code> the like is used to display the lower right corner of the site&#39;s social buttons, as shown below.<br>
+! <a href="Http://ww4.sinaimg.cn/large/81b78497jw1emgscr3575j2078050jrc.jpg"></a></p></li>
+<li><p>** Contents toc **<br>
+Whether in the article or directory function sidebar enabled. Both may have to <code>true</code> or are<code>false</code>. Also, if you want to turn off a specific directory features an article at the beginning of the article you can file <code>front-matter</code> add a line in<code>toc: false</code>.</p></li>
+<li><p>Comments comments ** **<br>
+Fill <code>duoshuo_shortname</code> <a href="http://duoshuo.com/">say</a> user name, say enabled commenting system. In mainland China with a better comment system.</p></li>
+</ul>
+
+<p>Fill <code>disqus_shortname</code> <a href="http://disqus.com/">disqus</a> user name, enable disqus comment system. Wider international use of the commenting system. <code>_config.yml</code> Blog settings file in the root directory of the<code>disqus_shortname</code> also can open the function.</p>
+
+<ul>
+<li><p>Share jiathis ** ** Screening<br>
+<a href="http://www.jiathis.com/">Screening</a> sharing system. It turned off by default, because the theme has built native sharing.</p></li>
+<li><p>Site Stats Analytics ** **<br>
+<code>Google_analytics</code>: Google Analytics tracking code. Note: Google Analytics has been upgraded to Universal Analytics. Please go back to upgrade your version of Google Analytics tracking code is then enabled, for more information please <a href="https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN">CLICK HERE</a> understanding.</p></li>
+</ul>
+
+<p><code>Baidu_tongji</code>: Baidu statistics. Sites need to fill pattern <code>sitecode</code>, in <a href="http://tongji.baidu.com/web/welcome/login">official website</a> to register and configure a site, to obtain signatures. Signature in the &quot;Site Center&quot; -&gt; &quot;Get the code&quot; view, <code>e6d1f421bbc9962127a50488f9ed37d1</code> shown in the following figure, remove the front of the note<code>3F</code>.<br>
+! <a href="Http://ww4.sinaimg.cn/large/81b78497jw1emf4v6qf91j20kf07sq8v.jpg"></a></p>
+
+<p><code>Cnzz_tongji</code>: Master statistics. After the need to fill the site ID<code>siteid</code>, empathy in <a href="http://www.cnzz.com">Station Executive Network</a> register and configure the site to get.</p>
+
+<ul>
+<li><p>Mathematical formulas mathjax ** **<br>
+Theme Support LaTex write mathematical formulas. Only at the beginning of the article file <code>front-matter</code> in, add a line<code>mathjax: true</code>, LaTex to write the formula in the text.</p></li>
+<li><p>Photo browser fancybox ** **<br>
+Off by default, if you regularly publish articles Gallery type, then set to <code>true</code>.</p></li>
+<li><p>** Top totop **<br>
+`` Back to top the bottom right button is enabled by default.</p></li>
+<li><p>Custom Search Search ** **<br>
+<code>Baidu_search</code>: If enabled within the Baidu search the station need to sign <a href="http://zn.baidu.com/">Baidu Search stations</a>, configure your site and get the search open search Site ID, additional attributes can fill<code>site</code> the default value can also fill in their own second-level domain of the CNAME, more detail can be read <a href="http://gengbiao.me/hexo/hexo%E6%B7%BB%E5%8A%A0%%20E7%%2099%%20BE%%20E5%%20BA%%20A6%%20E7%%20AB%%2099%%20E5%%2086%%2085%%20E6%%2090%%209C%%20E7%%20B4%%20A2%20/">this blog</a> understanding.</p></li>
+</ul>
+
+<p><code>Google_cse</code>: If enabled Google Custom Search need to sign <a href="https://www.google.com/cse/">Google CSE</a>, configure your site and get this custom search ID. In addition, you need to create <code>search</code> file<code>source</code> file blog directory folder in the folder and file contains a <code>index.md</code>. Content:<br>
+ `<code></code><br>
+ layout: search<br>
+ title: search</p>
+
+<hr>
+
+<p>`<code></code></p>
+
+<p><code>Tiny_search</code>: If you want to turn <a href="http://tinysou.com/">micro search</a>, you need to register an account, configure an Engine, the Engine of Key Fill in the configuration file<code>id</code> can.</p>
+
+<h2 id="common-problem">common problem</h2>
+
+<ul>
+<li><p>** Q: The default picture is left home, how do I set up the center to make pictures? **</p>
+
+<blockquote>
+<p>Use <code>&lt;img src =&quot; &quot;style =&quot; display: block; margin: auto &quot;/&gt;</code> HTML tags.</p>
+</blockquote></li>
+<li><p>** Q: How to build an image articles (Gallery Post)? **</p>
+
+<blockquote>
+<p>Direct Create a Markdown file, <code>front-matter</code> modified as follows, you can see the theme style image articles provided.</p>
+
+<h2 id=">`<code></code></h2>
+
+<p>layout: photo<br>
+title: Gallery Post<br>
+photos:</p>
+</blockquote></li>
+<li><p><a href="Http://i.minus.com/ibobbTlfxZgITW.jpg">Http://i.minus.com/ibobbTlfxZgITW.jpg</a></p></li>
+</ul>
+
+<h2 id="http-i-minus-com-iedpg90y0exfs-jpg">- <a href="Http://i.minus.com/iedpg90Y0exFS.jpg">Http://i.minus.com/iedpg90Y0exFS.jpg</a></h2>
+
+<p>`<code></code></p>
+
+<ul>
+<li><p>** Q: I am in the configuration file to set the value of an item, but why always see the effect ah? **</p>
+
+<blockquote>
+<p><code>_config.yml</code> Front of each attribute value file must leave a space, it is recommended that all open spaces display modes Sublime / Notepad ++ in. Another of each article <code>front-matter</code> also pay attention to this issue.</p>
+</blockquote></li>
+<li><p>** Q: how comments and suggestions? **</p>
+
+<blockquote>
+<p>Topic still evolving, welcome <a href="https://github.com/Simpleyyt/jekyll-jacman/issues">open issue</a> to make recommendations, participate in discussions.</p>
+</blockquote></li>
+<li><p>** Q: Why do I modify the configuration file / published Bowen, parse it out but it is a distortion? **</p>
+
+<blockquote>
+<p>Please save your configuration file / markdown files into <code>UTF-8</code> format.</p>
+</blockquote></li>
+<li><p>** Q: Why open microblogging show display is blank, no content impressions? **</p>
+
+<blockquote>
+<p>Each time you modify this parameter will need to refresh a few times, or uploaded to the server just fine.</p>
+</blockquote></li>
+</ul>
 
         
         
