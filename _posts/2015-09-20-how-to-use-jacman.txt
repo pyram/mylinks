@@ -1,0 +1,222 @@
+---
+layout: post
+title: How to Use Jacman topic
+tags:
+- Jekyll
+- Jacman
+categories: Jekyll
+description: Jacman is a flat, has a Jekyll theme responsive design. Official site uses Jacman theme. Jacman based Jacman modified from the Hexo theme. You can visit the site and Demo Preview More on this topic for more results. If you have any questions or comments Welcome to GitHub published issue.
+---
+## Topic Introduction
+Jekyll-Jacman is [Jekyll] (http://jekyllrb.com) has designed a fresh and responsive theme, has a richer feature support and a lot of domestic service. Jacman began [Jacman] (https://github.com/wuchong/jacman) transplanted from.
+
+<-! More ->
+## Configuration Guide
+
+Jacman topic provides a wealth of configuration properties, you can achieve your own definition of the subject matter. `_config.yml` Configuration file located in the root directory of the theme. This update to the configuration file for a major adjustment, if you use it before the Jacman, also require you to be modified according to the following guidelines.
+
+`` `
+##### Menu
+menu:
+  Home: /
+  Archive: / archives
+  About: / about
+
+#### Controls
+widgets:
+- Category
+- Tag
+- Links
+- Rss
+
+#### RSS
+rss: /atom.xml
+
+#### Pictures
+imglogo:
+  enable: true ## whether to display the website logo
+  src: img / logo.png
+favicon: img / favicon.ico ## favicon
+apple_icon: img / jacman.jpg ## Apple icon on your device, do not transparent background
+author_img: img / author.jpg ## at the bottom of the site's bloggers Avatar
+banner_img: img / banner.jpg ## blog top pictures
+
+close_aside: false ## whether to automatically turn off the sidebar in the article page
+
+#### Home related
+index:
+  expand: true ## Home Articles whether to expand. The default is expandable display Read More.
+  excerpt_link: Read More
+
+#### author information
+author:
+  name: ## Author Name
+  intro_line1: ". Hello, I'm Larry Page in Google" ## at the bottom of the site's personal introduction
+  intro_line2: "This is my blog, believe it or not."
+  weibo_verifier: ## microblogging show verification code
+  tsina: ## for the show and microblogging microblogging Share
+  weibo: ## social buttons to display the bottom of the site, the same below
+  douban:
+  zhihu:
+  email:
+  twitter:
+  github:
+  facebook:
+  linkedin:
+  google_plus:
+  stackoverflow:
+
+
+#### table of Contents
+toc:
+  article: true ## is displayed in the article directory
+  aside: true ## whether to display the directory in the sidebar
+
+#### Links
+links:
+  Code Agricultural circle: https://coderq.com, a programmer for the exchange and sharing of new generation community
+  Jark's Blog: http://wuchong.me
+  
+#### Reviews
+duoshuo_shortname:
+disqus_shortname:
+
+#### Share button
+jiathis:
+  enable: false ## default theme built-share
+  id:
+  tsina:
+  
+#### Site Statistics
+google_analytics:
+  enable: false
+  id: ## google analytics ID.
+  site: ## Web site addresses.
+baidu_tongji:
+  enable: false
+  sitecode: ## Baidu statistics signature site
+cnzz_tongji:
+  enable: false
+  siteid: ## CNZZ Statistics Site ID
+
+#### Miscellaneous
+ShowCustomFont: true
+fancybox: true
+totop: true
+
+#### Custom Search
+google_cse:
+  enable: false
+  cx:
+baidu_search:
+  enable: false
+  id:
+  site: http://zhannei.baidu.com/cse/search
+tinysou_search: ## http://tinysou.com/
+  enable: false
+  id: "4ac092ad8d749fdc6293"
+`` `
+
+### Properties function
+- Menu menu ** **
+Not enabled by default `/ tags` and` / categories` page, if you need to enable file in the `source` blog directory folders are established` tags` and `categories` Folders Each folder contains a` index respectively .md` file. Content:
+
+`` `
+layout: tags (or categories)
+title: tags (or categories)
+---
+`` `
+
+
+& Nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; because the topic has built templates on these two pages, so they will be properly parsed.
+
+- Controls ** widgets **
+Providing the seven kinds of gadgets. Including labeling, sorting, RSS, Links, microblogging show.
+
+ ** ** Link: Link URL Add to add the `links` attributes.
+ 
+ ** ** Microblogging show: Note that, if you want to enable microblogging show, you must fill in the value of `author` attributes` tsina` and `weibo_verifier`, the former is your Twitter ID, which is your microblogging show codes, visit the following figure http://app.weibo.com/tool/weiboshow in position, you can get your verifier, such as: I was `b3593ceb`.
+! [] (Http://ww1.sinaimg.cn/large/81b78497jw1emegd6b0ytj209204pweu.jpg)
+
+ If you want to turn off the sidebar, the `close_aside` set to` true`, it will automatically turn off the sidebar in blog page.
+
+- Pictures Image ** **
+This topic can set up a website related images, such as site icon ( `favicon`), website logo (` imglogo`), author avatar ( `author_img`). We recommend enabling website logo, format or suggestions for `.svg`` .png` format. At the same time it proposed to provide supporting and favicon icon `apple_icon` on Apple devices (not transparent background).
+
+- Display Mode Index ** ** Home
+Home currently supports two display modes, one is the original card of formula (Go to [Demo] (http://wuchong.me/jacman) Preview), and the other is similar to the official theme of the article Expanding ([site ] (http://wuchong.me) which uses this). Both have advantages and disadvantages, the former home load faster, the latter article content more attractive to readers. After expanding uses a default theme, open for the first card type, set the `expand` index` attributes of: false`.
+
+ The card is a summary of the article contents of the article before the interception of 140 words to be summarized `description` own and at the beginning of the` front-matter` in. Expanding the page is to use the `<-! More ->` intercepted.
+
+- Author information author ** **
+On information, we recommended to completed. Where `tsina` your Weibo ID, different from the user name or Twitter homepage addresses. Enabling this attribute, other users can share your articles on the microblogging while automatically! You. At the same time it `weibo_verifier` act together to generate microblogging show. `Intro_line1` and` intro_line2` is a personal website at the bottom of the presentation. `Weibo`,` twitter`, `facebook` the like is used to display the lower right corner of the site's social buttons, as shown below.
+! [] (Http://ww4.sinaimg.cn/large/81b78497jw1emgscr3575j2078050jrc.jpg)
+
+- ** Contents toc **
+Whether in the article or directory function sidebar enabled. Both may have to `true` or are` false`. Also, if you want to turn off a specific directory features an article at the beginning of the article you can file `front-matter` add a line in` toc: false`.
+
+- Comments comments ** **
+Fill `duoshuo_shortname` [say] (http://duoshuo.com/) user name, say enabled commenting system. In mainland China with a better comment system.
+
+ Fill `disqus_shortname` [disqus] (http://disqus.com/) user name, enable disqus comment system. Wider international use of the commenting system. `_config.yml` Blog settings file in the root directory of the` disqus_shortname` also can open the function.
+
+- Share jiathis ** ** Screening
+[Screening] (http://www.jiathis.com/) sharing system. It turned off by default, because the theme has built native sharing.
+
+- Site Stats Analytics ** **
+`Google_analytics`: Google Analytics tracking code. Note: Google Analytics has been upgraded to Universal Analytics. Please go back to upgrade your version of Google Analytics tracking code is then enabled, for more information please [CLICK HERE] (https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN) understanding.
+
+ `Baidu_tongji`: Baidu statistics. Sites need to fill pattern `sitecode`, in [official website] (http://tongji.baidu.com/web/welcome/login) to register and configure a site, to obtain signatures. Signature in the "Site Center" -> "Get the code" view, `e6d1f421bbc9962127a50488f9ed37d1` shown in the following figure, remove the front of the note` 3F`.
+! [] (Http://ww4.sinaimg.cn/large/81b78497jw1emf4v6qf91j20kf07sq8v.jpg)
+
+ `Cnzz_tongji`: Master statistics. After the need to fill the site ID`siteid`, empathy in [Station Executive Network] (http://www.cnzz.com) register and configure the site to get.
+
+- Mathematical formulas mathjax ** **
+Theme Support LaTex write mathematical formulas. Only at the beginning of the article file `front-matter` in, add a line` mathjax: true`, LaTex to write the formula in the text.
+
+- Photo browser fancybox ** **
+Off by default, if you regularly publish articles Gallery type, then set to `true`.
+
+- ** Top totop **
+`` Back to top the bottom right button is enabled by default.
+
+- Custom Search Search ** **
+`Baidu_search`: If enabled within the Baidu search the station need to sign [Baidu Search stations] (http://zn.baidu.com/), configure your site and get the search open search Site ID, additional attributes can fill` site` the default value can also fill in their own second-level domain of the CNAME, more detail can be read [this blog] (http://gengbiao.me/hexo/hexo%E6%B7%BB%E5%8A%A0% E7% 99% BE% E5% BA% A6% E7% AB% 99% E5% 86% 85% E6% 90% 9C% E7% B4% A2 /) understanding.
+
+ `Google_cse`: If enabled Google Custom Search need to sign [Google CSE] (https://www.google.com/cse/), configure your site and get this custom search ID. In addition, you need to create `search` file` source` file blog directory folder in the folder and file contains a `index.md`. Content:
+ `` `
+ layout: search
+ title: search
+ ---
+ `` `
+
+ `Tiny_search`: If you want to turn [micro search] (http://tinysou.com/), you need to register an account, configure an Engine, the Engine of Key Fill in the configuration file` id` can.
+
+
+##common problem
+- ** Q: The default picture is left home, how do I set up the center to make pictures? **
+> Use `<img src =" "style =" display: block; margin: auto "/>` HTML tags.
+
+- ** Q: How to build an image articles (Gallery Post)? **
+> Direct Create a Markdown file, `front-matter` modified as follows, you can see the theme style image articles provided.
+`` `
+---
+layout: photo
+title: Gallery Post
+photos:
+- Http://i.minus.com/ibobbTlfxZgITW.jpg
+- Http://i.minus.com/iedpg90Y0exFS.jpg
+---
+`` `
+
+- ** Q: I am in the configuration file to set the value of an item, but why always see the effect ah? **
+> `_config.yml` Front of each attribute value file must leave a space, it is recommended that all open spaces display modes Sublime / Notepad ++ in. Another of each article `front-matter` also pay attention to this issue.
+
+- ** Q: how comments and suggestions? **
+> Topic still evolving, welcome [open issue] (https://github.com/Simpleyyt/jekyll-jacman/issues) to make recommendations, participate in discussions.
+
+- ** Q: Why do I modify the configuration file / published Bowen, parse it out but it is a distortion? **
+> Please save your configuration file / markdown files into `UTF-8` format.
+
+- ** Q: Why open microblogging show display is blank, no content impressions? **
+> Each time you modify this parameter will need to refresh a few times, or uploaded to the server just fine.
