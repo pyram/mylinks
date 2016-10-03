@@ -1,6 +1,8 @@
+<!doctype html>
 {% if page.type == 'post' or page.type == 'photo' %}
  {% include _partial/head.html %}
-  <body>
+<body>
+  <div id="page-wrap">
     <header>
         {% include _partial/header.html %}
     </header>
@@ -12,6 +14,7 @@
     </div>
     <footer>{% include _partial/footer.html %}</footer>
     {% include _partial/after_footer.html %}
+  </div>
   </body>
 </html>
 {% elsif page.type == 'page' %}
