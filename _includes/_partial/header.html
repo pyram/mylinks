@@ -2,19 +2,19 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                <a href="index.html" class="logo"><img alt="Neubloc: Rightsource Software Design and Development" src="assets/img/logo.png"></a>
+                <a href="index.html" class="logo"><img alt="Neubloc: Rightsource Software Design and Development" src="images/logo.png" /></a>
             </div>
             <div class="col-sm-4">
                 <div class="search">
                     <form action="http://www.neubloc.com/" method="post" class="top-search" role="search">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search our website" name="searchword">
+                            <input type="text" class="form-control" placeholder="Search our website" name="searchword" />
                             <span class="input-group-btn"><button class="btn btn-default" type="submit" title="Search"><i class="nico-search"></i><span class="hidden">Search</span></button>
                             </span>
                         </div>
-                        <input type="hidden" name="task" value="search">
-                        <input type="hidden" name="option" value="com_search">
-                        <input type="hidden" name="Itemid" value="101">
+                        <input type="hidden" name="task" value="search" />
+                        <input type="hidden" name="option" value="com_search" />
+                        <input type="hidden" name="Itemid" value="101" />
                     </form>
                 </div>
             </div>
@@ -37,7 +37,6 @@
                     {% for m in site.menu %}
                     <li class="item-{{ forloop.index }} parent"><a href="{{ site.baseurl }}{{ m[1] }}">{{ m[0] }}</a></li>
                     {% endfor %}
-                    <!-- <li class="item-101 default current active"><a href="index.html">Home</a></li><li class="item-108 parent"><a href="about-us.html">About Us</a></li><li class="item-109 parent"><a href="services.html">Services</a></li><li class="item-110 parent"><a href="case-studies.html">Case Studies</a></li><li class="item-111 parent"><a href="expertise.html">Expertise</a></li><li class="item-112"><a href="clients.html">Clients</a></li><li class="item-113"><a href="blog.html">Blog</a></li><li class="item-134"><a href="contact.html">Contact</a></li> -->
                 </ul>
             </div>
         </div>
