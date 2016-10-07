@@ -104,8 +104,8 @@ author:
 
 #### Toc
 toc:
-  article: true   ## show contents in article.
-  aside: true     ## show contents in aside.
+  article: false   ## show contents in article.
+  aside: false    ## show contents in aside.
 ## you can set both of the value to true of neither of them.
 ## if you don't want display contents in a specified post,you can modify `front-matter` and add `toc: false`.
 
@@ -141,8 +141,8 @@ cnzz_tongji:
   siteid:    ## e.g. 1253575964 your cnzz tongji site id
 
 #### Miscellaneous
-fancybox: true        ## if you use gallery post or want use fancybox please set the value to true.
-totop: true           ## if you want to scroll to top in every post set the value to true
+fancybox: false          ## if you use gallery post or want use fancybox please set the value to true.
+totop: false           ## if you want to scroll to top in every post set the value to true
 
 
 #### Custom Search
