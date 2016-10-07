@@ -1,77 +1,77 @@
-{% if page.type == 'post' or page.type == 'photo' %}
- {% include _partial/head.html %}
+{% if page.type == 'post' or page.type == 'photo' %} {% include _partial/head.html %}
+
 <body>
     <header>
         {% include _partial/header.html %}
     </header>
     <div id="container">
-      {{ content }}
-      {% assign item = page %}
-      {% assign table = true %}
-      {% include _partial/sidebar.html %}
+        {{ content }} {% assign item = page %} {% assign table = true %} {% include _partial/sidebar.html %}
     </div>
     <footer>{% include _partial/footer.html %}</footer>
     {% include _partial/after_footer.html %}
-  </div>
-  </body>
+    </div>
+</body>
+
 </html>
-{% elsif page.type == 'page' %}
-    {% include _partial/head.html %}
-      <body>
-  <div id="page-wrap">
+{% elsif page.type == 'page' %} {% include _partial/head.html %}
+
+<body>
+    <div id="page-wrap">
         <header>
-          {% include _partial/header.html %}
+            {% include _partial/header.html %}
         </header>
         <div id="container">
-          {{ content }}
+            {{ content }}
         </div>
         <footer>{% include _partial/footer.html %}</footer>
         {% include _partial/after_footer.html %}
-      </div>
-      </body>
-     </html>
-{% elsif page.type == 'search' %}
-{% include _partial/head.html %}
-    <body>
-      <header>
-        {% include _partial/header.html %}
-      </header>
-      <div id="container">
-      {% include _partial/search.html %}
-      </div>
-      <footer>{% include _partial/footer.html %}</footer>
-      {% include _partial/after_footer.html %}
-    </body>
-   </html>
-{% elsif page.type == 'categories' or page.type == 'tags' or page.type == 'archives' %}
-  {% include _partial/head.html %}
-    <body>
-      <header>
-        {% include _partial/header.html %}
-      </header>
-      <div id="container">
-        {{ content }}
-      </div>
-      <footer>{% include _partial/footer.html %}</footer>
-      {% include _partial/after_footer.html %}
-    </body>
-   </html>
-{% else %}
-        {% include _partial/head.html %}
-  <body>
-<div id="page-wrap">
+    </div>
+</body>
+
+</html>
+{% elsif page.type == 'search' %} {% include _partial/head.html %}
+
+<body>
     <header>
         {% include _partial/header.html %}
     </header>
-    <div id="container" class="container">
-      {{ content }}
-      {% assign item = page %}
-      {% assign table = false %}
-      <!-- {% include _partial/sidebar.html %} -->
+    <div id="container">
+        {% include _partial/search.html %}
     </div>
     <footer>{% include _partial/footer.html %}</footer>
     {% include _partial/after_footer.html %}
+</body>
+
+</html>
+{% elsif page.type == 'categories' or page.type == 'tags' or page.type == 'archives' %} {% include _partial/head.html %}
+
+<body>
+    <header>
+        {% include _partial/header.html %}
+    </header>
+    <div id="container">
+        {{ content }}
     </div>
-  </body>
- </html>
-{% endif %} 
+    <footer>{% include _partial/footer.html %}</footer>
+    {% include _partial/after_footer.html %}
+</body>
+
+</html>
+{% else %} {% include _partial/head.html %}
+
+<body>
+    <div id="page-wrap">
+        <header>
+            {% include _partial/header.html %}
+        </header>
+        <div id="container" class="container">
+            {{ content }} {% assign item = page %} {% assign table = false %}
+            <!-- {% include _partial/sidebar.html %} -->
+        </div>
+        <footer>{% include _partial/footer.html %}</footer>
+        {% include _partial/after_footer.html %}
+    </div>
+</body>
+
+</html>
+{% endif %}
