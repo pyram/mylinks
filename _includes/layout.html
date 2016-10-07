@@ -67,9 +67,14 @@
         
             {{ content }} {% assign item = page %} {% assign table = false %}
             
-        
+        <div class="page-bottom">
+    <div class="container">
+
+        {% include _partial/before_footer.html %}
         <footer>{% include _partial/footer.html %}</footer>
         {% include _partial/after_footer.html %}
+    </div>
+</div>
     </div>
 </body>
 
