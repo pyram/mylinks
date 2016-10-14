@@ -1,10 +1,5 @@
 <?php
 
-function getimg($value = '')
-{
-
-}
-
 //set_time_limit (0);
 function crawl_page($url, $depth = 5)
 {
