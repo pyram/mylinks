@@ -3,15 +3,15 @@ title: "MADness"
 description: A Template for Jekyll
 
 # Files
-baseurl:
+baseurl: mylinks
 pagesdir: pages
 assets:
-  libs: assets/libs
-  owner: assets/owner
+  libs: mylinks/assets/libs
+  owner: mylinks/assets/owner
 logo: logo.png
 discus_shortname: MADness
 email: mad@ness.com
-url: "http://madforjekyll.github.io"
+url: "https://pyram.github.io/mylinks"
 search: true
 share: true
 comments: true
