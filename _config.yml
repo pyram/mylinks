@@ -1,0 +1,77 @@
+# This config file is meant for settings that affect your whole activity list, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+exclude: [Gemfile, Gemfile.lock, README.md, vendor]
+
+index:
+  en: welcome
+  fr:
+  ru: welcome
+
+feed:
+  en: /feed.xml
+  fr: /flux.xml
+
+collections:
+  locations:
+    output: true
+    permalink: /l/:title:output_ext
+  network:
+    output: true
+    permalink: /n/:name:output_ext
+  activities:
+    output: true
+    permalink: /a/:title:output_ext
+
+lang:
+  - fr
+  - en
+  - ru
+  - cn
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: "fr"
+  - scope:
+      path: ""
+      type: "activities"
+    values:
+      layout: "activity"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: locations
+    values:
+      layout: location
+  - scope:
+      path: ""
+      type: network
+    values:
+      layout: node
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://bettermtl.com/" # the base hostname & protocol for your site
+
+timezone: America/Montreal
+
+author: Paul Cuciureanu
+facebook_username: bettermtl
+twitter_username: BetterMTL
+github_username:  bettermtl
+company_name: BetterMTL invites
+
+# Build settings
+markdown: kramdown
+
+# Show future posts for future events.
+future: true
+
+permalink: /p/:title.html
