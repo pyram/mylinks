@@ -1,10 +1,10 @@
-- title: Start
+- title: Home
   url: "/"
-  side: left
+  side: center
 
-- title: Getting Started
-  url: "/getting-started/"
-  side: left
+- title: About Us
+  url: "/about-us/"
+  side: center
 
 - title: "Templates"
   url: "/design/"
