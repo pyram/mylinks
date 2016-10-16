@@ -7,10 +7,13 @@ layout: compress
 	{% include _head.html %}
 </head>
 <body id="top-of-page" class="{{ layout.format }}">
+<div id="page-wrap">
+		<header>
+	{% include _header_top.html %}
 	{% unless page.skip_boilerplate %}
 	{% include _navigation.html %}
 	{% endunless %}
-
+	</header>
 	{% include _masthead.html %}
 	{{ content }}
 
@@ -19,5 +22,6 @@ layout: compress
 	{% endunless %}
 
 	{% include _footer_scripts.html %}
+	</div>
 </body>
 </html>
