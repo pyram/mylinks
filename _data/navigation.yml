@@ -2,9 +2,9 @@
   url: "/"
   side: left
 
-- title: About Us
+- title: "O nas"
   url: "/about-us/"
-  side: center
+  side: left
 
 - title: "Templates"
   url: "/design/"
