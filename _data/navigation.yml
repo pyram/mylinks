@@ -1,6 +1,6 @@
 - title: Home
   url: "/"
-  side: center
+  side: left
 
 - title: About Us
   url: "/about-us/"
