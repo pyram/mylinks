@@ -1,10 +1,9 @@
 --- 
-layout: page 
-show_meta: false 
+layout: default
+#show_meta: false 
 title: "O Nas 2" 
 subheadline: "Poznajmy się bliżej!" 
-header: image_fullwidth: "header_unsplash_5.jpg" 
-permalink: "/about-us/" 
+permalink: "mylinks/about-us" 
 --- 
 <div class="container">
 <div class="row">
