@@ -1,0 +1,14 @@
+links:
+- name: Pricing
+  link: /pricing/
+- name: Blog
+  link: /blog/
+- name: About
+  link: /about/
+- name: Login
+  link: /
+  new_window: true
+- name: Sign Up
+  link: /
+  new_window: true
+  highlight: true

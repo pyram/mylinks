@@ -1,0 +1,83 @@
+---
+permalink: /pricing/
+title: Pricing
+heading: Find the perfect plan for your business
+subtitle: All plans include our award winning sales optimization solution to track your sales in real time.
+pricing_table:
+  - name: Basic
+    color: "#6fc3fd"
+    features:
+      - text: $25 per month
+        highlight: true
+      - text: Up to 5 users
+      - text: Basic lead scoring
+      - text: CRM
+      - text: Basic reporting
+      - text: Sales map
+    cta:
+      link: http://mysite.com?plan=basic
+      text: Get started
+  - name: Pro
+    color: "#4864b1"
+    features:
+      - text: $99 per month
+        highlight: true
+      - text: Everything in Basic
+      - text: Up to 25 users
+      - text: Advanced lead scoring
+      - text: Pipeline management
+      - text: Advanced reporting
+    cta:
+      link: http://mysite.com?plan=pro
+      text: Get started
+  - name: Professional
+    color: "#5d1988"
+    features:
+      - text: $299 per month
+        highlight: true
+      - text: Everything in Basic and Pro
+      - text: Up to 100 users
+      - text: Campaign builder
+      - text: Machine learning
+      - text: Calendar
+    cta:
+      link: http://mysite.com?plan=professional
+      text: Get started
+faq:
+  - question: What types of payment do you accept?
+    answer: Credit cards including MasterCard, Visa or American Express.
+  - question: Can I change my plan at a later time?
+    answer: Yes, you can upgrade and downgrade your plan at anytime.
+  - question: Do you offer pricing for nonprofit organizations?
+    answer: Yes, send us a message and we'll set you up on our nonprofit pricing.
+  - question: Questions?
+    answer: Contact us for any further questions at <a href="#">john@business.com</a>.
+---
+<div class="plans">
+	{% for plan in page.pricing_table %}
+		<ul class="plan">
+			<li style="background: {{ plan.color }}">
+				<h3>{{ plan.name }}</h3>
+			</li>
+			{% for feature in plan.features %}
+				<li {% if feature.highlight %} style="font-size: 1.2em"{% endif %}>{{ feature.text }}</li>
+			{% endfor %}
+
+			{% if plan.cta %}
+				<li class="pricing-cta"><div class="button"><a style="background: {{ plan.color }}" href="{{ plan.cta.link }}">{{ plan.cta.text }} &rarr;</a></div></li>
+			{% endif %}
+		</ul>
+	{% endfor %}
+</div>
+
+{% if page.faq %}
+  <h2>Pricing FAQ</h2>
+  <dl class="faq">
+    {% for item in page.faq %}
+      <div>
+        <dt>{{ item.question }}</dt>
+        <dd>{{ item.answer }}</dd>
+      </div>
+    {% endfor %}
+  </dl>
+{% endif %}

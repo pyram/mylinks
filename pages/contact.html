@@ -1,0 +1,45 @@
+---
+permalink: /contact/
+title: Contact
+heading: Get in touch today
+subtitle: We'd love to help you improve your sales.
+full_width: true
+map:
+  latitude: -45.8787605
+  longitude: 170.5027976
+  content_html: "<strong>Hydra HQ</strong><br>1 George Street,<br>Dunedin, New Zealand<br>"
+  zoom: 13
+---
+<div class="map" id="gmap_canvas"></div>
+
+
+<div class="contact-box">
+	<form action="/contact_success" method="post" class="contact-form">
+		<input type="hidden" name="cc_emails[]" value="support@cloudcannon.com" />
+
+		<label for="name">Full Name</label>
+		<input type="text" name="name" id="name" placeholder="Enter your name..." />
+
+		<label for="email">Email Address</label>
+		<input type="email" name="email" id="email" placeholder="Enter your email..." required />
+
+		<label for="message">Message</label>
+		<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+
+		<input type="submit" value="Send Message" />
+	</form>
+
+	<div class="contact-details">
+		<h3>Address</h3>
+		<address>1 George Street,<br />Dunedin,<br />9001,<br />Otago,<br />New Zealand</address>
+
+		<h3>Email</h3>
+		<p><a href="mailto:support@cloudcannon.com">support@cloudcannon.com</a></p>
+	</div>
+</div>
+
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+<script type='text/javascript'>
+  window.mapData = {{ page.map | jsonify }};
+</script>
+<script src="/js/map.js"></script>

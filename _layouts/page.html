@@ -1,6 +1,16 @@
 ---
 layout: default
-type: page
 ---
-
-{% include page.html %}
+<div class="content">
+	<section class="page">
+		<div class="container" {% if page.full_width %}style="max-width: 100%"{% endif %}>
+			{% if page.heading %}
+				<h2>{{ page.heading }}</h2>
+			{% endif %}
+			{% if page.subtitle %}
+				<p class="subtext">{{ page.subtitle }}</p>
+			{% endif %}
+			{{ content }}
+		</div>
+	</section>
+</div>
