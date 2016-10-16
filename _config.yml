@@ -57,8 +57,8 @@ defaults:
     values:
       layout: node
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://bettermtl.com/" # the base hostname & protocol for your site
+baseurl: "mylinks" # the subpath of your site, e.g. /blog
+url: "https://pyram.github.io/" # the base hostname & protocol for your site
 
 timezone: America/Montreal
 
