@@ -1,10 +1,30 @@
-		<base  />
+{% comment %}
+#
+#   Liquid variables are created at the top to keep the source DRY and clean.
+#   Idea by ericcarlisle.com
+#
+#   Variables › {{ url }} › site.url + site.baseurl
+#   Variables › {{ description }} › excerpt, page.meta_description, or site.description
+#   Variables › {{ title }} › page.title
+#
+{% endcomment %}{% capture ignore %}
+
+{% assign url = site.baseurl | prepend: site.url %}
+
+{% capture description %}{% if page.meta_description %}{{ page.meta_description }}{% elsif page.teaser %}{{ page.teaser }}{% elsif page.excerpt %}{{ page.excerpt }}{% elsif site.description %}{{ site.description }}{% endif %}{% endcapture %}
+{% assign description = description | strip_html | escape | strip %}
+
+{% capture title %}{% if page.meta_title %}{{ page.meta_title}}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title | strip_html | strip }}{% endif %}{% endcapture %}
+
+{% assign title = title | strip_html | escape | strip_newlines %}
+
+{% endcapture %}		<base  />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Rightsourcing, software development blog, software outsourcing, outsourcing to Poland, outsourcing to India" />
 	<meta name="rights" content="Neubloc" />
 	<meta name="description" content="Industry leader in Rightsourcing software development." />
 	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Home</title>
+	<title>{{ title }}</title>
 	<link href="component/search/indexad47.html?id=2&amp;Itemid=101&amp;format=opensearch" rel="search" title="Search Neubloc" type="application/opensearchdescription+xml" />
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500" rel="stylesheet" type="text/css" />

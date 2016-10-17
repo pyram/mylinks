@@ -1,5 +1,5 @@
 --- 
-layout: page
+layout: frontpage
 show_meta: false 
 title: "O Nas 2" 
 subheadline: "Poznajmy się bliżej!" 
