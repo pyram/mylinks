@@ -1,3 +1,14 @@
 name: Linear
 description: Linear template for Jekyll
 paginate: 10
+gems: [jekyll-paginate]
+
+##### Menu
+menu:
+  Home: /
+  About Us: /about-us
+  Services: /services
+  Case Studies: /case-studies
+  Expertise: /expertise
+  Blog: /blog
+  Contact: /contact
