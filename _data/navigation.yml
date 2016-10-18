@@ -2,14 +2,6 @@
 main:
   - title: "O Nas"
     url: /about-us/
-
-  
- - title: "Blog"
-    url: /blog/
-
- - title: "Usługi"
-    url: /services/
-
  - title: "Projekty"
     url: /case-studies/
 
