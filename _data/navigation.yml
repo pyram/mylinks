@@ -1,7 +1,20 @@
 # main links links
 main:
-  - title: "O Nas"
+- title: "O Nas"
     url: /about-us/
 
-  - title: "Sample Navigation Link 2"
-    url: /
+  - title: "Specjalizacja"
+    url: /about-us/
+
+ - title: "Blog"
+    url: /blog/
+
+ - title: "Usługi"
+    url: /services/
+
+ - title: "Projekty"
+    url: /case-studies/
+
+  - title: "Kontakt"
+    url: /contact/
+    
