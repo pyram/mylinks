@@ -2,8 +2,14 @@
 main:
   - title: "O Nas"
     url: /about-us/
- - title: "Projekty"
-    url: /case-studies/
 
+  - title: "Specjalizacja"
+    url: /expertise/''
+  - title: "Blog"
+    url: /blog/
+  - title: "Usługi"
+    url: /services/
+  - title: "Projekty"
+    url: /case-studies/
   - title: "Kontakt"
     url: /contact/
