@@ -1,6 +1,6 @@
 # main links links
 main:
-  - title: "O Nas"
+- title: "O Nas"
     url: /about-us/
 
   - title: "Specjalizacja"
@@ -17,3 +17,4 @@ main:
 
   - title: "Kontakt"
     url: /contact/
+    
