@@ -4,7 +4,7 @@ main:
     url: /about-us/
 
  - title: "Specjalizacja"
-    url: /expertise/
+    url: /about-us/
 
  - title: "Blog"
     url: /blog/
@@ -16,4 +16,4 @@ main:
     url: /case-studies/
 
   - title: "Kontakt"
-    url: /contact
+    url: /contact/
