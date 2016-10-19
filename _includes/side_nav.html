@@ -24,7 +24,7 @@
   </div>
 {% endif %}
  -->
-{% assign navigation = site.data.navigation.main.about-us %}
+{% assign navigation = site.data.navigation.main["about-us"].children %}
  <div class="col-sm-6 col-md-3 mg-bottom sidebar-a">
             <ul class="nav menu nav-pills nav-stacked">
                 {% for m in navigation %}
