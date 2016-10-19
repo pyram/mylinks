@@ -1,15 +1,41 @@
-
 {% include base_path %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6 col-md-3 mg-bottom sidebar-a">
+<!-- {% if page.author_profile or layout.author_profile or page.sidebar %}
+  <div class="sidebar sticky">
+  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+  {% if page.sidebar %}
+    {% for s in page.sidebar %}
+      {% if s.image %}
+        <img src=
+        {% if s.image contains "://" %}
+          "{{ s.image }}"
+        {% else %}
+          "{{ s.image | prepend: "/images/" | prepend: base_path }}"
+        {% endif %}
+        alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+      {% endif %}
+      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+      {% if s.text %}{{ s.text | markdownify }}{% endif %}
+    {% endfor %}
+    {% if page.sidebar.nav %}
+      {% include nav_list nav=page.sidebar.nav %}
+    {% endif %}
+  {% endif %}
+  </div>
+{% endif %}
+ -->
+{% assign navigation = site.data.navigation["about-us"] %}
+ <div class="col-sm-6 col-md-3 mg-bottom sidebar-a">
             <ul class="nav menu nav-pills nav-stacked">
-                <li class="item-115"><a href="about-us/why-neubloc.html">Why Neubloc</a></li>
-                <li class="item-116"><a href="about-us/our-history.html">Our History</a></li>
-                <li class="item-117"><a href="about-us/management.html">Management</a></li>
-                <li class="item-118"><a href="about-us/equity-option-program.html">Equity Option Program</a></li>
-                <li class="item-119"><a href="about-us/careers.html">Careers</a></li>
+                {% for m in navigation %}
+
+                    <li class="item-{{ forloop.index }} parent"><a href="{{ site.baseurl }}{{ m.url }}">{{ m.title }}</a></li>
+                    {% endfor %}
+              <!--     <li class="item-115"><a href="about-us/why-neubloc.html">Why Neubloc</a></li>
+                  <li class="item-116"><a href="about-us/our-history.html">Our History</a></li>
+                  <li class="item-117"><a href="about-us/management.html">Management</a></li>
+                  <li class="item-118"><a href="about-us/equity-option-program.html">Equity Option Program</a></li>
+                  <li class="item-119"><a href="about-us/careers.html">Careers</a></li> -->
             </ul>
         </div>
         <div class="col-sm-6 col-md-3 col-md-push-6 mg-bottom sidebar-b">
@@ -23,25 +49,25 @@
                     <li itemscope itemtype="https://schema.org/Article">
                         <a href="blog/79-outsourcing-mistakes-to-avoid-in-6-areas.html" itemprop="url">
                             <span itemprop="name">
-				Outsourcing Mistakes to Avoid in 6 Areas			</span>
+        Outsourcing Mistakes to Avoid in 6 Areas      </span>
                         </a>
                     </li>
                     <li itemscope itemtype="https://schema.org/Article">
                         <a href="blog/90-what-is-cloud-storage.html" itemprop="url">
                             <span itemprop="name">
-				What is Cloud Storage?			</span>
+        What is Cloud Storage?      </span>
                         </a>
                     </li>
                     <li itemscope itemtype="https://schema.org/Article">
                         <a href="blog/89-why-use-a-u-s-based-management-firm-for-your-software-project.html" itemprop="url">
                             <span itemprop="name">
-				Why Use a U.S. Based Management Firm for Your Software Project?			</span>
+        Why Use a U.S. Based Management Firm for Your Software Project?     </span>
                         </a>
                     </li>
                     <li itemscope itemtype="https://schema.org/Article">
                         <a href="blog/88-why-outsourcing-your-software-development-to-india-is-a-no-go.html" itemprop="url">
                             <span itemprop="name">
-				Why Outsourcing Your Software Development to India Is a No-Go			</span>
+        Why Outsourcing Your Software Development to India Is a No-Go     </span>
                         </a>
                     </li>
                 </ul>
@@ -64,22 +90,3 @@
                 </div>
             </div>
         </div>
-        <div class="clearfix visible-sm"></div>
-        <div class="col-sm-12 col-md-6 col-md-pull-3 mg-bottom main-column">
-            <div id="system-message-container">
-            </div>
-            <div class="item-page">
-                <div class="page-title">
-                    <h1>
-												About Us									</h1>
-                </div>
-                <p>Neubloc is a primarily U.S.-based, outsource software design and development firm that employs a unique RightSource model. This model couples the best of near shore design and project management with highly educated, experienced, and proven engineering resources near and off shore. Neubloc resources can be found in our offices throughout North America, near shore operations with our Argentinean and Ecuadorian locations, and off shore operations in multiple Central and Eastern European cities.
-                </p>
-                <p>
-                    We transcend the broken promises of time and cost efficiency from previous offshore models. In addition, we understand that work shipped offshore will fail without defined processes, clear communications, and the right balance of onshore, near shore and offshore resources. Only when a stable equilibrium between all of these aspects has been achieved, can productivity and savings be delivered.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<br/>
