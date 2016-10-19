@@ -27,6 +27,8 @@
 {% assign navigation = site.data.navigation.main["about-us"].children %}
  <div class="col-sm-6 col-md-3 mg-bottom sidebar-a">
             <ul class="nav menu nav-pills nav-stacked">
+        <li class="item-1 parent"><a href=".">test</a></li>
+
                 {% for m in navigation %}
 
                     <li class="item-{{ forloop.index }} parent"><a href="{{ site.baseurl }}{{ m.url }}">{{ m.title }}</a></li>
