@@ -4,17 +4,6 @@ main:
     url: /
   - title: O Nas
     url: /about-us/
-    children:
-      - title: "Dlaczego Neubloc"
-        url: /about-us/why-neubloc/
-      - title: "Nasza Historia"
-        url: /about-us/our-history/
-      - title: "Zarządzanie"
-        url: /about-us/management/
-      - title: "Program wyrównanych możliwości"
-        url: /about-us/equity-option-program/
-      - title: "Kariera"
-        url: /about-us/careers/
   - title: "Specjalizacja"
     url: /expertise/''
   - title: "Blog"
@@ -25,3 +14,15 @@ main:
     url: /case-studies/
   - title: "Kontakt"
     url: /contact/
+
+about-us:
+  - title: "Dlaczego Neubloc"
+    url: /about-us/why-neubloc/
+  - title: "Nasza Historia"
+    url: /about-us/our-history/
+  - title: "Zarządzanie"
+    url: /about-us/management/
+  - title: "Program wyrównanych możliwości"
+    url: /about-us/equity-option-program/
+  - title: "Kariera"
+    url: /about-us/careers/
