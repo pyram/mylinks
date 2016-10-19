@@ -2,7 +2,6 @@
 main:
   - title: "Start"
     url: /
-
   - title: O Nas
     url: /about-us/
     children:

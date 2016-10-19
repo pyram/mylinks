@@ -24,13 +24,15 @@
   </div>
 {% endif %}
  -->
-{% assign navigation = site.data.navigation["O nas"] %}
+{% assign navigation = site.data.navigation[page] %}
  <div class="col-sm-6 col-md-3 mg-bottom sidebar-a">
+    {% if page.sidebar.nav %}
+      {% include nav_list nav=page.sidebar.nav %}
+    {% endif %}
+    
             <ul class="nav menu nav-pills nav-stacked">
         <li class="item-1 parent"><a href=".">test</a></li>
-
-              {% include nav_list nav=page.sidebar.nav %}
-
+    
                 {% for m in navigation %}
 
                     <li class="item-{{ forloop.index }} parent"><a href="{{ site.baseurl }}{{ m.url }}">{{ m.title }}</a></li>
