@@ -8,7 +8,7 @@
 # Site Settings
 locale                   : "PL-pl"
 title                    : "Neubloc - www.neubloc.pl"
-title_separator          : "|"
+title_separator          : "-"
 name                     : "Neubloc Polska Sp. z o.o."
 description              : "An amazing website."
 url                      : "https://pyram.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
