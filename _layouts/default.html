@@ -13,10 +13,12 @@
 
   <!-- <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}"> -->
 <body>
-   
+<div id="page-wrap">
+    <header>   
     {% include browser-upgrade.html %}
     {% include masthead.html %}
-
+    </header>
+    <div class="below-nav hidden-xs"></div>
     {{ content }}
 
     <div class="page__footer">
@@ -27,6 +29,6 @@
     </div>
 
     {% include scripts.html %}
-   
+   </div>
   </body>
 </html>
