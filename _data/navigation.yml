@@ -31,6 +31,6 @@ about-us:
 
 expertise:
   - title: Specjalizacja
-   url: /expertise/
+    url: /expertise/
   - title: Wycena
-   url: /expertise/assessments
+    url: /expertise/assessments
