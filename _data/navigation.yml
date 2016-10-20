@@ -33,4 +33,14 @@ expertise:
   - title: Specjalizacja
     url: /expertise/
   - title: Wycena
-    url: /expertise/assessments
+    url: /expertise/assessments/
+  - title: "Programowanie aplikacji"
+    url: /expertise/application-software/
+  - title: "embedded software"
+    url: /expertise/embedded-software/
+  - title: "Product Identity Design"
+    url: /expertise/product-identity-design/
+  - title: "User Experience Design"
+    url: /expertise/user-experience-design/
+  - title: "Web Site Design and Development"
+    url: /expertise/Web-site-design-and-development/
