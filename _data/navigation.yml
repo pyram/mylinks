@@ -5,7 +5,7 @@ main:
   - title: O Nas
     url: /about-us/
   - title: "Specjalizacja"
-    url: /expertise/''
+    url: /expertise/
   - title: "Blog"
     url: /blog/
   - title: "Usługi"
