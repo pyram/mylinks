@@ -16,6 +16,8 @@ main:
     url: /contact/
 
 about-us:
+  - title: O Nas
+    url: /about-us/
   - title: "Dlaczego Neubloc"
     url: /about-us/why-neubloc/
   - title: "Nasza Historia"

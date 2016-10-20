@@ -35,8 +35,9 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="collapse navbar-collapse" id="main-nav-collapse">
+            <div class="collapse navbar-collapse" id="main-nav-collapse">            
                 <ul class="nav menu navbar-nav">
+
                     {% for link in site.data.navigation.main %}
                     {% if link.url contains 'http' %}
                       {% assign domain = '' %}
