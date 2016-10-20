@@ -35,18 +35,22 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
+                    <!-- {{ page.url }} -->
+                    {% assign url_parts = page.url | remove_first: '/' | split: '/' %}
+                    {% assign main_url  = url_parts[0] | prepend: site.baseurl %}
+                    
             <div class="collapse navbar-collapse" id="main-nav-collapse">            
                 <ul class="nav menu navbar-nav">
-
                     {% for link in site.data.navigation.main %}
                     {% if link.url contains 'http' %}
                       {% assign domain = '' %}
                       {% else %}
                       {% assign domain = base_path %}
                     {% endif %}
-                    <li class="item-{{ forloop.index }} parent"><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+                    {% assign link_url = link.url | remove: '/' | prepend: site.baseurl %}
+                    <li class="item-{{ forloop.index }} parent {% if link_url == main_url %}active{% endif %}"><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
                     {% endfor %}
-                </ul>
+                                </ul>
             </div>
         </div>
     </nav>
