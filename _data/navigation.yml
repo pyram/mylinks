@@ -28,3 +28,9 @@ about-us:
     url: /about-us/equity-option-program/
   - title: "Kariera"
     url: /about-us/careers/
+
+expertise:
+  - title: Specjalizacja
+   url: /expertise/
+  - title: Wycena
+   url: /expertise/assessments
