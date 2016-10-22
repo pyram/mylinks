@@ -1,23 +1,35 @@
 ---
 layout: default
 ---
-<!-- {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
-
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %} -->
-<div id="page-wrap">
-    <!-- {% include sidebar.html %} -->
+ <div class="below-nav hidden-xs"></div>
     
-        {% unless page.header.overlay_color or page.header.overlay_image %}
-        <div class="page-title">
-            <h1>{{ page.title }}</h1>
+    <div class="container">
+        <div class="row">
+        
+        {% include side_nav.html %}
+        {% include sidebar.html %}
+        <div class="clearfix visible-sm"></div>
+            <div class="col-sm-12 col-md-6 col-md-pull-3 mg-bottom main-column">
+                <div id="system-message-container">
+                </div>
+            <div class="item-page">
+                {% if page.title %}
+                <div class="page-title">
+                    <h1> {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }} </h1>
+                </div>
+                {% endif %}
+                {{ content }}
+            </div>
         </div>
-        {% endunless %}
-        {{ content }}
+        </div>
     </div>
-</div>
+    <br/>
+
+        <div class="page__footer">
+          <footer>
+            {% include footer/custom.html %}
+            {% include footer.html %}
+          </footer>
+        </div>
+    
+            {% include scripts.html %}
