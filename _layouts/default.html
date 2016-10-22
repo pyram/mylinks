@@ -5,13 +5,10 @@
 
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ site.locale | slice: 0,2 | default: "en" }}" lang="{{ site.locale | slice: 0,2 | default: "en" }}" dir="ltr" class="no-js">
-
   <head>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
-
-  <!-- <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}"> -->
 <body>
 <div id="page-wrap">
     <header>   
@@ -20,34 +17,38 @@
     </header>
     <div class="below-nav hidden-xs"></div>
     
-<div class="container">
-    <div class="row">
-    
-    {% include side_nav.html %}
-    <div class="clearfix visible-sm"></div>
-        <div class="col-sm-12 col-md-6 col-md-pull-3 mg-bottom main-column">
-            <div id="system-message-container">
-            </div>
+    <div class="container">
+        <div class="row">
+        
+        {% include side_nav.html %}
+        {% include sidebar.html %}
+        <div class="clearfix visible-sm"></div>
+            <div class="col-sm-12 col-md-6 col-md-pull-3 mg-bottom main-column">
+                <div id="system-message-container">
+                </div>
             <div class="item-page">
+                {% if page.title %}
                 <div class="page-title">
                     <h1> {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }} </h1>
                 </div>
-    {{ content }}
+                {% endif %}
+                {{ content }}
+            </div>
+    <!--     </div>
+        </div>
+    </div>
+    <br/>
 
-    </div>
-    </div>
-    </div>
-</div>
-<br/>
-
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
-    {% include scripts.html %}
-   </div>
+        <div class="page__footer">
+          <footer> -->
+            {% include footer/custom.html %}
+            {% include footer.html %}
+    <!--       </footer>
+        </div>
+     -->
+            {% include scripts.html %}
+       </div>
+       </div>
+       </div></div>
   </body>
 </html>
