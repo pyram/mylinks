@@ -1,16 +1,18 @@
   {% include base_path %}
 
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
 
 {% if post.id %}
   {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
   {% assign title = post.title %}
 {% endif %}
+
+{% if post.excerpt %}
+{% assign excerpt = post.excerpt %}
+{% else %}
+{% assign excerpt = post.content | close_format %}
+{% endif %}
+{% assign excerpt = "post.excerpt" %}
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
@@ -35,6 +37,6 @@
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+    {% if excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ excerpt }}</p>{% endif %}
   </article>
 </div>

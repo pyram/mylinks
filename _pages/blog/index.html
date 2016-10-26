@@ -1,0 +1,20 @@
+---
+layout: archive
+title: "Blog"
+author_profile: true
+permalink: /blog/
+paginate: blogs
+---
+{% include base_path %}
+{% assign blogs = site.collections | where: "label", "blogs"  | first %}
+<!-- {% for p in site %}
+{{ p }}
+<hr>
+{% endfor %} -->
+{{ paginator|inspect }}
+
+{% for post in blogs.docs %}
+
+  <h1>ho!</h1>
+  {% include archive-single.html %}
+{% endfor %}

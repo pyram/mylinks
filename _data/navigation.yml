@@ -6,8 +6,12 @@ main:
     url: /about-us/
   - title: "Specjalizacja"
     url: /expertise/
+  - title: "Badania Wyrywkowe"
+    url: /case-studies/
   - title: "Blog"
     url: /blog/
+  - title: "Blog 2"
+    url: /posts/
   - title: "Usługi"
     url: /services/
   - title: "Projekty"
