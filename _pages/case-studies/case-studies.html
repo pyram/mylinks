@@ -3,3 +3,8 @@ permalink: /case-studies/
 sidebar:
   nav: "case-studies"
 ---
+
+{% for m in site.pages %}
+
+{{ m.path }}<br>
+{%endfor%}

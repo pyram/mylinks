@@ -234,6 +234,9 @@ collections:
   blogs:
     output: true
     # permalink: /posts/:path/
+  case-studies:
+    output: true
+    permalink: /case-studies/:path
 
 # Defaults
 defaults:
