@@ -9,8 +9,22 @@
             <ul class="nav menu nav-pills nav-stacked">
                 {% for m in navigation %}
 
-                    <li class="item-{{ forloop.index }} parent {%if page.url==m.url %}active{% endif %}"><a href="{{ site.baseurl }}{{ m.url }}">{{ m.title }}</a></li>
-                    {% endfor %}              
+                	{% if m.children %}
+                		<li class="item-{{ forloop.index }} {%if page.url==m.url %}current{% endif %} active deeper parent">
+                		<a href="{{ m.url }}">{{ m.title }}</a>
+                			<ul class="nav-child unstyled small">
+                			{% for n in m.children %}
+                				<li class="item-10{{ forloop.index }}">
+                					<a href="{{ n.url }}">{{ n.title }}</a>
+            					</li>
+            				{% endfor %}
+        					</ul>
+    					</li>
+                	{% else %}
+
+	                    <li class="item-{{ forloop.index }} parent {%if page.url==m.url %}active{% endif %}"><a href="{{ site.baseurl }}{{ m.url }}">{{ m.title }}</a></li>
+                    {% endif %}
+	                    {% endfor %}              
             </ul>
           
         </div>

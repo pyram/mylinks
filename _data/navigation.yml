@@ -1,21 +1,19 @@
 # main links links
 main:
-  - title: "Start"
+  - title: "Strona Główna"
     url: /
   - title: O Nas
     url: /about-us/
-  - title: "Specjalizacja"
-    url: /expertise/
-  - title: "Badania Wyrywkowe"
-    url: /case-studies/
-  - title: "Blog"
-    url: /blog/
-  - title: "Blog 2"
-    url: /posts/
   - title: "Usługi"
     url: /services/
-  - title: "Projekty"
+  - title: "Studia Przypadków"
     url: /case-studies/
+  - title: "Wiedza Specjalistyczna"
+    url: /expertise/
+  - title: "Klienci"
+    url: /clients/
+  - title: "Blog"
+    url: /blog/
   - title: "Kontakt"
     url: /contact/
 
@@ -48,3 +46,12 @@ expertise:
     url: /expertise/user-experience-design/
   - title: "Web Site Design and Development"
     url: /expertise/Web-site-design-and-development/
+
+case-studies:
+    - title: "Studia Przypadków"
+      url: /case-studies/
+      children:
+      - title: Osadzone
+        url: /case-studies/embedded/
+      - title: Enterprise Software/SaaS
+        url: /case-studies/enterprise-software-saas/

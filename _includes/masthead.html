@@ -48,7 +48,7 @@
                       {% assign domain = base_path %}
                     {% endif %}
                     {% assign link_url = link.url | remove: '/' | prepend: site.baseurl %}
-                    <li class="item-{{ forloop.index }} parent {% if link_url == main_url %}active{% endif %}"><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+                    <li class="item-{{ forloop.index }} parent {% if link_url == main_url %}active{% endif %}"><a style="padding-right: 15px; padding-left: 15px;" href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
                     {% endfor %}
                                 </ul>
             </div>

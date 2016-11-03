@@ -4544,7 +4544,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
     }
     .navbar-nav>li {
         float: left;
-        white-space: nowrap
+        white-space: nowrap;
     }
     .navbar-nav>li>a {
         padding-top: 15px;
