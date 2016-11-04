@@ -1,7 +1,11 @@
 {% include base_path %}
 
 {% if page.sidebar %}
-    <div class="col-sm-6 col-md-3 col-md-push-6 mg-bottom sidebar-b">
+    {% if page.sidebar.nav %}
+        <div class="col-sm-6 col-md-3 col-md-push-6 mg-bottom sidebar-b">
+    {% else %}
+        <div class="col-md-3 col-md-push-9 mg-bottom sidebar-b">
+    {% endif %}
             <div class="client-quote">
                 <div class="quote-inner">"They have augmented our project management aspect. That is their secret weapon in delivering a high quality product on time. That makes the product development more focused and more efficient." </div>
                 <div class="quote-cite">Jim DeBello CEO, Mitek Systems</div>

@@ -15,7 +15,7 @@
                 			<ul class="nav-child unstyled small">
                 			{% for n in m.children %}
                 				<li class="item-10{{ forloop.index }}">
-                					<a href="{{ n.url }}">{{ n.title }}</a>
+                					<a href="{{ site.baseurl }}{{ n.url }}">{{ n.title }}</a>
             					</li>
             				{% endfor %}
         					</ul>

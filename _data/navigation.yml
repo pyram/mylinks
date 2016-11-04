@@ -55,3 +55,10 @@ case-studies:
         url: /case-studies/embedded/
       - title: Enterprise Software/SaaS
         url: /case-studies/enterprise-software-saas/
+    - title: "Oficjalne dokumenty"
+      url: /case-studies/white-papers/
+      children:
+      - title: Krytyczne błędy popełniane przez firmy przy outsourcingu
+        url: /critical-mistakes-companies-make-when-outsourcing
+      - title: Dotykowy interfejs użytkownika dla zanieczyszczenia instrumentacji
+      url: /touchscreen-user-interface-for-pollution-instrumentation
