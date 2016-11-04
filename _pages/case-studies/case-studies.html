@@ -1,7 +1,7 @@
 ---
 title: Studia Przypadków
 permalink: /case-studies/
-category_list: ["embedded","Enterprise Software/SaaS","Mobile/Wireless","Rich Media","User Experience","Corporate Communications/Websites"]
+category_list: ["Embedded","Enterprise Software/SaaS","Mobile/Wireless","Rich Media","User Experience","Corporate Communications/Websites"]
 sidebar:
   nav: "case-studies"
 
@@ -9,12 +9,12 @@ sidebar:
 {% assign lst = []  %}
  
  {% for cat in page.category_list %}
-<h3>{{ cat }}</h3>
+<h3>{{ site.data.ui-text[site.locale][cat] | default: cat }}  </h3>
  	{% assign cat_down = cat|downcase %}
  	{% for pg in site.pages %}
       {% for pc in pg.categories %}
-      {% assign pc = pc|downcase %}
-        {% if  pc == cat_down %}
+      {% assign pc_down = pc|downcase %}
+        {% if  pc_down == cat_down %}
 			<p style="padding-left: 30px;"><a style="color: #0C090A;" href="{{ pg.permalink }}">{{ pg.title }}</a></p>
 		 {% endif %}
       {% endfor %}  <!-- page-category -->

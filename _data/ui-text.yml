@@ -48,6 +48,11 @@ en-GB:
 en-AU:
   <<: *DEFAULT_EN
 
+# Polish
+# --------------
+pl: &DEFAULT_PL
+  Embedded                   : "Osadzone"
+
 # Spanish
 # --------------
 es: &DEFAULT_ES
