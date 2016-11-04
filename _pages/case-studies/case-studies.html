@@ -1,85 +1,22 @@
 ---
+title: Studia Przypadków
 permalink: /case-studies/
+category_list: ["embedded","Enterprise Software/SaaS","Mobile/Wireless","Rich Media","User Experience","Corporate Communications/Websites"]
 sidebar:
   nav: "case-studies"
+
 ---
-<!-- 
-{% for m in site.pages %}
-
-{{ m.path }}<br>
-{%endfor%} -->
-
-{% assign list=[] %}
- {% for page in site.pages %}
-      {% for pc in page.categories %}
-        {% if listp[pc] == nil %}
-
-        	{% list[pc]=[] %}
-        
-        {% endif %}   <!-- cat-match-p -->
-
-        {% list[pc] | push page %}
-
+{% assign lst = []  %}
+ 
+ {% for cat in page.category_list %}
+<h3>{{ cat }}</h3>
+ 	{% assign cat_down = cat|downcase %}
+ 	{% for pg in site.pages %}
+      {% for pc in pg.categories %}
+      {% assign pc = pc|downcase %}
+        {% if  pc == cat_down %}
+			<p style="padding-left: 30px;"><a style="color: #0C090A;" href="{{ pg.permalink }}">{{ pg.title }}</a></p>
+		 {% endif %}
       {% endfor %}  <!-- page-category -->
   {% endfor %}  <!-- page -->
-
-{% for cat in list %}
-	{{ cat }}<br>
-	{% for pg in cat %}
-		{{ pg.url }} <br>
-	{% endfor %}
-
 {% endfor %}
-{% comment %}
-
-<div class="item-page">
-				<div class="page-title">
-		<h1>
-												Case Studies									</h1>
-							</div>
-	
-	
-	
-		
-								<h3>Embedded</h3>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/touchscreen-user-interface-for-pollution-instrumentation">Touchscreen User Interface for Pollution Instrumentation</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/storage-device-software-optimization">Storage Device Software Optimization</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/linux-device-driver-projects">Linux Device Driver Projects</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/embedded-software-for-mobile-devices">Embedded Software for Mobile Devices</a></p>
-
-<h3>Enterprise Software/SaaS</h3>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/mitek-imagenet-forms-studio-browser-based-template-form-image-cleanup-identification-and-data-extraction">Mitek ImageNet™ Forms Studio - Browser-based Template Form Image Cleanup, Identification and Data Extraction</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/fraudprotect-thick-client-application-to-web-2-0-distributed-solution">FraudProtect™ - Thick Client Application to Web 2.0 Distributed Solution</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/industrial-automation-management-software-for-mesh-wireless-devices">Industrial Automation Management Software for Mesh Wireless Devices</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/smart-a-web-and-mobile-device-video-conference-management-and-room-reservation-system">SMART - A Web and Mobile Device Video Conference Management and Room Reservation System</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/telalert-urgent-messaging-system">TelAlert Urgent Messaging System</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/software-startup-company-product-engineering">Software Startup Company Product Engineering</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/ibex-intellectual-property-management-software-tool">IBEX™- Intellectual Property Management Software Tool</a></p>
-
-<h3>Mobile/Wireless</h3>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/hand-held-in-flight-customer-service-control-and-security">Hand-held In-Flight Customer Service Control and Security</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/mobile-phone-and-web-check-deposit-application">Mobile Phone and Web Check Deposit Application</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/software-startup-company-product-engineering">Software Startup Company Product Engineering</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/smart-a-web-and-mobile-device-video-conference-management-and-room-reservation-system">SMART - A Web and Mobile Device Video Conference Management and Room Reservation System</a></p><a style="color: #0C090A;" href="/smart-a-web-and-mobile-device-video-conference-management-and-room-reservation-system">
-</a><p style="padding-left: 30px;"><a style="color: #0C090A;" href="/smart-a-web-and-mobile-device-video-conference-management-and-room-reservation-system"></a><a style="color: #0C090A;" href="/rfid-water-park-management-system">RFID Water Park Management System</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/embedded-software-for-mobile-devices">Embedded Software for Mobile Devices</a></p>
-
-<h3>Rich Media</h3>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/storydeck-video-creation-and-sharing-social-collaboration-software-solution">StoryDeck™ Video Creation and Sharing Social Collaboration Software Solution</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/smart-a-web-and-mobile-device-video-conference-management-and-room-reservation-system">SMART - A Web and Mobile Device Video Conference Management and Room Reservation System</a></p>
-
-<h3>User Experience</h3>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/touchscreen-user-interface-for-pollution-instrumentation">Touchscreen User Interface for Pollution Instrumentation</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/industrial-automation-management-software-for-mesh-wireless-devices">Industrial Automation Management Software for Mesh Wireless Devices</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/hand-held-in-flight-customer-service-control-and-security">Hand-held In-Flight Customer Service Control and Security</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/mitek-imagenet-forms-studio-browser-based-template-form-image-cleanup-identification-and-data-extraction">Mitek ImageNet™ Forms Studio - Browser-based Template Form Image Cleanup, Identification and Data Extraction</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/ibex-intellectual-property-management-software-tool">IBEX™- Intellectual Property Management Software Tool</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/storydeck-video-creation-and-sharing-social-collaboration-software-solution">StoryDeck™ Video Creation and Sharing Social Collaboration Software Solution</a></p>
-
-<h3>Corporate Communications/Websites</h3>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/software-company-startup-brand-and-collateral-design-program">Software Company Startup Brand and Collateral Design Program</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/early-stage-venture-capital-company-identity-and-web-site-design">Early Stage Venture Capital Company Identity and Web Site Design</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/tachyon-networks-print-and-website-design-collateral-program">Tachyon Networks Print and Website Design Collateral Program</a></p>
-<p style="padding-left: 30px;"><a style="color: #0C090A;" href="/corporate-identity-design">Corporate Identity Design</a></p> 
-	
-						 </div>{% endcomment %}
