@@ -11,7 +11,7 @@
 
                 	{% if m.children %}
                 		<li class="item-{{ forloop.index }} {%if page.url==m.url %}current{% endif %} active deeper parent">
-                		<a href="{{ m.url }}">{{ m.title }}</a>
+                		<a href="{{ site.baseurl }}{{ m.url }}">{{ m.title }}</a>
                 			<ul class="nav-child unstyled small">
                 			{% for n in m.children %}
                 				<li class="item-10{{ forloop.index }}">
