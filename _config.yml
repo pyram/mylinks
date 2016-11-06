@@ -246,11 +246,12 @@ defaults:
       type: posts
     values:
       layout: archive
-      author_profile: true
-      read_time: true
+      author_profile: false
+      read_time: false
       comments: true
       share: true
       related: true
+      sidebar: true
   - scope:
       path: ""
       type: blogs

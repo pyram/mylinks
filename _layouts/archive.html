@@ -7,8 +7,11 @@ layout: default
         <div class="row">
         
         {% include side_nav.html %}
-{{ page.sidebar.nav }}
-        {{page.sidebar.nav|inspect}}
+        {% comment %}{{ page.sidebar.nav }}{% endcomment %}
+        
+        {% for p in  page%}
+        {{ p }}<br>
+        {% endfor %}
         {% include sidebar.html %}
         <div class="clearfix visible-sm"></div>
         {% if page.sidebar.nav %}

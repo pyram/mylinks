@@ -1,14 +1,11 @@
 ---
 layout: archive
-title: "Blog"
 author_profile: true
 paginate: true
 ---
 {% include base_path %}
-{{ site.paginator|inspect }}
+<!-- {{ site.paginator|inspect }} -->
 
 {% for post in site.posts %}
-
-  <h1>ho!</h1>
   {% include archive-single.html %}
 {% endfor %}
