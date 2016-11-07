@@ -7,6 +7,8 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% assign post_link = base_path | append: post.url %}
+
 
 
 
@@ -14,7 +16,7 @@
     <div class="leading-0">
         <div class="page-header">
             <h2 itemprop="name">
-                      <a href="{{ post.link }}" itemprop="url">{{ title }}</a>
+                      <a href="{{ post_link }}" itemprop="url">{{ title }}</a>
             </h2> 
           </div>
         <div class="icons"> </div>
@@ -26,7 +28,7 @@
         </dl>
         <div class="pull-left item-image">
         {% if post.image %}
-            <a href="{{ post.url | prepend: base_path }}"><img src="{{ post.image|prepend:  page.blog_image_path | prepend: base_path }}" alt="" itemprop="thumbnailUrl"></a>
+            <a href="{{ post_link }}"><img src="{{ post.image|prepend:  page.blog_image_path | prepend: base_path }}" alt="" itemprop="thumbnailUrl"></a>
         {% endif %}
         </div>
         <p>
@@ -39,34 +41,7 @@
         </p>
         <dl class="article-info muted"> </dl>
         <p class="readmore">
-            <a class="btn btn-light" href="{{ post.link }}"> <span class="icon-chevron-right"></span> Read more ... </a>
+            <a class="btn btn-light" href="{{ post_link }}"> <span class="icon-chevron-right"></span> {{ site.data.ui-text[site.locale].read_more | default: "Read more ..." }} </a>
         </p>
     </div>
 </div>
-{% comment %}
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="">
-      </div>
-    {% endif %}
-    <h2 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
-    </h2>
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
-    {% endif %}
-    {% if excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ excerpt }}</p>{% endif %}
-  </article>
-</div>{% endcomment %}

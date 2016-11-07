@@ -1,6 +1,8 @@
 {% include base_path %}
 
-
+{% for m in page  %}
+  {{ m|inspect }}<br>
+{% endfor %}
 
 {% if paginator.total_pages > 1 %}
 <div class="pagination-block">
@@ -12,10 +14,12 @@
       <li class="pagination-prev">
         {% if paginator.previous_page %}
         <a title="" href="{{ paginator.previous_page_path }}" class="hasTooltip pagenav" data-original-title="Prev">
+        {% else %}
+        <span class="pagenav">
         {% endif %}
 
         {{ site.data.ui-text[site.locale].pagination_previous | default: "Prev" }}
-        {% if paginator.previous_page %}</a>{% endif %}
+        {% if paginator.previous_page %}</a>{% else %}</span>{% endif %}
       </li>              
 
     {% comment %} First page {% endcomment %}
@@ -67,17 +71,21 @@
       <li class="pagination-next">
       {% if paginator.next_page %}
       <a href="{{ paginator.next_page_path }}" class="hasTooltip pagenav" data-original-title="Next">
+      {% else %}
+      <span class="pagenav">
       {% endif %}
       {{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}
-      {% if paginator.next_page %}</a>{% endif %}
+      {% if paginator.next_page %}</a>{% else %}</span>{% endif %}
       </li>
       {% comment %} Link last page {% endcomment %}    
       <li class="pagination-end">
       {% if paginator.next_page %}
       <a href="{{ base_path }}/page{{ paginator.total_pages }}" class="hasTooltip pagenav" data-original-title="End">
+      {% else %}
+      <span class="pagenav">
       {% endif %}
       {{ site.data.ui-text[site.locale].pagination_end | default: "End" }}
-      {% if paginator.next_page %}</a>{% endif %}
+      {% if paginator.next_page %}</a>{% else %}</span>{% endif %}
       </li>
   </ul>
 </nav>
