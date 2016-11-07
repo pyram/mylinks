@@ -1,13 +1,15 @@
 ---
 layout: blog
 author_profile: false
+base_path: /blog/
 ---
 
 {% include base_path %}
 
+{% include paginator.html page_path = page.base_path %}
 
 {% for post in paginator.posts %}
   {% include archive-single.html %}
 {% endfor %}
 
-{% include paginator.html %}
+{% include paginator.html page_path = page.base_path %}
