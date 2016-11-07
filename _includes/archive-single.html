@@ -15,7 +15,6 @@
         <div class="page-header">
             <h2 itemprop="name">
                       <a href="{{ post.link }}" itemprop="url">{{ title }}</a>
-                    
             </h2> 
           </div>
         <div class="icons"> </div>
@@ -26,7 +25,9 @@
             </dd>
         </dl>
         <div class="pull-left item-image">
-            <a href="{ base_path }}{{ post.url }}"><img src="{{ post.image }}" alt="" itemprop="thumbnailUrl"></a>
+        {% if post.image %}
+            <a href="{{ post.url | prepend: base_path }}"><img src="{{ post.image|prepend:  page.blog_image_path | prepend: base_path }}" alt="" itemprop="thumbnailUrl"></a>
+        {% endif %}
         </div>
         <p>
           {% if post.excerpt | contains: site.excerpt_separator %}

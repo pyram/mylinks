@@ -171,9 +171,11 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+permalink: /blog/:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /blog/page:num/
+paginate_base: "blog" # Puts all pagination folders in the "blog" dir, e.g. "/blog/page2"
+paginate_index: "/blog/" # Paginates using the specified file
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
@@ -252,7 +254,7 @@ defaults:
       comments: true
       share: true
       related: true
-      sidebar: true
+      sidebar: true      
   - scope:
       path: ""
       type: blogs
@@ -271,3 +273,4 @@ defaults:
       layout: archive
       author_profile: false
       sidebar: true
+      blog_image_path: /images/BlogImages/
