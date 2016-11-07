@@ -1,4 +1,4 @@
-  {% include base_path %}
+{% include base_path %}
 
 
 {% if post.id %}
@@ -7,13 +7,42 @@
   {% assign title = post.title %}
 {% endif %}
 
-{% if post.excerpt %}
-{% assign excerpt = post.excerpt %}
-{% else %}
-{% assign excerpt = post.content | close_format %}
-{% endif %}
-<!-- {% assign excerpt = "post.excerpt" %} -->
 
+
+
+<div class="items-leading clearfix">
+    <div class="leading-0">
+        <div class="page-header">
+            <h2 itemprop="name">
+                      <a href="{{ post.link }}" itemprop="url">{{ title }}</a>
+                    
+            </h2> 
+          </div>
+        <div class="icons"> </div>
+        <dl class="article-info muted">
+            <dt class="article-info-term"> Details </dt>
+            <dd class="published"> <span class="icon-calendar"></span>
+                <time datetime="{{ post.date }}" itemprop="datePublished"> Data publikacji: {{ post.date | date_to_long_string }} </time>
+            </dd>
+        </dl>
+        <div class="pull-left item-image">
+            <a href="{ base_path }}{{ post.url }}"><img src="{{ post.image }}" alt="" itemprop="thumbnailUrl"></a>
+        </div>
+        <p>
+          {% if post.excerpt | contains: site.excerpt_separator %}
+            {{ post.excerpt }}
+          {% else %}
+            {{ post.content | strip_html | truncatewords: 100  }}
+          {% endif %}
+
+        </p>
+        <dl class="article-info muted"> </dl>
+        <p class="readmore">
+            <a class="btn btn-light" href="{{ post.link }}"> <span class="icon-chevron-right"></span> Read more ... </a>
+        </p>
+    </div>
+</div>
+{% comment %}
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
@@ -39,4 +68,4 @@
     {% endif %}
     {% if excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ excerpt }}</p>{% endif %}
   </article>
-</div>
+</div>{% endcomment %}

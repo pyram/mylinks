@@ -2,9 +2,10 @@
 layout: archive
 author_profile: true
 paginate: true
+permalink: /post
 ---
 {% include base_path %}
-<!-- {{ site.paginator|inspect }} -->
+{{ site.paginator|inspect }}
 
 {% for post in site.posts %}
   {% include archive-single.html %}

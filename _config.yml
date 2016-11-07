@@ -147,7 +147,8 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n"
+
+excerpt_separator: "</p>" #"\n\n"
 incremental: false
 
 
@@ -231,9 +232,9 @@ compress_html:
     envs: development
 
 collections:
-  blogs:
+  posts:
     output: true
-    # permalink: /posts/:path/
+    permalink: /posts/:path/
   case-studies:
     output: true
     permalink: /case-studies/:path
