@@ -5,8 +5,9 @@ permalink: /clients/
 ---		
 
 {% for client in site.data.clients %}
-	<div class="row">
+	{% cycle '<div class="row">','' %} 
 	{% include vcard_client.html %}
-	</div>
+	{% cycle '', '</div>' %} 
+	
 
 {% endfor %}
