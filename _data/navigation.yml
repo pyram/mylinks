@@ -62,3 +62,15 @@ case-studies:
         url: /critical-mistakes-companies-make-when-outsourcing
       - title: Dotykowy interfejs użytkownika dla zanieczyszczenia instrumentacji
         url: /touchscreen-user-interface-for-pollution-instrumentation
+
+services:
+    - title: Projektowanie produktu oprogramowania
+      url: /services/software-product-design-and-development/
+    - title: Personel powiększania
+      url: /services/staff-augmentation
+    - title: Plany RightSource
+      url: /services/rightsource-roadmaps
+    - title: Budowy, działania i transferu
+      url: /services/build-operate-and-transfer
+    - title: Wirtualne projektowanie i inżynieria
+      url: /services/virtual-design-and-engineering-department
