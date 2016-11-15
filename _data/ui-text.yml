@@ -54,6 +54,9 @@ en-AU:
 pl: &DEFAULT_PL
   Embedded                   : "Osadzone"
   read_more                  : "Czytaj dalej ..."
+  pagination_previous        : "Wstecz"
+  pagination_next            : "Dalej"
+  pagination_end             : "Koniec"
 
 # Spanish
 # --------------
