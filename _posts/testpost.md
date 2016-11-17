@@ -1,4 +1,8 @@
---- title: "Advantages of Using Co-Design" excerpt: "In today’s global and fast-paced economy, outsourcing provides enriching opportunities for companies that save both time and money. However, in order to make the most of these third parties, it is important to understand their advantages as well as their disadvantages." published: "17 February 2014" ---
+--- 
+title: "Advantages of Using Co-Design" 
+excerpt: "In today’s global and fast-paced economy, outsourcing provides enriching opportunities for companies that save both time and money. However, in order to make the most of these third parties, it is important to understand their advantages as well as their disadvantages." 
+published: "17 February 2014" 
+---
 
 Designers usually are not the end-users of a given product, but most engineered products are marketed with little or no user input or involvement. Co-design is a design practice utilizing User Centered Design (UCD) that relies on user input to aid product design before marketing it.
 
