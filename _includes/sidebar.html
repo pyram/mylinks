@@ -6,55 +6,12 @@
     {% else %}
         <div class="col-md-3 col-md-push-9 mg-bottom sidebar-b">
     {% endif %}
-            <div class="client-quote">
-                <div class="quote-inner">"They have augmented our project management aspect. That is their secret weapon in delivering a high quality product on time. That makes the product development more focused and more efficient." </div>
-                <div class="quote-cite">Jim DeBello CEO, Mitek Systems</div>
-            </div>
-            <div class="widget no-border">
-                <p class="sidebar-title">Latest Blog Posts</p>
-                <ul class="latestnews link-list">
-                    <li itemscope itemtype="https://schema.org/Article">
-                        <a href="blog/79-outsourcing-mistakes-to-avoid-in-6-areas.html" itemprop="url">
-                            <span itemprop="name">
-        Outsourcing Mistakes to Avoid in 6 Areas      </span>
-                        </a>
-                    </li>
-                    <li itemscope itemtype="https://schema.org/Article">
-                        <a href="blog/90-what-is-cloud-storage.html" itemprop="url">
-                            <span itemprop="name">
-        What is Cloud Storage?      </span>
-                        </a>
-                    </li>
-                    <li itemscope itemtype="https://schema.org/Article">
-                        <a href="blog/89-why-use-a-u-s-based-management-firm-for-your-software-project.html" itemprop="url">
-                            <span itemprop="name">
-        Why Use a U.S. Based Management Firm for Your Software Project?     </span>
-                        </a>
-                    </li>
-                    <li itemscope itemtype="https://schema.org/Article">
-                        <a href="blog/88-why-outsourcing-your-software-development-to-india-is-a-no-go.html" itemprop="url">
-                            <span itemprop="name">
-        Why Outsourcing Your Software Development to India Is a No-Go     </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="custom">
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/Neubloc" title="Facebook"><i class="nico-facebook"></i></a>
-                    <a href="https://twitter.com/neubloc" title="Twitter"><i class="nico-twitter"></i></a>
-                    <a href="http://www.linkedin.com/company/120303?trk=tyah&amp;trkInfo=tas%3Aneubloc%2Cidx%3A1-1-1" title="LinkedIn"><i class="nico-linkedin"></i></a>
-                    <a href="https://plus.google.com/102401187026086876168" title="Google+"><i class="nico-google-plus"></i></a>
-                </div>
-            </div>
-            <div class="custom">
-                <div class="widget">
-                    <div class="widget-title">Equity Option Program</div>
-                    <div class="widget-inner">
-                        <p>Neubloc's Equity Option Program can provide access to financing for angel and early-stage enterprise...</p>
-                        <a class="btn btn-light" href="about-us/equity-option-program.html">more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    {% if page.sidebar.type == 'blog' %}
+        {% include  sidebar_blog.html %} 
+    {% else %}
+        {% include  sidebar_default.html %} 
+
+    {% endif %}
+    </div>
+
 {% endif %}
