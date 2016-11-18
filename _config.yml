@@ -61,6 +61,10 @@ facebook:
   username               : "Neubloc"
   app_id                 :
   publisher              :
+google_plus:
+  profile_id             : 102401187026086876168
+linkedin                 :
+  url                    : http://www.linkedin.com/company/120303?trk=tyah&amp;trkInfo=tas%3Aneubloc%2Cidx%3A1-1-1
 og_image                 : # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles

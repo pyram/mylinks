@@ -22,7 +22,7 @@ en: &DEFAULT_EN
   more_label                 : "Learn More"
   related_label              : "You May Also Enjoy"
   follow_label               : "Follow:"
-  feed_label                 : "Feed"
+  feed_label                 : "Subscribe"
   powered_by                 : "Powered by"
   website_label              : "Website"
   email_label                : "Email"
@@ -40,6 +40,7 @@ en: &DEFAULT_EN
   comment_error_msg          : "Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again."
   loading_label              : "Loading..."
   read_more                  : "Read More ..."
+  contact_label              : "Get In Touch"
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -57,7 +58,11 @@ pl: &DEFAULT_PL
   pagination_previous        : "Wstecz"
   pagination_next            : "Dalej"
   pagination_end             : "Koniec"
-
+  contact_label              : "Napisz do nas"
+  email_label                : "Email"
+  recent_posts               : "Ostatnie wpisy"
+  feed_label                 : "Subskrybuj"
+  
 # Spanish
 # --------------
 es: &DEFAULT_ES
