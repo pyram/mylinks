@@ -1,10 +1,10 @@
 {
-  "name": "minimal-mistakes",
+  "name": "www-neubloc-pl",
   "version": "3.4.8",
   "description": "Minimal Mistakes Jekyll theme npm build scripts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+    "url": "git://github.com/neubloc/www-neubloc-pl.git"
   },
   "keywords": [
     "jekyll",
@@ -14,9 +14,9 @@
   "author": "Michael Rose",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
+    "url": "https://github.com/neubloc/www-neubloc-pl/issues"
   },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
+  "homepage": "https://neubloc.github.io/www-neubloc-pl/",
   "engines": {
     "node": ">= 0.10.0"
   },
